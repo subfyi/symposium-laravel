@@ -50,7 +50,7 @@
                                                                                     <div class="col-md-9 col-sm-9 col-xs-9">
                                                                                         <input class="form-control col-md-12 col-xs-12 error"
                                                                                                name="pap_title" type="text"
-                                                                                               value="" aria-invalid="true">
+                                                                                               value="" aria-invalid="true" required>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group row">
@@ -120,7 +120,7 @@
                                                                                         (.doc, .docx)
                                                                                     </label>
                                                                                     <div class="col-md-9 col-sm-9 col-xs-12">
-                                                                                        <file-picker name="dosyalar"
+                                                                                        <file-picker id="dosyalar" name="dosyalar"
                                                                                                      accepts="application/msword,.docx"
                                                                                                      desc="Abstract
                                                                                         (.doc, .docx)"
@@ -133,7 +133,7 @@
                                                                                         Paper (.doc, .docx)
                                                                                     </label>
                                                                                     <div class="col-md-9 col-sm-9 col-xs-12">
-                                                                                        <file-picker name="fdosyalar"
+                                                                                        <file-picker id="fdosyalar" name="fdosyalar"
                                                                                                      accepts="application/msword,.docx"
                                                                                                      desc="Full
                                                                                         Paper (.doc, .docx)"
@@ -148,7 +148,8 @@
 
                                                                                     </label>
                                                                                     <div class="col-md-9 col-sm-9 col-xs-12">
-                                                                                        <file-picker name="pdosyalar" accepts="application/pdf"
+                                                                                        <file-picker id="pdosyalar" name="pdosyalar"
+                                                                                                     accepts="application/pdf"
                                                                                                      desc="Poster
                                                                                         Presentation (.pdf)"
                                                                                                      required></file-picker>
@@ -320,6 +321,55 @@
         });
 
         $(document).ready(function () {
+            $('form').on('submit', function(e) {
+                if(document.getElementById('dosyalar').$controller.$state !== 3 &&
+                    document.getElementById('fdosyalar').$controller.$state !== 3 &&
+                    document.getElementById('pdosyalar').$controller.$state !== 3) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+
+                    swal.fire('Hata', 'En az bir dosya yuklemeniz gerekiyor.', 'error');
+                    return ;
+                }
+
+                var radio1 = $("input[name=correspond]");
+                var radio2 = $("input[name=presenter]");
+
+                var ok = false;
+
+                for(var i = 0; i < radio1.length; ++i) {
+                    if(radio1[i].checked) {
+                        ok = true;
+                    }
+                }
+
+                if(!ok) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+
+                    swal.fire('Hata', 'Corresponder secin.', 'error');
+                    return ;
+                }
+
+                ok = false;
+
+                for(var i = 0; i < radio2.length; ++i) {
+                    if(radio2[i].checked) {
+                        ok = true;
+                    }
+                }
+
+                if(!ok) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+
+                    swal.fire('Hata', 'Presenter secin.', 'error');
+                    return ;
+                }
+
+
+            });
+
             $('form').validate();
             $('form').ajaxForm({
                 beforeSubmit: function () {
