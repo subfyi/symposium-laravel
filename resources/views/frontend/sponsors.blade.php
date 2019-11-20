@@ -91,7 +91,7 @@
                             <div class="wpb_wrapper td_block_wrap vc_raw_html td_uid_13_5c91424633ff4_rand ">
                                 <a id="demoimage" target="_blank"
                                    href="https://sites.google.com/site/injournalofecosystems/">
-                                    <img src="../wp-content/uploads/2018/12/ISSN-2224-232x300.jpg" alt="" width="300"
+                                    <img src="{{url('/')}}/doc/logo/ISSN-2224-232x300.jpg" alt="" width="300"
                                          height="300"/>
                                 </a></div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="wpb_wrapper">
                             <div class="wpb_wrapper td_block_wrap vc_raw_html td_uid_15_5c914246341ba_rand ">
                                 <a id="demoimage" target="_blank" href="http://www.jieas.com/">
-                                    <img src="../wp-content/uploads/2018/12/jieaslogo-1.jpg" alt="" width="300"
+                                    <img src="{{url('/')}}/doc/logo/jieaslogo-1.jpg" alt="" width="300"
                                          height="300"/>
                                 </a></div>
                         </div>
@@ -109,7 +109,7 @@
                         <div class="wpb_wrapper">
                             <div class="wpb_wrapper td_block_wrap vc_raw_html td_uid_20_5c91424634602_rand ">
                                 <a id="demoimage" target="_blank" href="https://ijepem.com/">
-                                    <img src="../wp-content/uploads/2018/12/yeni-kare-300x300.png" alt="" width="300"
+                                    <img src="{{url('/')}}/doc/logo/yeni-kare-300x300.png" alt="" width="300"
                                          height="300"/>
                                 </a></div>
                         </div>
@@ -118,7 +118,7 @@
                         <div class="wpb_wrapper">
                             <div class="wpb_wrapper td_block_wrap vc_raw_html td_uid_18_5c91424634461_rand ">
                                 <a id="demoimage" target="_blank" href="https://ucbad.com/">
-                                    <img src="../wp-content/uploads/2018/12/logo_black_300x300.png" alt="" width="300"
+                                    <img src="{{url('/')}}/doc/logo/logo_black_300x300.png" alt="" width="300"
                                          height="300"/>
                                 </a></div>
                         </div>

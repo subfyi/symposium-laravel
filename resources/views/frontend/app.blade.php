@@ -107,9 +107,7 @@
         #rs-demo-id {
         }
     </style>
-    <link crossorigin="anonymous" rel='stylesheet' id='google-fonts-style-css'
-          href='https://fonts.googleapis.com/css?family=Playfair+Display%3A400%7CLato%3A400%7COpen+Sans%3A300italic%2C400%2C400italic%2C600%2C600italic%2C700%7CRoboto%3A300%2C400%2C400italic%2C500%2C500italic%2C700%2C900&amp;ver=8.1.2'
-          type='text/css' media='all'/>
+
     <link rel='stylesheet' id='js_composer_front-css'
           href='/wp-content/plugins/js_composer/assets/css/js_composer.min7263.css?ver=5.4.4' type='text/css'
           media='all'/>
@@ -124,24 +122,7 @@
             src='/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min035f.js?ver=5.4.6.2'></script>
     <script type='text/javascript'
             src='/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min035f.js?ver=5.4.6.2'></script>
-    <link rel='https://api.w.org/' href='/wp-json/'/>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd"/>
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml"/>
-    <meta name="generator" content="WordPress 5.1.1"/>
-    <link rel='shortlink' href='index.html'/>
-    <link rel="alternate" type="application/json+oembed"
-          href="/wp-json/oembed/1.0/embedc378.json?url=https%3A%2F%2Fiseser.com%2F"/>
-    <link rel="alternate" type="text/xml+oembed"
-          href="/wp-json/oembed/1.0/embedab09?url=https%3A%2F%2Fiseser.com%2F&amp;format=xml"/>
-    <style type="text/css">
-        .qtranxs_flag_en {
-            background-image: url(/wp-content/plugins/qtranslate-x/flags/gb.png);
-            background-repeat: no-repeat;
-        }
-    </style>
-    <link hreflang="en" href="en/" rel="alternate"/>
-    <link hreflang="x-default" href="index.html" rel="alternate"/>
-    <meta name="generator" content="qTranslate-X 3.4.6.8"/>
+
     <style id="tdw-css-placeholder"></style>
     <script>
         window.tdwGlobal = {
@@ -713,13 +694,11 @@
 
 
         ul.sf-menu > .td-menu-item > a {
-            font-family: Lato;
             font-weight: normal;
 
         }
 
         .sf-menu ul .td-menu-item a {
-            font-family: Lato;
             font-weight: normal;
 
         }
@@ -730,13 +709,12 @@
         }
 
         .td_mega_menu_sub_cats .block-mega-child-cats a {
-            font-family: Lato;
+
             font-weight: normal;
 
         }
 
         .td_module_1 .td-module-title {
-            font-family: "Playfair Display";
             font-weight: bold;
 
         }
@@ -1208,7 +1186,7 @@
         <div class="td-banner-wrap-full td-logo-wrap-full td-logo-mobile-loaded td-container-wrap ">
             <div class="td-header-sp-logo">
                 <h1 class="td-logo"><a class="td-main-logo" href="/">
-                        <img src="/wp-content/uploads/2017/11/v6_telifsiz-300x72.png" alt=""/>
+                        <img src="{{url('/')}}/doc/logo/v6_telifsiz-300x72.png" alt=""/>
                         <span class="td-visual-hidden">ISESER</span>
                     </a>
                 </h1></div>
@@ -1221,10 +1199,10 @@
                         </div>
                         <div class="td-main-menu-logo td-logo-in-header">
                             <a class="td-mobile-logo td-sticky-disable" href="/">
-                                <img src="/wp-content/uploads/2017/11/v6_telifsiz-300x72.png" alt=""/>
+                                <img src="{{url('/')}}/doc/logo/v6_telifsiz-300x72.png" alt=""/>
                             </a>
                             <a class="td-header-logo td-sticky-disable" href="/">
-                                <img src="/wp-content/uploads/2017/11/v6_telifsiz-300x72.png" alt=""/>
+                                <img src="{{url('/')}}/doc/logo/v6_telifsiz-300x72.png" alt=""/>
                             </a>
                         </div>
                         <div class="menu-td-demo-header-menu-container">
@@ -1309,8 +1287,8 @@
             <div class="td-pb-row">
                 <div class="td-pb-span3">
                     <aside><a href="/"><img class="td-retina-data"
-                                            src="/wp-content/uploads/2017/11/v_5_telif-300x300.png"
-                                            data-retina="https://iseser.com/wp-content/uploads/2017/11/v_5_telif-300x300.png"
+                                            src="{{url('/')}}/doc/logo/v_5_telif-300x300.png"
+                                            data-retina="{{url('/')}}/doc/logo/v_5_telif-300x300.png"
                                             alt="iseser" title="iseser"
                                             width=""/></a>
                     </aside>
@@ -1621,7 +1599,7 @@
         "@type": "WebSite",
         "name": "iseser.com",
         "url": "https://iseser.com/",
-        "image": "https://iseser.com/wp-content/uploads/2017/11/v6_telifsiz-300x72.png",
+        "image": "{{url('/')}}/doc/logo/v6_telifsiz-300x72.png",
         "sameAs": [
             "https://www.facebook.com/isesercom/",
             "https://iseser.com/",
@@ -1634,7 +1612,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://iseser.com/",
-        "logo":  "https://iseser.com/wp-content/uploads/2017/11/v6_telifsiz-300x72.png",
+        "logo":  "{{url('/')}}/doc/logo/v6_telifsiz-300x72.png",
         "name": "iseser.com",
         "contactPoint": [
             {
