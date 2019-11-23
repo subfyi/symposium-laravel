@@ -1,21 +1,20 @@
 @extends('frontend.app')
 
 @section('css')
-    <title>ISESER</title>
+    <title>ISESER | 2020</title>
     <meta name="description" content="International Symposium for Environmental Science and Engineering Research"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="ISESER"/>
+    <meta property="og:title" content="ISESER | 2020"/>
     <meta property="og:description"
           content="International Symposium for Environmental Science and Engineering Research"/>
     <meta property="og:url" content="https://iseser.com/"/>
-    <meta property="og:site_name" content="ISESER"/>
+    <meta property="og:site_name" content="ISESER | 2020"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:description"
           content="International Symposium for Environmental Science and Engineering Research"/>
-    <meta name="twitter:title" content="ISESER"/>
+    <meta name="twitter:title" content="ISESER | 2020"/>
     <meta name="google-site-verification" content="VlFvvGX2Uen49tabqEdrm8xHzZzhOR7IQPOwRwwYAt8"/>
-
 @endsection
 
 @section('content')

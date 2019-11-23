@@ -251,7 +251,7 @@
         var tds_more_articles_on_post_enable = "";
         var tds_more_articles_on_post_time_to_wait = "";
         var tds_more_articles_on_post_pages_distance_from_top = 0;
-        var tds_theme_color_site_wide = "#207887";
+        var tds_theme_color_site_wide = "#a74828";
         var tds_smart_sidebar = "enabled";
         var tdThemeName = "Newspaper";
         var td_magnific_popup_translation_tPrev = "Previous (Left arrow key)";
@@ -342,11 +342,11 @@
         .td-pulldown-syle-2 .td-subcat-dropdown ul:after,
         .td_block_template_9 .td-block-title:after,
         .td_block_template_15 .td-block-title:before {
-            background-color: #207887;
+            background-color: #a74828;
         }
 
         .global-block-template-4 .td-related-title .td-cur-simple-item:before {
-            border-color: #207887 transparent transparent transparent !important;
+            border-color: #a74828 transparent transparent transparent !important;
         }
 
         .woocommerce .woocommerce-message .button:hover,
@@ -355,16 +355,16 @@
         .global-block-template-4 .td-related-title .td-cur-simple-item,
         .global-block-template-3 .td-related-title .td-cur-simple-item,
         .global-block-template-9 .td-related-title:after {
-            background-color: #207887 !important;
+            background-color: #a74828 !important;
         }
 
         .woocommerce .product .onsale,
         .woocommerce.widget .ui-slider .ui-slider-handle {
-            background: none #207887;
+            background: none #a74828;
         }
 
         .woocommerce.widget.widget_layered_nav_filters ul li a {
-            background: none repeat scroll 0 0 #207887 !important;
+            background: none repeat scroll 0 0 #a74828 !important;
         }
 
         a,
@@ -465,7 +465,7 @@
         .td-theme-wrap .sf-menu ul .current-category-ancestor > a,
         .td-theme-wrap .sf-menu ul .current-menu-item > a,
         .td_outlined_btn {
-            color: #207887;
+            color: #a74828;
         }
 
         a.vc_btn-black.vc_btn_square_outlined:hover,
@@ -473,7 +473,7 @@
         .td-mega-menu-page .wpb_content_element ul li a:hover,
         .td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,
         .td-theme-wrap .header-search-wrap .result-msg a:hover {
-            color: #207887 !important;
+            color: #a74828 !important;
         }
 
         .td-next-prev-wrap a:hover,
@@ -489,15 +489,15 @@
         a.vc_btn-black:hover,
         .td_block_template_5 .td-block-title > *,
         .td_outlined_btn {
-            border-color: #207887;
+            border-color: #a74828;
         }
 
         .td_wrapper_video_playlist .td_video_currently_playing:after {
-            border-color: #207887 !important;
+            border-color: #a74828 !important;
         }
 
         .header-search-wrap .td-drop-down-search:before {
-            border-color: transparent transparent #207887 transparent;
+            border-color: transparent transparent #a74828 transparent;
         }
 
         .block-title > span,
@@ -519,11 +519,11 @@
         .td_default_btn,
         .td_round_btn,
         .td_outlined_btn:hover {
-            background-color: #207887;
+            background-color: #a74828;
         }
 
         .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-            background-color: #207887 !important;
+            background-color: #a74828 !important;
         }
 
         .block-title,
@@ -531,11 +531,11 @@
         .wpb_tabs .wpb_tabs_nav,
         .vc_tta-container .vc_tta-color-grey.vc_tta-tabs-position-top.vc_tta-style-classic .vc_tta-tabs-container,
         .woocommerce div.product .woocommerce-tabs ul.tabs:before {
-            border-color: #207887;
+            border-color: #a74828;
         }
 
         .td_block_wrap .td-subcat-item a.td-cur-simple-item {
-            color: #207887;
+            color: #a74828;
         }
 
 
@@ -588,7 +588,7 @@
 
         .td-header-wrap .td-header-top-menu-full,
         .td-header-wrap .top-header-menu .sub-menu {
-            background-color: #207887;
+            background-color: #a74828;
         }
 
         .td-header-style-8 .td-header-top-menu-full {
@@ -596,7 +596,7 @@
         }
 
         .td-header-style-8 .td-header-top-menu-full .td-header-top-menu {
-            background-color: #207887;
+            background-color: #a74828;
             padding-left: 15px;
             padding-right: 15px;
         }

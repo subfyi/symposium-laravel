@@ -126,7 +126,7 @@
                                 <td class="tg-0pky">Sezen Küçükçongar, Engineering and Natural Sciences Faculty, Konya Technical University, Konya, Turkey</td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Şermin Çam Kaynar, Manisa Celal Bayar University, Sciences and Arts Faculty, Physics Department, Manisa, Turkey</td>
+                                <td class="tg-0pky">Sermin Çam Kaynar, Manisa Celal Bayar University, Sciences and Arts Faculty, Physics Department, Manisa, Turkey</td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Umit Kaynar, Bakirçay University, Engineering and Architecture Faculty, İzmir, Turkey</td>

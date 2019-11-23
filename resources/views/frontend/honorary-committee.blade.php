@@ -13,7 +13,7 @@
     <meta property="og:site_name" content="ISESER"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:description"
-          content="Prof. Dr. Babür Özçelik, Konya Technical University Rector, Konya, Turkey Prof. Dr. Alush Musaj, University of Mitrovica &quot;Isa Boletini&quot;, Mitrovicë, Kosovo"/>
+          content="Prof. Dr. Babür Özçelik, Konya Technical University Rector, Konya, Turkey "/>
     <meta name="twitter:title" content="HONORARY COMMITTEE - ISESER"/>
 @endsection
 
