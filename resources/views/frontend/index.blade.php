@@ -101,7 +101,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     INTERNATIONAL SYMPOSIUM FOR
                                                 </div>
 
@@ -117,7 +117,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENGINEERING RESEARCH 2020
                                                 </div>
 
@@ -132,11 +132,11 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENVIRONMENTAL SCIENCE AND
                                                 </div>
                                             </li>
-                                            <li data-index="rs-14" data-transition="fade" data-slotamount="7"
+                                            <li data-index="rs-4" data-transition="fade" data-slotamount="7"
                                                 data-hideafterloop="0" data-hideslideonmobile="off"
                                                 data-easein="default" data-easeout="default" data-masterspeed="300"
                                                 data-thumb="https://iseser.com/doc/slider/fotograf_20.jpg"
@@ -166,7 +166,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     INTERNATIONAL SYMPOSIUM FOR
                                                 </div>
 
@@ -182,7 +182,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENGINEERING RESEARCH 2020
                                                 </div>
 
@@ -197,7 +197,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENVIRONMENTAL SCIENCE AND
                                                 </div>
                                             </li>
@@ -231,7 +231,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     INTERNATIONAL SYMPOSIUM FOR
                                                 </div>
 
@@ -247,7 +247,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENGINEERING RESEARCH 2020
                                                 </div>
 
@@ -262,7 +262,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENVIRONMENTAL SCIENCE AND
                                                 </div>
                                             </li>
@@ -297,7 +297,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     INTERNATIONAL SYMPOSIUM FOR
                                                 </div>
 
@@ -313,7 +313,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENGINEERING RESEARCH 2020
                                                 </div>
 
@@ -328,7 +328,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENVIRONMENTAL SCIENCE AND
                                                 </div>
                                             </li>
@@ -363,7 +363,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 5; min-width: 389px; max-width: 389px; max-width: 35px; max-width: 35px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     INTERNATIONAL SYMPOSIUM FOR
                                                 </div>
 
@@ -379,7 +379,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 6; min-width: 353px; max-width: 353px; max-width: 38px; max-width: 38px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENGINEERING RESEARCH 2020
                                                 </div>
 
@@ -394,7 +394,7 @@
                                                      data-textAlign="['inherit','inherit','inherit','inherit']"
                                                      data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]"
                                                      data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]"
-                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(32,120,135,1);">
+                                                     style="z-index: 7; min-width: 368px; max-width: 368px; white-space: nowrap; font-weight: 400; letter-spacing: px;background-color:rgba(167,72,40,1);">
                                                     ENVIRONMENTAL SCIENCE AND
                                                 </div>
                                             </li>

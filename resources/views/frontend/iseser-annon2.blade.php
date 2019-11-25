@@ -56,8 +56,7 @@
                                     <div class="col-md-5 nopadding">
 
                                         <div class="form-group">
-                                            <p>Abstract book and Final Program may be found in documents section in link below:</p>
-                                            <p><a href="../documents/">https://iseser.com/documents/</a></p>
+
 
                                             <p>Important Dates were announced in link below:</p>
                                             <p><a href="../important-dates/">https://iseser.com/important-dates/</a></p>
