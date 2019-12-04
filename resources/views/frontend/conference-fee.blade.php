@@ -61,16 +61,22 @@
                             <div class="td-block-title-wrap"></div>
                             <p>Please send the required fee to IBAN address given below and please write the "iseser2020" in the description field.
                                 <br>(<span style="color: #ff0000;"><strong>There is no fee refund.</strong></span>)</p>
-                            <p><strong>Account Holder: <!--  NECMETTİN ERBAKAN ÜNİ.SOS.TES.İKT.İŞLET --></strong><br/>
-                                <strong>Account IBAN: <!-- TR34 0001 5001 5800 7305 9006 20 --></strong><br/>
-                                <strong>Bank Name: <!--  VAKIFBANK --></strong><br/>
-                                <strong>Bank Swift Code(BIC): </strong><br/>
-                                <strong>Bank Code: </strong><br/>
-                                <strong>Bank Branch Code: </strong><br/>
-                                <!--  <strong>Account Number: 001 5800 7305 9006 20</strong><br /> -->
-                                <strong>Account Type (Only): // The bank make exchange from the daily exchange rate.</strong><br/>
+                            <p>
+                                <strong>Account Holder: Vehbi AKYILDIZ</strong><br/>
+                                <strong>Account IBAN: TR950006400000245130049466</strong><br/>
+                                <strong>Bank Name: TURKIYE IS BANKASI A.S.</strong><br/>
+                                <strong>Bank Swift Code(BIC): ISBKTRIS</strong><br/>
+                                <strong>Account Type (Only): TRY // The bank make exchange from the daily exchange rate.</strong><br/>
                                 <strong>Description field (required): iseser2020</strong><br/>
                                 <!--  <strong>Maximum Submission: </strong> -->
+                            </p>
+                            <p>
+                                <strong>Account Holder: Vehbi AKYILDIZ</strong><br/>
+                                <strong>Account IBAN: TR950006400000245130049466</strong><br/>
+                                <strong>Bank Name: TURKIYE IS BANKASI A.S.</strong><br/>
+                                <strong>Bank Swift Code(BIC): ISBKTRIS</strong><br/>
+                                <strong>Account Type: EUR </strong><br/>
+                                <strong>Description field (required): iseser2020</strong><br/>
                             </p>
                         </div>
                     </div>
