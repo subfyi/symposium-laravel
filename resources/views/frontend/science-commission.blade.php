@@ -92,7 +92,7 @@
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Elif Akpınar Külekçi, Department of Landscape Architecture, Atatürk
-                                    University, Poland
+                                    University, Erzurum, Turkey.
                                 </td>
                             </tr>
                             <tr>
@@ -166,7 +166,7 @@
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Ir. Raf Dewıl, Chemical Engineering Department, Leuven Catholic
-                                    University, Belgıum
+                                    University, Belgium
                                 </td>
                             </tr>
                             <tr>
@@ -181,7 +181,7 @@
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Işık Sezen, Department of Landscape Architecture, Atatürk
-                                    University, Poland
+                                    University, Erzurum, Turkey.
                                 </td>
                             </tr>
                             <tr>
@@ -190,7 +190,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Leah Moore, Applied Science Faculty, Canberra University, Australıa</td>
+                                <td class="tg-0pky">Leah Moore, Applied Science Faculty, Canberra University, Australia</td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Maris Klavıns, Environmental Science Department, University Of Latvia,
