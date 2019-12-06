@@ -81,7 +81,7 @@ Route::prefix('user')->middleware('Izleyici')->group(function () {
     Route::post('/papers-all', 'AdminPostController@post_gorev_sil');
 
     Route::get('/get_user_mail', 'AdminGetController@get_user_mail');
-
+    Route::get('/get_tags', 'AdminGetController@get_tags');
 
     Route::get('/papers-add', 'AdminGetController@get_papers_add');
     Route::post('/papers-add', 'AdminPostController@post_papers_add');

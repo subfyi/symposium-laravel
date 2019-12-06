@@ -57,11 +57,21 @@ class AdminGetController extends AdminController
         if (strlen($request->q) < 3)
             return [];
 
-        $kullanicilar = Kullanicilar::where('email', 'like', '%' . $request->q . '%')->with('utitle')->select('name', 'surname', 'email', 'u_title')->get()
-            ->toArray();
+        $kullanicilar = DB::select('
+        SELECT name, surname, email FROM (
+            SELECT created_at, name, surname, email
+            FROM users
+            UNION SELECT created_at, name, surname, p_mail
+            FROM p_authors
+						ORDER BY created_at DESC
+        ) AS a
+        WHERE email like \'%'.$request->q.'%\'
+        GROUP BY email, name, surname
+
+        ');
 
         foreach ($kullanicilar as $kullanici) {
-            if ($kullanici['email'] == $request->q) {
+            if ($kullanici->email == $request->q) {
                 return ["items" => $kullanicilar];
             }
         }
@@ -69,6 +79,28 @@ class AdminGetController extends AdminController
         $yeni = [["email" => $request->q]];
 
         return ["items" => array_merge($yeni, $kullanicilar)];
+    }
+
+    Public function get_tags(Request $request)
+    {
+        if (strlen($request->q) < 1)
+            return [];
+
+        $tagler = Parameters::where('type', 'tagcon')
+                ->where('value', 'like', '%' . $request->q . '%')
+                ->select('value AS tag')
+                ->get()
+                ->toArray();
+
+        foreach ($tagler as $tag) {
+            if ($tag['tag'] == $request->q) {
+                return ["items" => []];
+            }
+        }
+
+        $yeni = [["tag" => $request->q]];
+
+        return ["items" => $tagler];//array_merge($yeni, $tagler)];
     }
 
     Public function get_announce_add()

@@ -720,7 +720,7 @@ class AdminPostController extends AdminController
         $resim_isim = $tarih . '_' . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
         $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
-        Storage::disk('uploads')->makeDirectory('dosya/gecici');
+        Storage::disk('uploads')->makeDirectory('dosya/user/' . Auth::user()->slug);
         Storage::disk('uploads')->put('dosya/gecici/' . $resim_isim, file_get_contents($resim->getRealPath()));
 
         return [
@@ -749,6 +749,14 @@ class AdminPostController extends AdminController
             $pap_keywords = "";
             foreach ($request->pap_keyword as $val) {
                 $pap_keywords = $val . '|' . $pap_keywords;
+
+                if(!Parameters::where('type', 'tagcon')->where('value', $val)->exists()) {
+                    Parameters::create([
+                        'type' => 'tagcon',
+                        'value' => $val,
+                        'item_num' => 0
+                    ]);
+                }
             }
 
             $gorevid = Gorevler::create([
@@ -760,6 +768,7 @@ class AdminPostController extends AdminController
                 'pap_type' => $request->pap_type,
                 'mes_congress' => $request->mes_congress,
                 'pap_creater' => Auth::user()->id,
+                'slug' => $slug
             ]);
 
 
@@ -789,8 +798,8 @@ class AdminPostController extends AdminController
             $d_slug = Kullanicilar::where('id', '=', Auth::user()->id)->first()->slug;
 
             $dosyalar = $request->dosyalar; //$request->file('dosyalar');
-            $fdosyalar = Input::file('fdosyalar'); //$request->file('fdosyalar');
-            $pdosyalar = Input::file('pdosyalar'); //$request->file('pdosyalar');
+            $fdosyalar = $request->fdosyalar; //$request->file('fdosyalar');
+            $pdosyalar = $request->pdosyalar; //$request->file('pdosyalar');
             if (!empty($dosyalar)) {
                 $resim = $dosyalar;
                 $resim_uzanti = pathinfo($dosyalar, PATHINFO_EXTENSION);
@@ -814,13 +823,13 @@ class AdminPostController extends AdminController
 
             if (!empty($fdosyalar)) {
                 $resim = $fdosyalar;
-                $resim_uzanti = $resim->getClientOriginalExtension();
-                $resim_boyutu = $resim->getSize();
-                $resim_isim = $tarih . '_' . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
-                $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
+                $resim_uzanti = pathinfo($resim, PATHINFO_EXTENSION);
+                $resim_boyutu = Storage::disk('uploads')->size('dosya/gecici/'.$resim);
+                $resim_isim = $tarih . '_' . str_slug(pathinfo($resim, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                $resim_isim_r = pathinfo($resim, PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
                 Storage::disk('uploads')->makeDirectory('dosya/' . $d_slug);
-                Storage::disk('uploads')->put('dosya/' . $d_slug . '/' . $resim_isim, file_get_contents($resim));
+                Storage::disk('uploads')->put('dosya/' . $d_slug . '/' . $resim_isim, Storage::disk('uploads')->get("dosya/gecici/".$resim));
 
                 Gorevfiles::create([
                     'slug' => $slug,
@@ -835,13 +844,13 @@ class AdminPostController extends AdminController
             }
             if (!empty($pdosyalar)) {
                 $resim = $pdosyalar;
-                $resim_uzanti = $resim->getClientOriginalExtension();
-                $resim_boyutu = $resim->getSize();
-                $resim_isim = $tarih . '_' . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
-                $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
-
+                $resim_uzanti = pathinfo($resim, PATHINFO_EXTENSION);
+                $resim_boyutu = Storage::disk('uploads')->size('dosya/gecici/'.$resim);
+                $resim_isim = $tarih . '_' . str_slug(pathinfo($resim, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                $resim_isim_r = pathinfo($resim, PATHINFO_FILENAME) . '.' . $resim_uzanti;
+                
                 Storage::disk('uploads')->makeDirectory('dosya/' . $d_slug);
-                Storage::disk('uploads')->put('dosya/' . $d_slug . '/' . $resim_isim, file_get_contents($resim));
+                Storage::disk('uploads')->put('dosya/' . $d_slug . '/' . $resim_isim, Storage::disk('uploads')->get("dosya/gecici/".$resim));
 
                 Gorevfiles::create([
                     'slug' => $slug,
