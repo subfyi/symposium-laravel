@@ -20,60 +20,61 @@
     <!--begin::Global Theme Styles(used by all pages) -->
 
     <!--begin:: Vendor Plugins -->
-    <link href="{{url('/')}}/cms/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/quill/dist/quill.snow.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/plugins/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/plugins/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/plugins/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{url('/')}}/cms/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/quill/dist/quill.snow.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/animate.css/animate.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/toastr/build/toastr.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/morris.js/morris.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/socicon/css/socicon.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/plugins/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/plugins/flaticon/flaticon.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/plugins/flaticon2/flaticon.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
 
     <!--end:: Vendor Plugins -->
-    <link href="{{url('/')}}/cms/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="{{url('/')}}/cms/css/style.bundle.css" rel="stylesheet" type="text/css"/>
 
     <!--begin:: Vendor Plugins for custom pages -->
-    <link href="{{url('/')}}/cms/plugins/custom/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/core/main.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/daygrid/main.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/list/main.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/timegrid/main.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-autofill-bs4/css/autoFill.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-colreorder-bs4/css/colReorder.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-fixedcolumns-bs4/css/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-rowgroup-bs4/css/rowGroup.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/jstree/dist/themes/default/style.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/jqvmap/dist/jqvmap.css" rel="stylesheet" type="text/css" />
-    <link href="{{url('/')}}/cms/plugins/custom/uppy/dist/uppy.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{url('/')}}/cms/plugins/custom/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/core/main.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/daygrid/main.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/list/main.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/@fullcalendar/timegrid/main.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-autofill-bs4/css/autoFill.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-colreorder-bs4/css/colReorder.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-fixedcolumns-bs4/css/fixedColumns.bootstrap4.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-rowgroup-bs4/css/rowGroup.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/jstree/dist/themes/default/style.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/jqvmap/dist/jqvmap.css" rel="stylesheet" type="text/css"/>
+    <link href="{{url('/')}}/cms/plugins/custom/uppy/dist/uppy.min.css" rel="stylesheet" type="text/css"/>
 
     <!--end:: Vendor Plugins for custom pages -->
     <!--end::Layout Skins -->
@@ -90,7 +91,11 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109514763-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
             gtag('js', new Date());
 
             gtag('config', 'UA-109514763-1');
@@ -123,7 +128,8 @@
         <div class="kt-header-mobile__nav">
             <div class="dropdown">
                 <button type="button" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24"
+                         version="1.1"
                          class="kt-svg-icon kt-svg-icon--md kt-svg-icon--success">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <rect x="0" y="0" width="24" height="24"/>
@@ -137,7 +143,7 @@
                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-md">
                     <ul class="kt-nav kt-nav--bold kt-nav--md-space kt-margin-t-20 kt-margin-b-20">
                         <li class="kt-nav__item">
-                            <a  class="kt-nav__link active" href="{{url('/')}}">
+                            <a class="kt-nav__link active" href="{{url('/')}}">
                                 <span class="kt-nav__link-icon"><i class="flaticon2-chart2"></i></span>
                                 <span class="kt-nav__link-text">Home</span>
                             </a>
@@ -187,45 +193,7 @@
 " class="logo-default">
                                 </a>
                             </div>
-                            <div class="kt-header__brand-nav">
-                                <div class="dropdown">
-                                    <button type="button" class="btn btn-pill btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="true">
-                                        More
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-fit dropdown-menu-md">
-                                        <ul class="kt-nav kt-nav--bold kt-nav--md-space kt-margin-t-20 kt-margin-b-20">
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link active" href="{{url('/')}}">
-                                                    <span class="kt-nav__link-icon"><i class="flaticon2-chart2"></i></span>
-                                                    <span class="kt-nav__link-text">Home</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a class="kt-nav__link" href="{{url('/')}}/user/">
-                                                    <span class="kt-nav__link-icon"><i class="flaticon2-chart2"></i></span>
-                                                    <span class="kt-nav__link-text">User Area</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a  class="kt-nav__link" href="{{url('/')}}/documents/">
-                                                    <span class="kt-nav__link-icon"><i class="flaticon2-chart2"></i></span>
-                                                    <span class="kt-nav__link-text">Documents</span>
-                                                </a>
-                                            </li>
-                                            <li class="kt-nav__item">
-                                                <a  class="kt-nav__link" href="{{url('/')}}/contact/">
-                                                    <span class="kt-nav__link-icon"><i class="flaticon2-chart2"></i></span>
-                                                    <span class="kt-nav__link-text">Contact</span>
-                                                </a>
-                                            </li>
 
-                                            <li class="kt-nav__separator"></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         <!-- end:: Brand -->
@@ -234,16 +202,15 @@
                         <div class="kt-header__topbar">
 
 
-
                             <!--begin: User bar -->
                             <div class="kt-header__topbar-item kt-header__topbar-item--user">
                                 <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,10px">
                                     <span class="kt-hidden kt-header__topbar-welcome">Hallo,</span>
                                     <span class="kt-hidden kt-header__topbar-username"> {{ Auth::user()->name }}</span>
                                     @if(isset(Auth::user()->logo))
-                                        <img src="/uploads/img/{{ Auth::user()->logo }}" class="kt-hidden-" alt="Pic" >
+                                        <img src="/uploads/img/{{ Auth::user()->logo }}" class="kt-hidden-" alt="Pic">
                                     @else
-                                        <img src="/uploads/img/logo.png" class="kt-hidden-" alt="Pic" >
+                                        <img src="/uploads/img/logo.png" class="kt-hidden-" alt="Pic">
                                     @endif
                                     <span class="kt-header__topbar-icon kt-header__topbar-icon--brand kt-hidden"><b>S</b></span>
                                 </div>
@@ -253,7 +220,7 @@
                                     <div class="kt-user-card kt-user-card--skin-light kt-notification-item-padding-x">
                                         <div class="kt-user-card__avatar">
                                             @if(isset(Auth::user()->logo))
-                                                <img class="kt-hidden-" alt="Pic" src="/uploads/img/{{ Auth::user()->logo }}" >
+                                                <img class="kt-hidden-" alt="Pic" src="/uploads/img/{{ Auth::user()->logo }}">
                                             @else
                                                 <img class="kt-hidden-" src="/uploads/img/logo.png" alt="Pic">
                                         @endif
@@ -284,10 +251,9 @@
                                         </a>
 
                                         <div class="kt-notification__custom kt-space-between">
-                                            <a href="/cikisyap" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign
+                                            <a ></a>
+                                            <a href="/cikisyap" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign
                                                 Out</a>
-                                            <a href="/admin/sss"  class="btn btn-clean btn-sm
-                                            btn-bold">SSS</a>
                                         </div>
                                     </div>
 
@@ -320,10 +286,6 @@
                                             <a href="{{url('/')}}/user/" class="kt-menu__link ">
                                                 <span class="kt-menu__link-text">Profile</span><i></i></a>
                                         </li>
-                                    @endif
-
-
-                                    @if(\Illuminate\Support\Facades\Auth::user()->yetki > 0)
 
                                         <li class="kt-menu__item  kt-menu__item--rel">
                                             <a href="{{url('/')}}/user/paper-add" class="kt-menu__link ">
@@ -331,22 +293,53 @@
                                                 Submission</span><i></i></a>
                                         </li>
 
-                                    @endif
-                                    @if(\Illuminate\Support\Facades\Auth::user()->yetki > 0)
-
                                         <li class="kt-menu__item  kt-menu__item--rel">
                                             <a href="{{url('/')}}/user/papers" class="kt-menu__link ">
                                                 <span class="kt-menu__link-text">Sended
                                                 Papers</span><i></i></a>
                                         </li>
 
-                                    @endif
 
+                                        <li class="kt-menu__item  kt-menu__item--rel">
+                                            <a href="{{url('/')}}/user/feedback/feedback-add" class="kt-menu__link ">
+                                                <span class="kt-menu__link-text">Add
+                                                Feedback</span><i></i></a>
+                                        </li>
+                                    @endif
 
 
                                     <li class="kt-menu__item  kt-menu__item--rel">
                                         <a href="{{url('/')}}/documents" class="kt-menu__link ">
                                             <span class="kt-menu__link-text">Documents</span><i></i></a>
+                                    </li>
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click"
+                                        aria-haspopup="true"><a
+                                                href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
+                                                    class="kt-menu__link-text">Old Symposiums</span><i
+                                                    class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+                                            <ul class="kt-menu__subnav">
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/documents/2019/"
+                                                                                                   class="kt-menu__link "><i
+                                                                class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                class="kt-menu__link-text">2019</span></a>
+                                                </li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/documents/2018/"
+                                                                                                   class="kt-menu__link "><i
+                                                                class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                class="kt-menu__link-text">2018</span></a>
+                                                </li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/documents/2017/" class="kt-menu__link "><i
+                                                                class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                class="kt-menu__link-text">2017</span></a>
+                                                </li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/documents/2016/"
+                                                                                                   class="kt-menu__link "><i
+                                                                class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                class="kt-menu__link-text">2016</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="kt-menu__item  kt-menu__item--rel">
                                         <a href="{{url('/')}}/contact" class="kt-menu__link ">
@@ -355,96 +348,105 @@
 
 
 
-
-
-                                        @if(\Illuminate\Support\Facades\Auth::user()->yetki <= 9)
-
-                                            <li class="kt-menu__item  kt-menu__item--rel">
-                                                <a href="{{url('/')}}/user/feedback/feedback-add" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Add
-                                                Feedback</span><i></i></a>
-                                            </li>
-
-                                        @endif
-
                                     @if(\Illuminate\Support\Facades\Auth::user()->yetki > 7)
 
 
-                                        <li class="kt-menu__item  kt-menu__item--rel">
-                                            <a href="{{url('/')}}/user/preparing" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Preparing</span><i></i></a>
-                                        </li>
-                                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a
+                                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click"
+                                            aria-haspopup="true"><a
                                                     href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
                                                         class="kt-menu__link-text">Admin</span><i
                                                         class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                             <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                                 <ul class="kt-menu__subnav">
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/papers-add" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Paper Add</span></a>
+
+                                                    <li class="kt-menu__item  kt-menu__item--rel">
+                                                        <a href="{{url('/')}}/user/preparing" class="kt-menu__link ">
+                                                            <span class="kt-menu__link-text">Preparing</span><i></i></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/papers-all" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">All Papers</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/papers-add"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Paper Add</span></a>
+                                                    </li>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/papers-all"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">All Papers</span></a>
                                                     </li>
                                                     <li class="kt-menu__item " aria-haspopup="true"><a href="/user/feedback" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Feedbacks</span></a>
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Feedbacks</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="/user/feedback/feedback-add" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Feedbacks</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="/user/feedback/feedback-add"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Add Feedbacks</span></a>
                                                     </li>
                                                 </ul>
-                                            </div>
-                                        </li>
-                                    @endif
-
-
-                                    @if(\Illuminate\Support\Facades\Auth::user()->yetki > 7)
-                                        <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a
-                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Types</span><i
-                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                            <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                                 <ul class="kt-menu__subnav">
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/is-turu" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Title Types</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/is-turu"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Title Types</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/is-turu-ekle" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Title Type</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/is-turu-ekle"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Add Title Type</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/malzeme-turu" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Type Types</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/malzeme-turu"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Type Types</span></a>
                                                     </li>
                                                     <li class="kt-nav__separator"></li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/malzeme-turu-ekle" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Type Type</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/malzeme-turu-ekle"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Add Type Type</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/uygulama-turu" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">PresentationTypes</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/uygulama-turu"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">PresentationTypes</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/uygulama-turu-ekle" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Presentation
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/uygulama-turu-ekle"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Add Presentation
                                                         Type</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/birim-turu" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Paper Types</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/birim-turu"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Paper Types</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/birim-turu-ekle" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Paper Type</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/birim-turu-ekle"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Add Paper Type</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/yetki-turu" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Authority Types</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/yetki-turu"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Authority Types</span></a>
                                                     </li>
-                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/yetki-turu-ekle" class="kt-menu__link "><i
-                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Authority Type</span></a>
+                                                    <li class="kt-menu__item " aria-haspopup="true"><a href="{{url('/')}}/user/tur/yetki-turu-ekle"
+                                                                                                       class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Add Authority Type</span></a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                     @endif
+
+
                                 </ul>
                             </div>
                             <div class="kt-header-toolbar">
 
-                                <?php echo "[" . date("Y-m-d") . "]";?>
+                                <?php echo "[".date("Y-m-d")."]";?>
                             </div>
                         </div>
 
@@ -506,7 +508,7 @@
                                 &copy; 2020 ISESER By <a href="https://sub.fyi/" target="_blank">Sub.fyi</a>
                             </div>
                             <div class="kt-footer__menu">
-                                <a href="{{url('/')}}/contact/" >Contact</a>
+                                <a href="{{url('/')}}/contact/">Contact</a>
                             </div>
                         </div>
                     </div>
@@ -574,7 +576,8 @@
 <script src="{{url('/')}}/cms/plugins/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
-<script src="{{url('/')}}/cms/plugins/general/plugins/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
+<script src="{{url('/')}}/cms/plugins/general/plugins/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js"
+        type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/js/global/integration/plugins/bootstrap-switch.init.js" type="text/javascript"></script>
@@ -608,7 +611,8 @@
 <script src="{{url('/')}}/cms/plugins/general/raphael/raphael.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/morris.js/morris.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
-<script src="{{url('/')}}/cms/plugins/general/plugins/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
+<script src="{{url('/')}}/cms/plugins/general/plugins/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js"
+        type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/plugins/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/general/counterup/jquery.counterup.js" type="text/javascript"></script>
@@ -690,7 +694,7 @@
 <script src="{{url('/')}}/js/messages_tr.min.js"></script>
 -->
 <style>
-    div.dataTables_wrapper div.dataTables_filter input{
+    div.dataTables_wrapper div.dataTables_filter input {
         width: 450px;
     }
 </style>
@@ -704,21 +708,19 @@
         airMode: false
     });
 
-    $('#kt_table_1').DataTable( {
+    $('#kt_table_1').DataTable({
         "lengthMenu": [[50, 100, 150, -1], [50, 100, 150, "All"]],
         dom: 'Bfrtip',
-        "order": [[ 0, 'desc' ]],
+        "order": [[0, 'desc']],
         buttons: [
             'excel', 'copy', 'pdf', 'pageLength'
         ]
-    } );
+    });
 
     $("#kt_datetimepicker_2").datetimepicker({
         format: 'yyyy-mm-dd hh:ii'
     });
 </script>
-
-
 
 
 <script src="https://cdn.jsdelivr.net/gh/alnorris/file-dialog/index.js"></script>
@@ -786,6 +788,7 @@
         ]
     }
 
+
 </script>
 <script type="application/ld+json" data-type="Organization">
     {
@@ -803,6 +806,7 @@
             }
         ]
     }
+
 
 </script>
 @yield('js')

@@ -754,7 +754,7 @@ class AdminPostController extends AdminController
                     Parameters::create([
                         'type' => 'tagcon',
                         'value' => $val,
-                        'item_num' => 0
+                        'item_num' => 1
                     ]);
                 }
             }
@@ -848,7 +848,7 @@ class AdminPostController extends AdminController
                 $resim_boyutu = Storage::disk('uploads')->size('dosya/gecici/'.$resim);
                 $resim_isim = $tarih . '_' . str_slug(pathinfo($resim, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
                 $resim_isim_r = pathinfo($resim, PATHINFO_FILENAME) . '.' . $resim_uzanti;
-                
+
                 Storage::disk('uploads')->makeDirectory('dosya/' . $d_slug);
                 Storage::disk('uploads')->put('dosya/' . $d_slug . '/' . $resim_isim, Storage::disk('uploads')->get("dosya/gecici/".$resim));
 

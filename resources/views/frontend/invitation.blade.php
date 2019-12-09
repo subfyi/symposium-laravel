@@ -30,7 +30,7 @@
                                 class="wpb_wrapper">
                             <div class="wpb_wrapper wpb_text_column td_block_wrap td_block_wrap vc_column_text
                                 td_uid_4_5c91423e838f6_rand  td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_4_5c91423e838f6"
-                            ">
+                            >
                             <div class="td-block-title-wrap"></div>
                             <p style="text-align: justify;">As an organizing commitee, we are honored to
                                 invite you to attend the International Symposium for Environmental Science and Engineering Research 2020 which will
