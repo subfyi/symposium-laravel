@@ -1301,7 +1301,8 @@
                         ISESER2020 which will be held on 29-31 May 2020 in, Manisa.
                         <div class="footer-email-wrap">Contact us: <a
                                     href="tel:iseser@iseser.com"><span>iseser@iseser.com</span></a><br>
-                            <a href="tel:+903322238630">Şükrü Dursun (office)</a>: +903322238630
+                            <a href="tel:+903322238630">Şükrü Dursun (office)</a>: +903322238630<br>
+                            <a href="tel:+902362013159">Nilgün Yenil Harmancı (office)</a>: +902362013159
 
                         </div>
                     </aside>

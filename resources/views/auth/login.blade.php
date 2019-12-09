@@ -14,14 +14,6 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">ISESER2020</div>
-                <div class="card-body">
-                    User Page is preparing, but you can register for now...
-                    <hr>
-                    <a href="/register">Register Page</a>
-                </div>
-            </div>
 
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>

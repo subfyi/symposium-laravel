@@ -55,7 +55,9 @@
                                                 <p>You can contact us by phone number for emergencies.     </p>
                                                 <ul>
                                                     <li><a href="tel:+903322238630">Şükrü Dursun (office)</a>: +903322238630 </li>
+                                                    <li><a href="tel:+902362013159">Nilgün Yenil Harmancı (office)</a>: +902362013159 </li>
                                                     <li><a href="tel:+905365954591">Şükrü Dursun (whatsapp)</a>: +905365954591 </li>
+                                                    <li><a href="tel:+905333449728">Nilgün Yenil Harmancı (whatsapp)</a>: +905333449728 </li>
                                                 </ul>
                                                 <p>For technical issues. </p>
                                                 <ul>

@@ -353,7 +353,7 @@
         "@type": "WebSite",
         "name": "iseser.com",
         "url": "https://iseser.com/",
-        "image": "https://iseser.com/wp-content/uploads/2017/11/v6_telifsiz-300x72.png",
+        "image": "https://iseser.com/doc/logo/v6_telifsiz-300x72.png",
         "sameAs": [
             "https://www.facebook.com/isesercom/",
             "https://iseser.com/",
@@ -366,7 +366,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://iseser.com/",
-        "logo":  "https://iseser.com/wp-content/uploads/2017/11/v6_telifsiz-300x72.png",
+        "logo":  "https://iseser.com/doc/logo/v6_telifsiz-300x72.png",
         "name": "iseser.com",
         "contactPoint": [
             {

@@ -118,7 +118,7 @@
         <a class="kt-header-mobile__logo" href="?page=index&demo=demo5">
             <img style="
     width: 190px;
-" alt="Logo" src="{{url('/')}}/wp-content/uploads/2017/11/v6_telifsiz-300x72.png"/>
+" alt="Logo" src="{{url('/')}}/doc/logo/v6_telifsiz-300x72.png"/>
         </a>
         <div class="kt-header-mobile__nav">
             <div class="dropdown">
@@ -181,7 +181,7 @@
                             <div class="kt-header__brand-logo">
 
                                 <a href="/admin">
-                                    <img src="/wp-content/uploads/2017/11/v6_telifsiz-300x72.png" alt="logo" style="
+                                    <img src="/doc/logo/v6_telifsiz-300x72.png" alt="logo" style="
 
     height: 50px;
 " class="logo-default">
@@ -320,10 +320,26 @@
                                             <a href="{{url('/')}}/user/" class="kt-menu__link ">
                                                 <span class="kt-menu__link-text">Profile</span><i></i></a>
                                         </li>
+                                    @endif
+
+
+                                    @if(\Illuminate\Support\Facades\Auth::user()->yetki > 0)
+
                                         <li class="kt-menu__item  kt-menu__item--rel">
-                                            <a href="{{url('/')}}/user/preparing" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Preparing</span><i></i></a>
+                                            <a href="{{url('/')}}/user/paper-add" class="kt-menu__link ">
+                                                <span class="kt-menu__link-text">Paper
+                                                Submission</span><i></i></a>
                                         </li>
+
+                                    @endif
+                                    @if(\Illuminate\Support\Facades\Auth::user()->yetki > 0)
+
+                                        <li class="kt-menu__item  kt-menu__item--rel">
+                                            <a href="{{url('/')}}/user/papers" class="kt-menu__link ">
+                                                <span class="kt-menu__link-text">Sended
+                                                Papers</span><i></i></a>
+                                        </li>
+
                                     @endif
 
 
@@ -339,26 +355,6 @@
 
 
 
-                                    @if(\Illuminate\Support\Facades\Auth::user()->yetki > 7)
-
-                                        @if(\Illuminate\Support\Facades\Auth::user()->yetki > 0)
-
-                                            <li class="kt-menu__item  kt-menu__item--rel">
-                                                <a href="{{url('/')}}/user/paper-add" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Paper
-                                                Submission</span><i></i></a>
-                                            </li>
-
-                                        @endif
-                                        @if(\Illuminate\Support\Facades\Auth::user()->yetki > 0)
-
-                                            <li class="kt-menu__item  kt-menu__item--rel">
-                                                <a href="{{url('/')}}/user/papers" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Sended
-                                                Papers</span><i></i></a>
-                                            </li>
-
-                                        @endif
 
 
                                         @if(\Illuminate\Support\Facades\Auth::user()->yetki <= 9)
@@ -371,9 +367,13 @@
 
                                         @endif
 
+                                    @if(\Illuminate\Support\Facades\Auth::user()->yetki > 7)
 
 
-
+                                        <li class="kt-menu__item  kt-menu__item--rel">
+                                            <a href="{{url('/')}}/user/preparing" class="kt-menu__link ">
+                                                <span class="kt-menu__link-text">Preparing</span><i></i></a>
+                                        </li>
                                         <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a
                                                     href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
                                                         class="kt-menu__link-text">Admin</span><i
@@ -484,8 +484,11 @@
                                     <div class="kt-footer__content">
                                         International Symposium for Environmental Science and Engineering Research (ISESER2020)<br>
                                         ISESER2020 which will be held on 29-31 May 2020 in, Manisa.
-                                        <div class="footer-email-wrap">Contact us: <a href="tel:iseser@iseser.com"><span>iseser@iseser.com</span></a><br>
+                                        <div class="footer-email-wrap">Contact us: <a href="tel:iseser@iseser.com"><span>iseser@iseser.com</span></a>
+                                            <br>
                                             <a href="tel:+903322238630">Şükrü Dursun (office)</a>: +903322238630
+                                            <br>
+                                            <a href="tel:+902362013159">Nilgün Yenil Harmancı (office)</a>: +902362013159
                                         </div>
 
                                     </div>
@@ -776,7 +779,7 @@
         "@type": "WebSite",
         "name": "iseser.com",
         "url": "https://iseser.com/",
-        "image": "https://iseser.com/wp-content/uploads/2017/11/v6_telifsiz-300x72.png",
+        "image": "https://iseser.com/doc/logo/v6_telifsiz-300x72.png",
         "sameAs": [
             "https://www.facebook.com/isesercom/",
             "https://iseser.com/",
@@ -789,7 +792,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://iseser.com/",
-        "logo":  "https://iseser.com/wp-content/uploads/2017/11/v6_telifsiz-300x72.png",
+        "logo":  "https://iseser.com/doc/logo/v6_telifsiz-300x72.png",
         "name": "iseser.com",
         "contactPoint": [
             {

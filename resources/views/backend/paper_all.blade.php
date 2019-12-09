@@ -26,18 +26,20 @@
                                                                    id="kt_table_1" style="width: 100%">
                                                                 <thead>
                                                                 <tr>
+                                                                    <th>Sended Date</th>
                                                                     <th>Title of Abstract:</th>
                                                                     <th>Topic of article</th>
                                                                     <th>Pap. Type</th>
                                                                     <th>Pre. Type</th>
                                                                     <th>Attachment</th>
-                                                                    <th>Sended Date</th>
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
 
                                                                 @foreach($tumgorevler as $gorev)
                                                                     <tr>
+                                                                        <td>{{$gorev->created_at->formatLocalized('%Y-%m-%d, %H:%M')}}</td>
+
                                                                         <td style="width: 20%">{{$gorev->pap_title}}</td>
                                                                         <td style="width: 20%">
                                                                             @if($gorev->topic)
@@ -59,10 +61,6 @@
                                                                                     <a href="{{url('/')}}/uploads/dosya/{{$gorev->user->slug}}/{{$dosya->f_dosyaisimi}}"><i class="fa fa-folder"></i> Download </a>
                                                                                 @endforeach
                                                                             @endif
-                                                                        </td>
-                                                                        <td>{{$gorev->created_at->formatLocalized('%Y-%m-%d, %H:%M')}}</td>
-
-
                                                                         </td>
                                                                     </tr>
                                                                 @endforeach
