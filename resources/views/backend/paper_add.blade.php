@@ -66,7 +66,7 @@
                                                                                     <label class="col-form-label col-lg-3 col-sm-12">Keywords (ENG)
                                                                                         *</label>
                                                                                     <div class=" col-lg-9 col-md-9 col-sm-12">
-                                                                                        <select class="form-control keyword-select  kt-select2"
+                                                                                        <select class="keyword-select form-control"
                                                                                                 multiple="multiple" name="pap_keyword[]" required></select>
                                                                                     </div>
                                                                                 </div>
