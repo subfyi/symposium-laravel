@@ -284,25 +284,25 @@
 
                                         <li class="kt-menu__item  kt-menu__item--rel">
                                             <a href="{{url('/')}}/user/" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Profile</span><i></i></a>
+                                                <span class="kt-menu__link-text text-dark">Profile</span><i></i></a>
                                         </li>
 
                                         <li class="kt-menu__item  kt-menu__item--rel">
                                             <a href="{{url('/')}}/user/paper-add" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Paper
+                                                <span class="kt-menu__link-text text-dark">Paper
                                                 Submission</span><i></i></a>
                                         </li>
 
                                         <li class="kt-menu__item  kt-menu__item--rel">
                                             <a href="{{url('/')}}/user/papers" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Sended
+                                                <span class="kt-menu__link-text text-dark">Sended
                                                 Papers</span><i></i></a>
                                         </li>
 
 
                                         <li class="kt-menu__item  kt-menu__item--rel">
                                             <a href="{{url('/')}}/user/feedback/feedback-add" class="kt-menu__link ">
-                                                <span class="kt-menu__link-text">Add
+                                                <span class="kt-menu__link-text text-dark">Add
                                                 Feedback</span><i></i></a>
                                         </li>
                                     @endif

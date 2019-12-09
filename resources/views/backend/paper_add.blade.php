@@ -58,7 +58,7 @@
                                                                                         :</label>
                                                                                     <div class="col-md-9 col-sm-9 col-xs-9">
                                                         <textarea id="summernote" name="pap_abstract"
-                                                                  class="form-control ">
+                                                                  class="form-control">
                                                         </textarea>
                                                                                     </div>
                                                                                 </div>
@@ -67,7 +67,7 @@
                                                                                         *</label>
                                                                                     <div class=" col-lg-9 col-md-9 col-sm-12">
                                                                                         <select class="keyword-select form-control"
-                                                                                                multiple="multiple" name="pap_keyword[]"></select>
+                                                                                                multiple="multiple" name="pap_keyword[]" required></select>
                                                                                     </div>
                                                                                 </div>
 
@@ -78,11 +78,11 @@
                                                                                     <div class="col-md-9 col-sm-9 col-xs-6">
 
                                                                                         <select class="form-control kt-select2"
-                                                                                                name="pap_topic_p">
+                                                                                                name="pap_topic_p" required>
 
                                                                                             <option disabled selected value> -- Select --</option>
                                                                                             @foreach(App\Models\Parameters::where('type', 'keywordcon')->get() as $topic)
-                                                                                            <option value="{{ $topic->id }}">{{ $topic->value }}</option>
+                                                                                                <option value="{{ $topic->id }}">{{ $topic->value }}</option>
                                                                                             @endforeach
                                                                                         </select>
 
@@ -97,7 +97,7 @@
                                                                                     <div class="col-md-9 col-sm-9 col-xs-6">
 
                                                                                         <select class="form-control"
-                                                                                                name="pre_type">
+                                                                                                name="pre_type" required>
                                                                                             <option disabled selected value> -- Select --</option>
                                                                                             @foreach($uygulamacon as $val)
                                                                                                 <option value='{{$val->item_num}}'> {{$val->value}}</option>
@@ -156,7 +156,7 @@
                                                                                     <div class="col-md-9 col-sm-9 col-xs-6">
 
                                                                                         <select class="form-control"
-                                                                                                name="pap_type">
+                                                                                                name="pap_type" required>
                                                                                             <option disabled selected value> -- Select --</option>
                                                                                             @foreach($birimcon as $val)
 
@@ -312,15 +312,15 @@
         });
 
         $(document).ready(function () {
-            $('form').on('submit', function(e) {
-                if(document.getElementById('dosyalar').$controller.$state !== 3 &&
+            $('form').on('submit', function (e) {
+                if (document.getElementById('dosyalar').$controller.$state !== 3 &&
                     document.getElementById('fdosyalar').$controller.$state !== 3 &&
                     document.getElementById('pdosyalar').$controller.$state !== 3) {
                     e.preventDefault();
                     e.stopImmediatePropagation();
 
-                    swal.fire('Hata', 'En az bir dosya yuklemeniz gerekiyor.', 'error');
-                    return ;
+                    swal.fire('Warning', 'You need to upload at least one file.', 'error');
+                    return;
                 }
 
                 var radio1 = $("input[name=correspond]");
@@ -328,36 +328,35 @@
 
                 var ok = false;
 
-                for(var i = 0; i < radio1.length; ++i) {
-                    if(radio1[i].checked) {
+                for (var i = 0; i < radio1.length; ++i) {
+                    if (radio1[i].checked) {
                         ok = true;
                     }
                 }
 
-                if(!ok) {
+                if (!ok) {
                     e.preventDefault();
                     e.stopImmediatePropagation();
 
-                    swal.fire('Hata', 'Corresponder secin.', 'error');
-                    return ;
+                    swal.fire('Warning', 'Select Corresponder.', 'error');
+                    return;
                 }
 
                 ok = false;
 
-                for(var i = 0; i < radio2.length; ++i) {
-                    if(radio2[i].checked) {
+                for (var i = 0; i < radio2.length; ++i) {
+                    if (radio2[i].checked) {
                         ok = true;
                     }
                 }
 
-                if(!ok) {
+                if (!ok) {
                     e.preventDefault();
                     e.stopImmediatePropagation();
 
-                    swal.fire('Hata', 'Presenter secin.', 'error');
-                    return ;
+                    swal.fire('Warning', 'Select Presenter.', 'error');
+                    return;
                 }
-
 
             });
 
@@ -369,8 +368,8 @@
                 uploadProgress: function (event, position, total, percentComplete) {
                     var percentVal = percentComplete + '%';
                     swal.fire({
-                        title: percentVal + ' Yükleniyor',
-                        text: ' Lütfen Bekleyiniz..',
+                        title: percentVal + ' Loading',
+                        text: ' Please wait..',
                         icon: 'info',
                     })
                 },
