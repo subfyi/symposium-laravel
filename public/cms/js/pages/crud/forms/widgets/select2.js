@@ -67,6 +67,20 @@ var KTSelect2 = function() {
             return repo.email || repo.text;
         }
 
+        function formatTag(repo) {
+            console.log(repo);
+            if (repo.loading) return null; //repo.text;
+            var markup = "<div class='select2-result-repository clearfix'>" +
+                "<div class='select2-result-repository__meta'>" +
+                "<div class='select2-result-repository__title'>" + (repo.tag || repo.text) + "</div>";
+            markup += "</div></div>";
+            return markup;
+        }
+
+        function formatTagSelection(repo) {
+            return repo.tag || repo.text;
+        }
+
 function selectyap(nerede) {
     nerede.find(".email-select").select2({
         placeholder: "Email Adress",
@@ -102,12 +116,53 @@ function selectyap(nerede) {
     })
         .on('select2:select', function (e) {
             if (e.params.data.name || e.params.data.surname) {
+                $(this).parents('tr').find('.name').attr('disabled', true);
+                $(this).parents('tr').find('.surname').attr('disabled', true);
                 $(this).parents('tr').find('.name').val(e.params.data.name);
                 $(this).parents('tr').find('.surname').val(e.params.data.surname);
+            } else {
+                $(this).parents('tr').find('.name').attr('disabled', false);
+                $(this).parents('tr').find('.surname').attr('disabled', false);
             }
+        });
+
+        nerede.find('.keyword-select').select2({
+            tags: true,
+            tokenSeparators: [',', ' '],
+            placeholder: "Keywords...",
+            ajax: {
+                url: "/user/get_tags",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        q: params.term,
+                        page: 1
+                    };
+                },
+                processResults: function (data, params) {
+                    params.page = params.page || 1;
+                    console.log(data.items);
+                    return {
+                        results: data.items.map(a => ({ id: a.tag, tag: a.tag })),
+                        pagination: {
+                            more: false,
+                        }
+                    };
+                },
+                cache: true
+            },
+            escapeMarkup: function (markup) {
+                return markup;
+            }, // let our custom formatter work
+            minimumInputLength: 1,
+            templateResult: formatTag, // omitted for brevity, see the source of this page
+            templateSelection: formatTagSelection // omitted for brevity, see the source of this page
         });
 }
 selectyap($("body"));
+
+
         $(".ekleme").on('click', function(e) {
             e.preventDefault();
             var num = $(".tablo tbody tr").length + 1;

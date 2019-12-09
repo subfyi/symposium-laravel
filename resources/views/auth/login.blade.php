@@ -22,7 +22,7 @@
                     <a href="/register">Register Page</a>
                 </div>
             </div>
-<!--
+
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -95,8 +95,6 @@
                        <hr>
                 </div>
             </div>
-
-            -->
         </div>
     </div>
 </div>

@@ -25,9 +25,14 @@ class Gorevler extends Model
         return $this->belongsTo('App\Models\Parameters', 'pre_type', 'item_num')->where('type','=','uygulamacon');
     }
 
+    public function topic()
+    {
+        return $this->belongsTo('App\Models\Parameters', 'pap_topic_p', 'id');
+    }
+
     public function dosyalar()
     {
-        return $this->belongsTo('App\Models\Gorevfiles', 'slug', 'slug');
+        return $this->hasMany('App\Models\Gorevfiles', 'slug', 'slug');
     }
 
     protected $dates = [

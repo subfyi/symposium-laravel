@@ -66,14 +66,8 @@
                                                                                     <label class="col-form-label col-lg-3 col-sm-12">Keywords (ENG)
                                                                                         *</label>
                                                                                     <div class=" col-lg-9 col-md-9 col-sm-12">
-                                                                                        <select class=" js-example-tokenizer form-control"
-                                                                                                multiple="multiple" name="pap_keyword[]">
-                                                                                            <option></option>
-                                                                                            <option>red</option>
-                                                                                            <option>blue</option>
-                                                                                            <option>green</option>
-
-                                                                                        </select>
+                                                                                        <select class="keyword-select form-control"
+                                                                                                multiple="multiple" name="pap_keyword[]"></select>
                                                                                     </div>
                                                                                 </div>
 
@@ -87,12 +81,9 @@
                                                                                                 name="pap_topic_p">
 
                                                                                             <option disabled selected value> -- Select --</option>
-                                                                                            <option value="0">Acoustic
-                                                                                                Engineering
-                                                                                            </option>
-                                                                                            <option value="1">Anthropology</option>
-                                                                                            <option value="2">Archaeology</option>
-                                                                                            <option value="3">Astrophysics</option>
+                                                                                            @foreach(App\Models\Parameters::where('type', 'keywordcon')->get() as $topic)
+                                                                                            <option value="{{ $topic->id }}">{{ $topic->value }}</option>
+                                                                                            @endforeach
                                                                                         </select>
 
                                                                                     </div>
