@@ -57,7 +57,7 @@
                                                                                     <label class="col-md-3 col-sm-3 col-xs-3">Abstract Text (ENG) *
                                                                                         :</label>
                                                                                     <div class="col-md-9 col-sm-9 col-xs-9">
-                                                        <textarea id="summernote" name="pap_abstract"
+                                                        <textarea id="summernote2" name="pap_abstract"
                                                                   class="form-control">
                                                         </textarea>
                                                                                     </div>
@@ -66,7 +66,7 @@
                                                                                     <label class="col-form-label col-lg-3 col-sm-12">Keywords (ENG)
                                                                                         *</label>
                                                                                     <div class=" col-lg-9 col-md-9 col-sm-12">
-                                                                                        <select class="keyword-select form-control"
+                                                                                        <select class="keyword-select"
                                                                                                 multiple="multiple" name="pap_keyword[]" required></select>
                                                                                     </div>
                                                                                 </div>
@@ -287,7 +287,7 @@
 @endsection
 @section('js')
     <script>
-        $('#summernote').summernote({
+        $('#summernote2').summernote({
             // Toolbar here
             dom: 'frtip',
             "pagingType": "full_numbers",
@@ -302,9 +302,9 @@
                 // ['fontname', ['fontname']],
                 // ['fontsize', ['fontsize']],
                 ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
+                // ['para', ['ul', 'ol', 'paragraph']],
                 ['height', ['height']],
-                ['table', ['table']],
+                // ['table', ['table']],
                 // ['insert', ['link', 'picture', 'hr']],
                 ['view', ['fullscreen'/*, 'codeview' */]],   // remove codeview button
                 //['help', ['help']]

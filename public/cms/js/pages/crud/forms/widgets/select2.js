@@ -1,7 +1,7 @@
 // Class definition
-var KTSelect2 = function() {
+var KTSelect2 = function () {
     // Private functions
-    var demos = function() {
+    var demos = function () {
         // basic
         $('#kt_select2_1, #kt_select2_1_validate').select2({
             placeholder: "Select a state"
@@ -81,89 +81,90 @@ var KTSelect2 = function() {
             return repo.tag || repo.text;
         }
 
-function selectyap(nerede) {
-    nerede.find(".email-select").select2({
-        placeholder: "Email Adress",
-        allowClear: true,
-        ajax: {
-            url: "/user/get_user_mail",
-            dataType: 'json',
-            delay: 250,
-            data: function (params) {
-                return {
-                    q: params.term,
-                    page: 1
-                };
-            },
-            processResults: function (data, params) {
-                params.page = params.page || 1;
-                return {
-                    results: data.items.map(a => ({id: a.email, email: a.email, name: a.name, surname: a.surname, utitle: a.utitle}))
-                        .filter(a => $(".email-select").toArray().map(a => a.value).indexOf(a.email) == -1),
-                    pagination: {
-                        more: false,
+        function selectyap(nerede) {
+            nerede.find(".email-select").select2({
+                placeholder: "Email Adress",
+                allowClear: true,
+                ajax: {
+                    url: "/user/get_user_mail",
+                    dataType: 'json',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            q: params.term,
+                            page: 1
+                        };
+                    },
+                    processResults: function (data, params) {
+                        params.page = params.page || 1;
+                        return {
+                            results: data.items.map(a => ({id: a.email, email: a.email, name: a.name, surname: a.surname, utitle: a.utitle}))
+                                .filter(a => $(".email-select").toArray().map(a => a.value).indexOf(a.email) == -1),
+                            pagination: {
+                                more: false,
+                            }
+                        };
+                    },
+                    cache: true
+                },
+                escapeMarkup: function (markup) {
+                    return markup;
+                }, // let our custom formatter work
+                minimumInputLength: 3,
+                templateResult: formatRepo, // omitted for brevity, see the source of this page
+                templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+            })
+                .on('select2:select', function (e) {
+                    if (e.params.data.name || e.params.data.surname) {
+                        $(this).parents('tr').find('.name').attr('disabled', true);
+                        $(this).parents('tr').find('.surname').attr('disabled', true);
+                        $(this).parents('tr').find('.name').val(e.params.data.name);
+                        $(this).parents('tr').find('.surname').val(e.params.data.surname);
+                    } else {
+                        $(this).parents('tr').find('.name').attr('disabled', false);
+                        $(this).parents('tr').find('.surname').attr('disabled', false);
                     }
-                };
-            },
-            cache: true
-        },
-        escapeMarkup: function (markup) {
-            return markup;
-        }, // let our custom formatter work
-        minimumInputLength: 3,
-        templateResult: formatRepo, // omitted for brevity, see the source of this page
-        templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
-    })
-        .on('select2:select', function (e) {
-            if (e.params.data.name || e.params.data.surname) {
-                $(this).parents('tr').find('.name').attr('disabled', true);
-                $(this).parents('tr').find('.surname').attr('disabled', true);
-                $(this).parents('tr').find('.name').val(e.params.data.name);
-                $(this).parents('tr').find('.surname').val(e.params.data.surname);
-            } else {
-                $(this).parents('tr').find('.name').attr('disabled', false);
-                $(this).parents('tr').find('.surname').attr('disabled', false);
-            }
-        });
+                });
 
-        nerede.find('.keyword-select').select2({
-            tags: true,
-            tokenSeparators: [',', ' '],
-            placeholder: "Keywords...",
-            ajax: {
-                url: "/user/get_tags",
-                dataType: 'json',
-                delay: 250,
-                data: function (params) {
-                    return {
-                        q: params.term,
-                        page: 1
-                    };
+            nerede.find('.keyword-select').select2({
+                tags: true,
+                tokenSeparators: [',', ' '],
+                placeholder: "Keywords...",
+                ajax: {
+                    url: "/user/get_tags",
+                    dataType: 'json',
+                    delay: 250,
+                    data: function (params) {
+                        return {
+                            q: params.term,
+                            page: 1
+                        };
+                    },
+                    processResults: function (data, params) {
+                        params.page = params.page || 1;
+                        console.log(data.items);
+                        return {
+                            results: data.items.map(a => ({id: a.tag, tag: a.tag})),
+                            pagination: {
+                                more: false,
+                            }
+                        };
+                    },
+                    cache: true
                 },
-                processResults: function (data, params) {
-                    params.page = params.page || 1;
-                    console.log(data.items);
-                    return {
-                        results: data.items.map(a => ({ id: a.tag, tag: a.tag })),
-                        pagination: {
-                            more: false,
-                        }
-                    };
-                },
-                cache: true
-            },
-            escapeMarkup: function (markup) {
-                return markup;
-            }, // let our custom formatter work
-            minimumInputLength: 1,
-            templateResult: formatTag, // omitted for brevity, see the source of this page
-            templateSelection: formatTagSelection // omitted for brevity, see the source of this page
-        });
-}
-selectyap($("body"));
+                escapeMarkup: function (markup) {
+                    return markup;
+                }, // let our custom formatter work
+                minimumInputLength: 1,
+                templateResult: formatTag, // omitted for brevity, see the source of this page
+                templateSelection: formatTagSelection // omitted for brevity, see the source of this page
+            });
+        }
+
+        selectyap($("body"));
 
 
-        $(".ekleme").on('click', function(e) {
+        $(".ekleme").on('click', function (e) {
             e.preventDefault();
             var num = $(".tablo tbody tr").length + 1;
             var degeer = `
@@ -258,7 +259,7 @@ selectyap($("body"));
         });
     }
 
-    var modalDemos = function() {
+    var modalDemos = function () {
         $('#kt_select2_modal').on('shown.bs.modal', function () {
             // basic
             $('#kt_select2_1_modal').select2({
@@ -283,9 +284,8 @@ selectyap($("body"));
         });
     }
 
-    // Public functions
     return {
-        init: function() {
+        init: function () {
             demos();
             modalDemos();
         }
@@ -293,6 +293,6 @@ selectyap($("body"));
 }();
 
 // Initialization
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
     KTSelect2.init();
 });
