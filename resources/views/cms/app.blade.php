@@ -676,7 +676,6 @@
 <script src="{{url('/')}}/cms/plugins/custom/jqvmap/dist/maps/jquery.vmap.europe.js" type="text/javascript"></script>
 <script src="{{url('/')}}/cms/plugins/custom/uppy/dist/uppy.min.js" type="text/javascript"></script>
 
-<script src="{{url('/')}}/cms/js/pages/crud/forms/widgets/select2.js" type="text/javascript"></script>
 <!--end:: Vendor Plugins for custom pages -->
 
 <!--end::Global Theme Bundle -->
@@ -767,14 +766,12 @@
             });
         }
     });
-
-    console.log("asdasdas");
-
     window.FileUploadComponent.register("file-picker", UploadController);
     window.MultipleFileUploadComponent.register("multi-file-upload", UploadController);
 </script>
 
 
+<script src="{{url('/')}}/cms/js/pages/crud/forms/widgets/select2.js" type="text/javascript"></script>
 <script type="application/ld+json" data-type="WebSite">
     {
         "@context": "https://schema.org",
