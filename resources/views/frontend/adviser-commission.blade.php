@@ -80,10 +80,6 @@
                                     Turkey</td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Israfil Şabikoğlu, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Physics Department, Manisa, Turkey</td>
-                            </tr>
-                            <tr>
                                 <td class="tg-0pky">Kübra Yazıcı, Agriculture Faculty, Gaziosmanpaşa University, Tokat,
                                     Turkey</td>
                             </tr>

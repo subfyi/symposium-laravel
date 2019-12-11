@@ -57,7 +57,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Bahriye Gülgün Aslan, Agriculture Faculty, Ege University, İzmir</td>
+                                <td class="tg-0pky">Bahriye Gülgün, Agriculture Faculty, Ege University, İzmir</td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Bahtiyar Öztürk, Engineering Faculty, Ondokuz Mayıs University, Samsun
