@@ -44,8 +44,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Deniz Demir Atlı, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Chemistry Department, Manisa, Turkey</td>
+                                <td class="tg-0pky">Deniz Demir Atlı, Sciences and Arts Faculty,  Celal Bayar University, Manisa, Turkey</td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Eda Güneş, Tourism Faculty, Necmettin Erbakan University, Konya,
@@ -56,8 +55,7 @@
                                     KTO Karatay University, Konya, Turkey</td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Feray Koçan, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Chemistry Department, Manisa, Turkey</td>
+                                <td class="tg-0pky">Feray Koçan, Sciences and Arts Faculty,  Celal Bayar University,  Manisa, Turkey</td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Flora Merko, Business Faculty, Aleksander Moisiu Durres University,
@@ -111,20 +109,17 @@
                                     Technical University, Konya, Turkey</td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Sermin Çam Kaynar, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Physics Department, Manisa, Turkey</td>
+                                <td class="tg-0pky">Sermin Çam Kaynar, Sciences and Arts Faculty,  Celal Bayar University, Manisa, Turkey</td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Umit Kaynar, Bakirçay University, Engineering and Architecture
-                                    Faculty, İzmir, Turkey</td>
+                                <td class="tg-0pky">Umit Kaynar, Engineering and Architecture Faculty, Bakirçay University, İzmir, Turkey</td>
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Yağmur Uysal, Engineering & Architecture Faculty, Mersin University,
                                     Mersin, Turkey</td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax">Yasemin Tuncer, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Physics Department, Manisa, Turkey</td>
+                                <td class="tg-0lax">Yasemin Tuncer, Sciences and Arts Faculty,  Celal Bayar University, Manisa, Turkey</td>
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Zehra Gök, Vocational School, Selçuk University, Konya, Turkey</td>

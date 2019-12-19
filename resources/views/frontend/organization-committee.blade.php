@@ -37,7 +37,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Nilgün Yenil Harmancı, Sciences and Arts Faculty, Celal Bayar Universty, Manisa, Turkey
+                                <td class="tg-0pky">Nilgün Yenil Harmancı, Sciences and Arts Faculty, Celal Bayar University, Manisa, Turkey
                                 </td>
                             </tr>
                             </tbody>
@@ -66,7 +66,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Israfil Şabikoğlu, Sciences and Arts Faculty,  Celal Bayar University, , Manisa, Turkey
+                                <td class="tg-0pky">Israfil Şabikoğlu, Sciences and Arts Faculty, Celal Bayar University, Manisa, Turkey
                                 </td>
                             </tr>
                             <tr>
@@ -91,7 +91,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Fadim Yemiş, Sciences and Arts Faculty,  Celal Bayar University, , Manisa, Turkey
+                                <td class="tg-0pky">Fadim Yemiş, Sciences and Arts Faculty, Celal Bayar University, Manisa, Turkey
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">Bircan Dindar, Solar Energy Institute, Ege University, Izmir, Turkey
                                 </td>
                             </tr>
                             <tr>
