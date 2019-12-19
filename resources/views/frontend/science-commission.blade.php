@@ -274,8 +274,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax">Nilgün Yenil Harmancı, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Chemistry Department, Manisa, Turkey
+                                <td class="tg-0lax">Nilgün Yenil Harmancı, Manisa Celal Bayar University, Sciences and Arts Faculty, , Manisa, Turkey
                                 </td>
                             </tr>
                             <tr>
@@ -326,9 +325,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax">Tülin Aydemir, Manisa Celal Bayar University, Sciences and Arts Faculty,
-                                    Chemistry Department,
-                                    Manisa, Turkey
+                                <td class="tg-0lax">Tülin Aydemir, Manisa Celal Bayar University, Sciences and Arts Faculty, , Manisa, Turkey
                                 </td>
                             </tr>
                             <tr>

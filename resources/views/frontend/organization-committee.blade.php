@@ -36,6 +36,10 @@
                                     Turkey
                                 </td>
                             </tr>
+                            <tr>
+                                <td class="tg-0pky">Nilgün Yenil Harmancı, Sciences and Arts Faculty, Celal Bayar Universty, Manisa, Turkey
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -45,11 +49,6 @@
                     <div class="td-page-content">
                         <table class="tg">
                             <tbody>
-                            <tr>
-                                <td class="tg-0pky">Nilgün Yenil Harmancı, Celal Bayar University, Faculty of Science
-                                    and Letters, Manisa, Turkey
-                                </td>
-                            </tr>
                             <tr>
                                 <td class="tg-0lax">Hysen Mankolli, Editor of IJEES, Health and Environment Association,
                                     Illinois, USA
@@ -67,8 +66,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Israfil Şabikoğlu, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Physics Department, Manisa, Turkey
+                                <td class="tg-0pky">Israfil Şabikoğlu, Sciences and Arts Faculty,  Celal Bayar University, , Manisa, Turkey
                                 </td>
                             </tr>
                             <tr>
@@ -93,9 +91,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Fadim Yemiş, Manisa Celal Bayar University, Sciences and Arts
-                                    Faculty, Chemistry Department,
-                                    Manisa, Turkey
+                                <td class="tg-0pky">Fadim Yemiş, Sciences and Arts Faculty,  Celal Bayar University, , Manisa, Turkey
                                 </td>
                             </tr>
                             <tr>
