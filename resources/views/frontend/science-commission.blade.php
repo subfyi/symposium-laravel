@@ -32,13 +32,13 @@
                     <div class="td-pb-span12 td-page-content">
                         <table class="tg">
                             <tr>
-                                <td class="tg-xldj">Abdelbasset Bessadok-Jemai, Institut Supérieur des Sciences Appliquées
-                                    et de Technologie de Gabès, Tunusia
+                                <td class="tg-0pky">Abdel-Moneim M. Galal Shaalan, Science Faculty, Taibah University,Saudi
+                                    Arabia
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Abdel-Moneim M. Galal Shaalan, Science Faculty, Taibah University,Saudi
-                                    Arabia
+                                <td class="tg-xldj">Abdelbasset Bessadok-Jemai, Institut Supérieur des Sciences Appliquées
+                                    et de Technologie de Gabès, Tunusia
                                 </td>
                             </tr>
                             <tr>
@@ -47,13 +47,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Amjad Shraım, Chemistry &amp; Earth Sciences Department, Qatar
-                                    University, Qatar
+                                <td class="tg-0pky">Ali Tor, Engineering and Architecture Faculty, Necmettin Erbakan
+                                    University, Konya, Turkey
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Ali Tor, Engineering and Architecture Faculty, Necmettin Erbakan
-                                    University, Konya, Turkey
+                                <td class="tg-0pky">Amjad Shraım, Chemistry &amp; Earth Sciences Department, Qatar
+                                    University, Qatar
                                 </td>
                             </tr>
                             <tr>
@@ -104,26 +104,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Filiz Nuran Acar, Engineering Faculty, Atatürk University, Erzurum
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky">Gürdal Tuncel, Engineering Faculty, Middle East Technical University, Ankara
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky">Fernardo Sa Neves Santos, Instituto Politécnico Da Guarda University,
-                                    Portugal
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="tg-0pky">Filiz Nuran Acar, Engineering Faculty, Atatürk University, Erzurum,
                                     Turkey
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Gürdal Tuncel, Engineering Faculty, Middle East Technical University,
-                                    Ankara, Turkey
+                                <td class="tg-0pky">Gürdal Tuncel, Engineering Faculty, Middle East Technical University, Ankara
                                 </td>
                             </tr>
                             <tr>
@@ -165,13 +151,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Ir. Raf Dewıl, Chemical Engineering Department, Leuven Catholic
-                                    University, Belgium
+                                <td class="tg-0pky">Indumathi M Nambı, Civil Engineering Department, Indian Institute of
+                                    Technology Madras, India
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Indumathi M Nambı, Civil Engineering Department, Indian Institute of
-                                    Technology Madras, India
+                                <td class="tg-0pky">Ir. Raf Dewıl, Chemical Engineering Department, Leuven Catholic
+                                    University, Belgium
                                 </td>
                             </tr>
                             <tr>
@@ -193,6 +179,10 @@
                                 <td class="tg-0pky">Leah Moore, Applied Science Faculty, Canberra University, Australia</td>
                             </tr>
                             <tr>
+                                <td class="tg-0lax">Levent ALTAŞ, Engineering Faculty, Aksaray University, Aksaray
+                                </td>
+                            </tr>
+                            <tr>
                                 <td class="tg-0pky">Maris Klavıns, Environmental Science Department, University Of Latvia,
                                     Latvia
                                 </td>
@@ -208,11 +198,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Mirela Llika (Çekani), Faculty of Natural Sciences, University of
-                                    Tirana, Tirana
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="tg-0lax">Mehmet Emin Argun, Engineering and Natural Sciences Faculty, Konya
                                     Technical University, Konya, Turkey
                                 </td>
@@ -222,12 +207,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax">Levent ALTAŞ, Engineering Faculty, Aksaray University, Aksaray
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">Mohammad Shahrıarı, Product &amp; Production Development Department,
-                                    Chalmers University Of Thechnology, Sweden
+                                <td class="tg-0pky">Mirela Llika (Çekani), Faculty of Natural Sciences, University of
+                                    Tirana, Tirana
                                 </td>
                             </tr>
                             <tr>
@@ -236,8 +217,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax">Mustapha Hasnaoui, University of Sultan Moulay Slimane, Department of
-                                    Life Sciences Faculty of Sciences and Techniques, Morocco
+                                <td class="tg-0lax">Mohammad Shahriari, Product &amp; Production Development Department,
+                                    Chalmers University Of Thechnology, Sweden
                                 </td>
                             </tr>
                             <tr>
@@ -247,6 +228,11 @@
                             <tr>
                                 <td class="tg-0lax">Mustafa Tabakcı, Engineering and Natural Sciences Faculty, Konya
                                     Technical University, Konya, Turkey
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Mustapha Hasnaoui, University of Sultan Moulay Slimane, Department of
+                                    Life Sciences Faculty of Sciences and Techniques, Morocco
                                 </td>
                             </tr>
                             <tr>
@@ -310,11 +296,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax">Victor A.Dryban, Rock Pressure Department, National Academy Of Sciences
-                                    Of Ukraine, Ukraine
-                                </td>
-                            </tr>
-                            <tr>
                                 <td class="tg-0lax">Tarit Roychowdhury, School Of Environmental Studies, Jadavpur
                                     University, India
                                 </td>
@@ -331,6 +312,11 @@
                             <tr>
                                 <td class="tg-0lax">Umar Hamzah , Science and Technology Faculty, Malaysia National
                                     University, Malaysia
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Victor A.Dryban, Rock Pressure Department, National Academy Of Sciences
+                                    Of Ukraine, Ukraine
                                 </td>
                             </tr>
                             <tr>

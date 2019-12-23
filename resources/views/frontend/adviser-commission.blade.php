@@ -101,15 +101,15 @@
                                     Technical University, Konya, Turkey</td>
                             </tr>
                             <tr>
+                                <td class="tg-0pky">Sermin Çam Kaynar, Sciences and Arts Faculty,  Celal Bayar University, Manisa, Turkey</td>
+                            </tr>
+                            <tr>
                                 <td class="tg-0pky">Sevda Ocak, Engineering Faculty, Giresun University, Giresun, Turkey
                                 </td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Sezen Küçükçongar, Engineering and Natural Sciences Faculty, Konya
                                     Technical University, Konya, Turkey</td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky">Sermin Çam Kaynar, Sciences and Arts Faculty,  Celal Bayar University, Manisa, Turkey</td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">Umit Kaynar, Engineering and Architecture Faculty, Bakirçay University, İzmir, Turkey</td>

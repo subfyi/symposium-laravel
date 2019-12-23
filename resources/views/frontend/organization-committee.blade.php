@@ -50,13 +50,18 @@
                         <table class="tg">
                             <tbody>
                             <tr>
-                                <td class="tg-0lax">Hysen Mankolli, Editor of IJEES, Health and Environment Association,
-                                    Illinois, USA
+                                <td class="tg-0lax"> Arzu Ege, Celal Bayar University, Sciences and Arts Faculty,
+                                    Manisa,
+                                    Turkey
                                 </td>
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Bahriye Gülgün, Agriculture Faculty, Ege University, İzmir,
                                     Turkey
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">Bircan Dindar, Solar Energy Institute, Ege University, Izmir, Turkey
                                 </td>
                             </tr>
                             <tr>
@@ -66,12 +71,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Israfil Şabikoğlu, Sciences and Arts Faculty, Celal Bayar University, Manisa, Turkey
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky">Şerife Yurdagül Kumcu, Engineering and Architecture Faculty,
-                                    Necmettin Erbakan University, Konya,
+                                <td class="tg-0lax">Emre Dalkılıç, Engineering and Natural Sciences Faculty, Konya
+                                    Technical University, Konya,
                                     Turkey
                                 </td>
                             </tr>
@@ -81,8 +82,21 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="tg-0pky">Fadim Yemiş, Sciences and Arts Faculty, Celal Bayar University, Manisa, Turkey
+                                </td>
+                            </tr>
+                            <tr>
                                 <td class="tg-0lax">Fatma Kunt, Engineering and Architecture Faculty, Necmettin Erbakan
                                     University, Konya, Turkey
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Hysen Mankolli, Editor of IJEES, Health and Environment Association,
+                                    Illinois, USA
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">Israfil Şabikoğlu, Sciences and Arts Faculty, Celal Bayar University, Manisa, Turkey
                                 </td>
                             </tr>
                             <tr>
@@ -91,39 +105,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Fadim Yemiş, Sciences and Arts Faculty, Celal Bayar University, Manisa, Turkey
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky">Bircan Dindar, Solar Energy Institute, Ege University, Izmir, Turkey
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">Zeynep Cansu Ayturan, Engineering and Natural Sciences Faculty,
-                                    Konya Technical University, Konya,
-                                    Turkey
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">Yasin Akın Ayturan, Engineering Faculty, KTO Karatay University,
-                                    Konya, Turkey
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">Emre Dalkılıç, Engineering and Natural Sciences Faculty, Konya
-                                    Technical University, Konya,
-                                    Turkey
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">Tülin Aydemir, Celal Bayar University, Sciences and Arts Faculty,
-                                    Manisa,
-                                    Turkey
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">Yüksel Abalı, Celal Bayar University, Sciences and Arts Faculty,
-                                    Manisa,
+                                <td class="tg-0pky">Şerife Yurdagül Kumcu, Engineering and Architecture Faculty,
+                                    Necmettin Erbakan University, Konya,
                                     Turkey
                                 </td>
                             </tr>
@@ -134,8 +117,25 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax"> Arzu Ege, Celal Bayar University, Sciences and Arts Faculty,
+                                <td class="tg-0lax">Tülin Aydemir, Celal Bayar University, Sciences and Arts Faculty,
                                     Manisa,
+                                    Turkey
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Yasin Akın Ayturan, Engineering Faculty, KTO Karatay University,
+                                    Konya, Turkey
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Yüksel Abalı, Celal Bayar University, Sciences and Arts Faculty,
+                                    Manisa,
+                                    Turkey
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Zeynep Cansu Ayturan, Engineering and Natural Sciences Faculty,
+                                    Konya Technical University, Konya,
                                     Turkey
                                 </td>
                             </tr>

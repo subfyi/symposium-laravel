@@ -28,8 +28,6 @@
                                 <p>The contents of articles and posters may include, but are not limited to, the
                                     following topics.</p>
                                 <ul>
-                                    <li>Water Pollution</li>
-                                    <li>Wastewater Pollution</li>
                                     <li>Air Pollution</li>
                                     <li>Soil Pollution</li>
                                     <li>Solid Waste Management</li>
@@ -50,6 +48,8 @@
                                     <li>Pasture and Environment</li>
                                     <li>Environmental Health</li>
                                     <li>Environmental Landscape</li>
+                                    <li>Water Pollution</li>
+                                    <li>Wastewater Pollution</li>
                                 </ul>
                                 <p>Related topics</p>
                             </div>
