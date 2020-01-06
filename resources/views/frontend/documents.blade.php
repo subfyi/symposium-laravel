@@ -29,6 +29,10 @@
                             <div class="td-block-title-wrap"></div>
                             <ul class="icon">
                                 <li class="star"><a href="https://iseser.com/user/">REGISTRATION (url)</a></li>
+                                <li class="star"><a href="https://iseser.com/doc/2020/ISESER2020_BANNER.pdf" target="_blank"
+                                                    rel="noopener noreferrer">BANNER (pdf)</a></li>
+                                <li class="star"><a href="https://iseser.com/doc/2020/ISESER2020_BROCHURE.pdf" target="_blank"
+                                                    rel="noopener noreferrer">BROCHURE (pdf)</a></li>
                                 <li class="star"><a href="https://iseser.com/doc/2020/ISESER2020_Abstract_Template.docx"
                                                     target="_blank" rel="noopener noreferrer">Abstract Template
                                         (docx)</a></li>
@@ -40,18 +44,13 @@
                                 </li>
                                 <!--
 
-                                <li class="star"><a href="https://iseser.com/doc/2019/ISESER2019_BANNER.pdf" target="_blank"
-                                                    rel="noopener noreferrer">BANNER (pdf)</a></li>
-                                <li class="star"><a href="https://iseser.com/doc/2019/ISESER2019_BROCHURE.pdf" target="_blank"
-                                                    rel="noopener noreferrer">BROCHURE (pdf)</a></li>
-
                                 <li class="star"><a href="https://iseser.com/doc/2019/ISESER2019-FINAL-PROGRAM.pdf?e7" target="_blank"
                                                     rel="noopener noreferrer">SYMPOSIUM FINAL PROGRAM  </a></li>
                                 <li class="star"><a href="https://iseser.com/doc/2019/ISESER2019-ABSTRACT-BOOK.pdf?e6" target="_blank"
                                                     rel="noopener noreferrer">SYMPOSIUM ABSTRACT BOOK  </a></li>
                                 <li class="star"><a href="https://iseser.com/doc/2019/ISESER2019-PROCEEDING-BOOK.pdf?e3" target="_blank"
                                                     rel="noopener noreferrer">SYMPOSIUM PROCEEDING BOOK  </a></li>
--->
+                                -->
 
                             </ul>
                         </div>

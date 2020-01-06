@@ -55,23 +55,13 @@
                         <table class="tg">
                             <tbody>
                             <tr>
-                                <td class="tg-0lax">Ahmad Muhammed Ahmed, Agribusiness &amp; Applied Economic, Tanta University, EGYPT</td>
-                            </tr>
-                            <tr>
                                 <td class="tg-0lax">Cezar Kongoli, National Oceanic and Atmospheric Administration, University of Maryland, USA</td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">Gurashi Nikolaoy, University Of Patras, Greece</td>
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Hysen Mankolli, Editor of IJEES, Health and Environment Association, Illinois, USA</td>
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Lyudmyla Symochko, Uzhhorod National University, Ukraine</td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0lax">M. Subhan Qureshi, Chief Patron Dairy Science Park University of Agriculture Peshawar, Pakistan
-                                </td>
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Massimo Zucchettı, Dipartimento Di Energetica, Torino Polytechnic University, Italy</td>
