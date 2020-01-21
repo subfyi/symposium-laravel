@@ -30,7 +30,10 @@
                             <table>
                                 <tbody>
                                 <tr>
-                                    <td>Prof. Dr. Ahmet ATAÇ, Manisa Celal Bayar University Rector, Manisa, Turkey</td>
+                                    <td>Prof. Dr. Ahmet Ataç, Manisa Celal Bayar University Rector, Manisa, Turkey</td>
+                                </tr>
+                                <tr>
+                                    <td>Prof. Dr. Alush Musaj, University of Mitrovica “Isa Boletini” (UMIB), Mitrovica, Kosovo</td>
                                 </tr>
                                 <tr>
                                     <td>Prof. Dr. Babür Özçelik, Konya Technical University Rector, Konya, Turkey</td>

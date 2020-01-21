@@ -264,6 +264,10 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="tg-0lax">Nurten Deva, University of Mitrovica “Isa Boletini” (UMIB), Mitrovica, Kosovo
+                                </td>
+                            </tr>
+                            <tr>
                                 <td class="tg-0lax">Rüdiger Anlauf, Applied Sciences, Osnabrueck University, Germany</td>
                             </tr>
                             <tr>
