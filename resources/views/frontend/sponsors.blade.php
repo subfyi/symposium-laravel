@@ -123,6 +123,24 @@
                                 </a></div>
                         </div>
                     </div>
+                    <div class="vc_column td_uid_17_5c9142463435b_rand  wpb_column vc_column_container td-pb-span3">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_wrapper td_block_wrap vc_raw_html td_uid_18_5c91424634461_rand ">
+                                <a id="demoimage" target="_blank" href="http://www.journaloflandscapeecology.cz/index.php?page=home">
+                                    <img src="{{url('/')}}/doc/logo/journaloflandscapeecology.jpg" alt="" width="300"
+                                         height="300"/>
+                                </a></div>
+                        </div>
+                    </div>
+                    <div class="vc_column td_uid_17_5c9142463435b_rand  wpb_column vc_column_container td-pb-span3">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_wrapper td_block_wrap vc_raw_html td_uid_18_5c91424634461_rand ">
+                                <a id="demoimage" target="_blank" href="https://www.inderscience.com/jhome.php?jcode=ijenvh">
+                                    <img src="{{url('/')}}/doc/logo/inderscience.jpg" alt="" width="300"
+                                         height="300"/>
+                                </a></div>
+                        </div>
+                    </div>
                     <div class="vc_column td_uid_21_5c914246346ab_rand  wpb_column vc_column_container td-pb-span4">
                         <div class="wpb_wrapper"></div>
                     </div>
