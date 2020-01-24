@@ -59,27 +59,27 @@
                                  data-td-block-uid="td_uid_5_5c9142457dac2"
                             ">
                             <div class="td-block-title-wrap"></div>
-                            <!--
+
                             <p>Please send the required fee to IBAN address given below and please write the "iseser2020" in the description field.
                                 <br>(<span style="color: #ff0000;"><strong>There is no fee refund.</strong></span>)</p>
                             <p>
                                 <strong>Account Type (Only):</strong> TRY // The bank make exchange from the daily exchange rate.<br/>
-                                <strong>Account Holder:</strong> Vehbi AKYILDIZ<br/>
-                                <strong>Account IBAN:</strong> TR950006400000245130049466<br/>
-                                <strong>Bank Name:</strong> TURKIYE IS BANKASI A.S.<br/>
-                                <strong>Bank Swift Code(BIC):</strong> ISBKTRIS<br/>
-                                <strong>Description field (required):</strong> iseser2020<br/>
-                                !--  <strong>Maximum Submission: </strong> --
+                                <strong>Account Holder:</strong> Cbü Strateji Geliş.dai Bşk<br/>
+                                <strong>Account IBAN:</strong> TR950001000188401982925416<br/>
+                                <strong>Bank Name:</strong> Ziraat Bank<br/>
+                                <strong>Bank Swift Code(BIC):</strong> TCZBTR2A<br/>
+                                <strong>Description field (required):</strong> iseser 2020<br/>
+                                <!--  <strong>Maximum Submission: </strong> -->
                             </p>
                             <hr/>
                             <p>
                                 <strong>Account Type:</strong> EUR <br/>
-                                <strong>Account Holder:</strong> Vehbi AKYILDIZ<br/>
-                                <strong>Account IBAN:</strong> TR950006400000245130049466<br/>
-                                <strong>Bank Name:</strong> TURKIYE IS BANKASI A.S.<br/>
-                                <strong>Bank Swift Code(BIC):</strong> ISBKTRIS<br/>
-                                <strong>Description field (required):</strong> iseser2020<br/>
-                            </p>-->
+                                <strong>Account Holder:</strong> Cbü Strateji Geliş.dai Bşk<br/>
+                                <strong>Account IBAN:</strong> TR680001000188401982925417<br/>
+                                <strong>Bank Name:</strong> Ziraat Bank<br/>
+                                <strong>Bank Swift Code(BIC):</strong> TCZBTR2A<br/>
+                                <strong>Description field (required):</strong> iseser 2020<br/>
+                            </p>
                         </div>
                     </div>
                 </div>
