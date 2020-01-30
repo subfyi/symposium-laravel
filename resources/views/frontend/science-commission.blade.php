@@ -183,6 +183,10 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="tg-0pky">Marcelo Enrique Conti, Rome sapienza University, Italy
+                                </td>
+                            </tr>
+                            <tr>
                                 <td class="tg-0pky">Maris Klavıns, Environmental Science Department, University Of Latvia,
                                     Latvia
                                 </td>
@@ -265,6 +269,10 @@
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Nurten Deva, University of Mitrovica “Isa Boletini” (UMIB), Mitrovica, Kosovo
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Petr Madera, Mendel University, Czech Republic
                                 </td>
                             </tr>
                             <tr>
