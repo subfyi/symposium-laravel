@@ -100,6 +100,11 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="tg-0pky">Lyudmila Symochko, SFaculty of Biology, Uzhhorod National University, Uzhhorod, Ukraine
+                                </td>
+                            </tr>
+
+                            <tr>
                                 <td class="tg-0lax">Muhammed Kamil Öden, Vocational School, Selcuk University, Konya,
                                     Turkey
                                 </td>
