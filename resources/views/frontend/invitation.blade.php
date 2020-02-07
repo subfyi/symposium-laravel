@@ -4,17 +4,20 @@
 
     <title>INVITATION - ISESER</title>
     <meta name="description"
-          content="Organizasyon Komitesi olarak 25-27 Mayıs 2019 tarihlerinde Konya’da gerçekleşecek olan Çevre Bilimleri ve Mühendisliği Araştırmaları Uluslararası"/>
+          content="As an organizing commitee, we are honored to invite you to attend the International Symposium for Environmental Science and
+          Engineering  Research 2020 which will be held  on 29-31 May 2020 in, Manisa."/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="INVITATION - ISESER"/>
     <meta property="og:description"
-          content="Organizasyon Komitesi olarak 25-27 Mayıs 2019 tarihlerinde Konya’da gerçekleşecek olan Çevre Bilimleri ve Mühendisliği Araştırmaları Uluslararası"/>
+          content="As an organizing commitee, we are honored to invite you to attend the International Symposium for Environmental Science and
+          Engineering  Research 2020 which will be held  on 29-31 May 2020 in, Manisa."/>
     <meta property="og:url" content="https://iseser.com/invitation/"/>
     <meta property="og:site_name" content="ISESER"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:description"
-          content="Organizasyon Komitesi olarak 25-27 Mayıs 2019 tarihlerinde Konya’da gerçekleşecek olan Çevre Bilimleri ve Mühendisliği Araştırmaları Uluslararası"/>
+          content="As an organizing commitee, we are honored to invite you to attend the International Symposium for Environmental Science and
+          Engineering  Research 2020 which will be held  on 29-31 May 2020 in, Manisa."/>
     <meta name="twitter:title" content="INVITATION - ISESER"/>
 @endsection
 
@@ -32,15 +35,24 @@
                                 td_uid_4_5c91423e838f6_rand  td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_4_5c91423e838f6"
                             >
                             <div class="td-block-title-wrap"></div>
-                            <p style="text-align: justify;">As an organizing commitee, we are honored to
-                                invite you to attend the International Symposium for Environmental Science and Engineering Research 2020 which will
-                                be held on 29-31 May 2020 at Konya. This event will be a useful for researchers, engineers, students, academics and
-                                anyone interested in environmental engineering and science. Through the conference, it will be possible to establish
-                                new partnerships, to share knowledge and experiences.</p>
-                            <p style="text-align: justify;">The purpose of the symposium is to give information about the environmental sciences and
-                                engineering to participants. In this symposium all participants will take advantage about environmental topics with
-                                the help of foreign participants and several poster and oral presentations. Also, this symposium aims to provide
-                                connections for students and to provide opportunities for experts to share and discuss their experiences.</p>
+                                <p style="text-align: justify;">As an organizing commitee, we are honored to invite you
+                                    to
+                                    attend the International Symposium for Environmental Science and Engineering
+                                    Research
+                                    2020 which will be held on 29-31 May 2020 in, Manisa.
+                                    This event will be a useful for
+                                    researchers, engineers, students, academics and anyone interested in environmental
+                                    engineering and science. Through the conference, it will be possible to establish
+                                    new
+                                    partnerships, to share knowledge and experiences.</p>
+                                <p style="text-align: justify;">The purpose of the symposium is to give information
+                                    about
+                                    the environmental sciences and engineering to participants. In this symposium all
+                                    participants will take advantage about environmental topics with the help of foreign
+                                    participants and several poster and oral presentations. Also, this symposium aims to
+                                    provide connections for students and to provide opportunities for experts to share
+                                    and
+                                    discuss their experiences.</p>
                             <p style="text-align: justify;">Received papers will be accepted after peer review and all accepted articles will be
                                 printed in the proceeding book.</p>
                         </div>
