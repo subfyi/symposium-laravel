@@ -183,7 +183,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="tg-0pky">Lyudmila Symochko, SFaculty of Biology, Uzhhorod National University, Uzhhorod, Ukraine
+                                <td class="tg-0pky">Lyudmyla Symochko, Faculty of Biology, Uzhhorod National University, Uzhhorod, Ukraine
                                 </td>
                             </tr>
                             <tr>
