@@ -11,7 +11,7 @@ class Gorevfiles extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User', 'grv_icerik_olusturan', 'id');
+        return $this->belongsTo('App\User', 'f_icerik_olusturan', 'id');
     }
 
     public function yorumlar()

@@ -18,9 +18,11 @@ use App\Models\Parameters;
 use App\Models\Pauthor;
 use App\Models\Sss;
 use App\Models\Blog;
+use App\Models\Dosyalar;
 use App\Models\Hakkimizda;
 use App\Models\Kategori;
 use App\Models\Kullanicilar;
+use Illuminate\Support\Str;
 use App\User;
 use Auth;
 use Faker\Provider\File;
@@ -711,8 +713,8 @@ class AdminPostController extends AdminController
 
     public function post_upload(Request $request)
     {
-        $resim = $request->file('dosya');//Input::file('dosya');
-
+        $resim = $request->file('dosya');
+        
         $tarih = str_slug(Carbon::now());
 
         $resim_uzanti = $resim->getClientOriginalExtension();
@@ -720,14 +722,32 @@ class AdminPostController extends AdminController
         $resim_isim = $tarih . '_' . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
         $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
-        Storage::disk('uploads')->makeDirectory('dosya/user/' . Auth::user()->slug);
-        Storage::disk('uploads')->put('dosya/gecici/' . $resim_isim, file_get_contents($resim->getRealPath()));
+        $auth_user = Auth::user();
+
+        if(!$auth_user) {
+            $auth_user = auth('api')->user();
+        }
+
+        $id = (string)Str::uuid();
+
+        Storage::disk('uploads')->makeDirectory('dosya/' . $id);
+        Storage::disk('uploads')->put('dosya/' . $id . "/" . $resim_isim, file_get_contents($resim->getRealPath()));
+
+        $dosya = Dosyalar::create([
+            "f_icerik_olusturan" => $auth_user->id,
+            "f_dosyayeri" => 1,
+            "r_dosyaisimi" => $resim->getClientOriginalName(),
+            "f_dosyaisimi" => $resim_isim,
+            "f_klasorismi" => $id,
+            "f_dosya_uzanti" => $resim_uzanti,
+            "f_dosya_boyut" => $resim_boyutu
+        ]);
 
         return [
-            "id" => $resim_isim,
-            "name" => $resim_isim_r,
+            "id" => $dosya->id,
+            "name" => $resim->getClientOriginalName(),
             "size" => $resim_boyutu,
-            "acess_url" => ""
+            "access_url" => '/uploads/dosya/' . $id . '/' . $resim_isim
         ];
     }
 
@@ -770,7 +790,6 @@ class AdminPostController extends AdminController
                 'pap_creater' => Auth::user()->id,
                 'slug' => $slug
             ]);
-
 
             $allEmails = $request->a_email;
             $allNames = $request->a_name;

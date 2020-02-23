@@ -11,7 +11,27 @@
 |
 */
 
+header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, PUT, POST, PATCH, DELETE, OPTIONS');
+
+
 Auth::routes();
+
+Route::group(['prefix' => 'api', 'middleware' => ['auth:api'], 'namespace' => 'Apim', 'as' => 'api.'], function () {
+    Route::get('parameters/{type}', 'TurlerController@nlist');
+    Route::get('parameters/{type}/{id}', 'TurlerController@nget');
+    Route::post('parameters/{type}', 'TurlerController@npost');
+    Route::patch('parameters/{type}/{id}', 'TurlerController@npatch');
+    Route::delete('parameters/{type}/{id}', 'TurlerController@ndel');
+
+    Route::get('myself', 'KullaniciController@myself');
+    Route::get('users', 'KullaniciController@json');
+    Route::apiResource('kullanicilar', 'UsersController');
+    Route::apiResource('submission', 'SubmissionController');
+    Route::apiResource('author', 'AuthorController');
+});
+
 Route::get('/girisyap', 'HomeGetController@get_login');
 Route::get('/cikisyap', 'HomeGetController@get_logout');
 
