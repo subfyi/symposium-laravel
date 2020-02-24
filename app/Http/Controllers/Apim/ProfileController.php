@@ -12,13 +12,13 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Facades\Image;
 
-class KullaniciController extends Controller
+class ProfileController extends Controller
 {
     public function get(Request $request) {
         return auth('api')->user();
     }
 
     public function update(Request $request) {
-        
+
     }
 }

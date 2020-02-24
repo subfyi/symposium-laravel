@@ -18,7 +18,7 @@ header('Access-Control-Allow-Methods: GET, PUT, POST, PATCH, DELETE, OPTIONS');
 
 Auth::routes();
 
-Route::group(['prefix' => 'api', 'middleware' => ['auth:api'], 'namespace' => 'Apim', 'as' => 'api.'], function () {
+Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Apim', 'as' => 'api.'], function () {
     Route::get('parameters/{type}', 'TurlerController@nlist');
     Route::get('parameters/{type}/{id}', 'TurlerController@nget');
     Route::post('parameters/{type}', 'TurlerController@npost');

@@ -17,12 +17,12 @@ class KullaniciController extends Controller
     public function json() {
         return [
             "myId" => auth('api')->id(),
-            "kullanicilar" => Kullanicilar::orderBy('name', 'asc')->select('id', 'name', 'email')->get()
+            "kullanicilar" => Kullanicilar::orderBy('name', 'asc')->select('id', 'name', 'surname', 'email')->get()
         ];
     }
 
     public function myself() {
-        return Kullanicilar::where('id', auth('api')->id())->select('id', 'name', 'email', 'yetki')->first();
+        return Kullanicilar::where('id', auth('api')->id())->select('id', 'name', 'surname', 'email', 'yetki')->first();
     }
 
     public function me(Request $request) {
