@@ -90,7 +90,7 @@ class SubmissionController extends Controller
                 Pauthor::create([
                     'p_id' => $id,
                     'p_user' => auth('api')->user()->id,
-                    'p_mail' => $author['p_email'],
+                    'p_mail' => $author['p_mail'],
                     'name' => $author['name'],
                     'surname' => $author['surname'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
