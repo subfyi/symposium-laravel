@@ -25,7 +25,7 @@ class HomeGetController extends HomeController
     }
     Public function get_index()
     {
-        return redirect('https://portal.iseser.com/');
+        return view('frontend.index');
     }
     Public function get_honorary_committee()
     {
