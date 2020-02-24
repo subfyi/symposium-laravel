@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/user';
+    protected $redirectTo = 'https://portal.iseser.com/';
 
     /**
      * Create a new controller instance.

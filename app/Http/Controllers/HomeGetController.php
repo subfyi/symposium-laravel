@@ -12,16 +12,15 @@ class HomeGetController extends HomeController
 {
     Public function get_login()
     {
-        return redirect('/login');
+        return redirect('https://portal.iseser.com/');
     }
     Public function get_403()
     {
-        return redirect('/login');
+        return redirect('https://portal.iseser.com/');
     }
     Public function get_logout()
     {
-        Auth::logout();
-        return redirect('/');
+        return redirect('https://portal.iseser.com/');
     }
     Public function get_index()
     {
