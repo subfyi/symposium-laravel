@@ -85,7 +85,7 @@
                                             <form id="contact" method="post">
                                                 <div class="form-group">
                                                     <p>Please register from <a
-                                                                href="/user/"><span>USER AREA</span></a>.
+                                                                href="https://portal.iseser.com/"><span>USER AREA</span></a>.
                                                     </p>
                                                 </div>
                                             </form>
@@ -103,7 +103,7 @@
                                                     <p>The abstracts will be prepared in accordance with the <a
                                                                 href="../documents/">full text preperation form</a> and
                                                         will be upload from <a
-                                                                href="/user/"><span>USER AREA</span></a> in MS Word
+                                                                href="https://portal.iseser.com/"><span>USER AREA</span></a> in MS Word
                                                         format until 14th Jun, 2020.
                                                     </p>
                                                 </div>

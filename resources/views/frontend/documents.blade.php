@@ -28,7 +28,7 @@
                             ">
                             <div class="td-block-title-wrap"></div>
                             <ul class="icon">
-                                <li class="star"><a href="https://iseser.com/user/">REGISTRATION (url)</a></li>
+                                <li class="star"><a href="https://portal.iseser.com/">REGISTRATION (url)</a></li>
                                 <li class="star"><a href="https://iseser.com/doc/2020/ISESER2020_BANNER.pdf" target="_blank"
                                                     rel="noopener noreferrer">BANNER (pdf)</a></li>
                                 <li class="star"><a href="https://iseser.com/doc/2020/ISESER2020_BROCHURE.pdf" target="_blank"

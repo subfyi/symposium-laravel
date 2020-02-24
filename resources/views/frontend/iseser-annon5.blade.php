@@ -75,7 +75,7 @@
                                     <div class="col-md-5 nopadding">
 
                                         <div class="form-group">
-                                            <p>Full paper submission is now open in <a href="https://iseser.com/user/paper-add">user area</a>. There are three choices for paper submission.
+                                            <p>Full paper submission is now open in <a href="https://portal.iseser.com/submission/create">user area</a>. There are three choices for paper submission.
 
                                             <ul>
                                                 <li>If you want your paper will be published in proceeding book, please submit your full paper written in english language and appropriate with template given in the documents and choose the option of (Proceeding Book).
