@@ -30,6 +30,8 @@ Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Ap
     Route::apiResource('kullanicilar', 'UsersController');
     Route::apiResource('submission', 'SubmissionController');
     Route::apiResource('author', 'AuthorController');
+    Route::apiResource('profile', 'ProfileController');
+
 });
 
 Route::get('/girisyap', 'HomeGetController@get_login');

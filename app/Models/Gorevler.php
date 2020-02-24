@@ -17,12 +17,12 @@ class Gorevler extends Model
 
     public function parampap()
     {
-        return $this->belongsTo('App\Models\Parameters', 'pap_type', 'item_num')->where('type','=','birimcon');
+        return $this->belongsTo('App\Models\Parameters', 'pap_type', 'id');
     }
 
     public function parampre()
     {
-        return $this->belongsTo('App\Models\Parameters', 'pre_type', 'item_num')->where('type','=','uygulamacon');
+        return $this->belongsTo('App\Models\Parameters', 'pre_type', 'id');
     }
 
     public function topic()

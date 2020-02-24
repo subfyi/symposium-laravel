@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Gorevler;
 use App\Models\Parameters;
 use App\Models\Pauthor;
+use Exception;
 
 class SubmissionController extends Controller
 {
@@ -46,6 +47,10 @@ class SubmissionController extends Controller
     public function show($id)
     {
         $all = Gorevler::with('user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya', 'poster_presentation_dosya')->findOrFail($id);
+
+        if(auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
+            throw new Exception("Yetkiniz yok");
+        }
 
         return $all;
     }
@@ -99,6 +104,12 @@ class SubmissionController extends Controller
 
     public function update(Request $request, $id)
     {
+        $all = Gorevler::with('user')->findOrFail($id);
+
+        if(auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
+            throw new Exception("Yetkiniz yok");
+        }
+
         $pap_keywords = $request->pap_keyword;
 
         $keywords = explode("|",$request->pap_keyword);
