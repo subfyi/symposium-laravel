@@ -38,12 +38,7 @@
                         <div class="wpb_wrapper wpb_text_column td_block_wrap td_block_wrap vc_column_text td_uid_5_5c9142443efcd_rand  td-pb-border-top td_block_template_1"
                              data-td-block-uid="td_uid_5_5c9142443efcd">
                         <div class="td-block-title-wrap"></div>
-                        <ul>
-                            <li><span style="color: #ff0000;">&#8220;THE POSTER NEED TO BE 70X90 CM TO BE SEEN IN THE TEMPLATE.&#8221;</span>
-                            </li>
-                            <li><span style="color: #ff0000;">&#8220;MAXIMUM PAGE NUMBER WHICH WILL BE USED IN ABSTRACT TEXTS SHOULD NOT BE EXCEEDED 1.&#8221;</span>
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
             </div>
