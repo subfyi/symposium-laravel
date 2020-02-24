@@ -80,14 +80,14 @@ Route::post('/f_delete', 'AdminPostController@post_f_delete');
 Route::post('/file_delete', 'AdminPostController@post_file_delete');
 Route::post('/dosya-sil', 'AdminPostController@post_dosya_sil');
 
-Route::prefix('cms')->middleware('Izleyici')->group(function () {
+Route::prefix('cms')->middleware('Admin')->group(function () {
     Route::get('/', 'AdminGetController@get_profile');
     Route::post('/', 'AdminPostController@post_profile');
 
 });
 
 Route::post('/upload', 'AdminPostController@post_upload');
-Route::prefix('user')->middleware('Izleyici')->group(function () {
+Route::prefix('user')->middleware('Admin')->group(function () {
     Route::get('/', 'AdminGetController@get_profile');
     Route::post('/', 'AdminPostController@post_profile');
 
