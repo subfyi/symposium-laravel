@@ -8,11 +8,11 @@
     <meta property="og:title" content="DOCUMENTS - ISESER"/>
     <meta property="og:url" content="https://iseser.com/documents/"/>
     <meta property="og:site_name" content="ISESER"/>
-    <meta property="og:image" content="https://selcukcevre.com/images/poster2.jpg"/>
-    <meta property="og:image:secure_url" content="https://selcukcevre.com/images/poster2.jpg"/>
+    <meta property="og:image" content="https://iseser.com/images/poster2.jpg"/>
+    <meta property="og:image:secure_url" content="https://iseser.com/images/poster2.jpg"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:title" content="DOCUMENTS - ISESER"/>
-    <meta name="twitter:image" content="https://selcukcevre.com/images/poster2.jpg"/>
+    <meta name="twitter:image" content="https://iseser.com/images/poster2.jpg"/>
 @endsection
 
 @section('content')

@@ -71,6 +71,10 @@ class HomeGetController extends HomeController
     {
         return view('frontend.documents');
     }
+    Public function get_documents_all()
+    {
+        return view('frontend.documents_all');
+    }
 
     Public function get_documents_2019()
     {

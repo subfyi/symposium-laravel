@@ -54,6 +54,7 @@ Route::get('/sponsors', 'HomeGetController@get_sponsors');
 Route::get('/contact', 'HomeGetController@get_contact');
 
 Route::get('/documents/', 'HomeGetController@get_documents');
+Route::get('/documents/all', 'HomeGetController@get_documents_all');
 Route::get('/documents/2019', 'HomeGetController@get_documents_2019');
 Route::get('/documents/2018', 'HomeGetController@get_documents_2018');
 Route::get('/documents/2017', 'HomeGetController@get_documents_2017');
