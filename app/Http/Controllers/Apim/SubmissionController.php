@@ -57,10 +57,10 @@ class SubmissionController extends Controller
 
     public function store(Request $request)
     {
-        $pap_keywords = "";
-        foreach ($request->pap_keyword as $val) {
-            $pap_keywords = $val . '|' . $pap_keywords;
+        $pap_keywords = $request->pap_keyword;
 
+        $keywords = explode("|",$request->pap_keyword);
+        foreach ($keywords as $val) {
             if(!Parameters::where('type', 'tagcon')->where('value', $val)->exists()) {
                 Parameters::create([
                     'type' => 'tagcon',
