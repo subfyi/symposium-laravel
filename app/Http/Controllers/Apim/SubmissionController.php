@@ -80,9 +80,9 @@ class SubmissionController extends Controller
             'mes_congress' => $request->mes_congress,
             'pap_creater' => auth('api')->user()->id,
             'slug' => str_slug($request->pap_title),
-            'abstract_dosya' => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : NULL,
-            'full_paper_dosya' => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : NULL,
-            'poster_presentation_dosya' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL
+            'abstract_dosya_id' => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : NULL,
+            'full_paper_dosya_id' => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : NULL,
+            'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL
         ])->id;
 
         if(isset($request->authors)) {
