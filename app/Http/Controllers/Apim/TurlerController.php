@@ -40,7 +40,7 @@ class TurlerController extends Controller
     {
         $paramcons = Parameters::with([])->where('type', $type);
 
-        return $paramcons->where('item_num', $id)->first();
+        return $paramcons->where('id', $id)->first();
     }
 
     public function npost($type, Request $request)
