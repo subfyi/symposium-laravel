@@ -1100,7 +1100,7 @@
                                         href="/documents/">DOCUMENTS</a></li>
                             <li id="menu-item-898"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-898"><a
-                                        href="/user/">USER AREA</a></li>
+                                        href="https://portal.iseser.com/">USER AREA</a></li>
                         </ul>
                     </li>
                     <li id="menu-item-374"
@@ -1115,7 +1115,7 @@
 
                     <li id="menu-item-368"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a
-                                href="/user/">USER ACTIONS</a></li>
+                                href="https://portal.iseser.com/">USER ACTIONS</a></li>
 
                 </ul>
             </div>
@@ -1165,7 +1165,7 @@
                                 </li>
                                 <li id="menu-item-900"
                                     class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-900">
-                                    <a href="/user/">USER AREA</a></li>
+                                    <a href="https://portal.iseser.com/">USER AREA</a></li>
                                 <li id="menu-item-442"
                                     class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-442">
                                     <a href="/contact/">CONTACT</a></li>
@@ -1235,7 +1235,7 @@
                                         <li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-371">
                                             <a href="/documents/">DOCUMENTS</a></li>
                                         <li class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-898">
-                                            <a href="/user/">USER AREA</a></li>
+                                            <a href="https://portal.iseser.com/">USER AREA</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-374">
@@ -1245,7 +1245,7 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-368">
                                     <a href="/contact/">CONTACT</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-368">
-                                    <a href="/user/">USER AREA</a></li>
+                                    <a href="https://portal.iseser.com/">USER AREA</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1326,7 +1326,7 @@
                                 <a href="/sponsors/">SPONSORS</a></li>
                             <li id="menu-item-901"
                                 class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-901">
-                                <a href="/user/">USER AREA</a></li>
+                                <a href="https://portal.iseser.com/">USER AREA</a></li>
                             <li id="menu-item-443"
                                 class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-443">
                                 <a href="/contact/">CONTACT</a></li>
