@@ -5,19 +5,19 @@
     <title>INVITATION - ISESER</title>
     <meta name="description"
           content="As an organizing commitee, we are honored to invite you to attend the International Symposium for Environmental Science and
-          Engineering  Research 2020 which will be held  on 29-31 May 2020 in, Manisa."/>
+          Engineering  Research 2020 which will be held  on 4-5 July 2020 in, Manisa."/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="INVITATION - ISESER"/>
     <meta property="og:description"
           content="As an organizing commitee, we are honored to invite you to attend the International Symposium for Environmental Science and
-          Engineering  Research 2020 which will be held  on 29-31 May 2020 in, Manisa."/>
+          Engineering  Research 2020 which will be held  on 4-5 July 2020 in, Manisa."/>
     <meta property="og:url" content="https://iseser.com/invitation/"/>
     <meta property="og:site_name" content="ISESER"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:description"
           content="As an organizing commitee, we are honored to invite you to attend the International Symposium for Environmental Science and
-          Engineering  Research 2020 which will be held  on 29-31 May 2020 in, Manisa."/>
+          Engineering  Research 2020 which will be held  on 4-5 July 2020 in, Manisa."/>
     <meta name="twitter:title" content="INVITATION - ISESER"/>
 @endsection
 
@@ -39,7 +39,7 @@
                                     to
                                     attend the International Symposium for Environmental Science and Engineering
                                     Research
-                                    2020 which will be held on 29-31 May 2020 in, Manisa.
+                                    2020 which will be held on 4-5 July 2020 in, Manisa.
                                     This event will be a useful for
                                     researchers, engineers, students, academics and anyone interested in environmental
                                     engineering and science. Through the conference, it will be possible to establish

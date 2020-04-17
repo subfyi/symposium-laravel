@@ -28,7 +28,7 @@
                                         <div class="wpb_gmaps_widget wpb_content_element td-pb-span7">
 
                                             <div class="form-group">
-                                                <p>ISESER2020  which will be held on 29-31 May 2020 in, <a
+                                                <p>ISESER2020  which will be held on 4-5 July 2020 in, <a
                                                             href="https://goo.gl/maps/n7i6pPyJEsJsyphd9" target="_blank"> <b>Suleyman Demirel
                                                             Cultural Center, Uncubozköy Campus</b></a>, Manisa. </p>
                                                 <ul>

@@ -35,13 +35,25 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Normal (Until 19 April 2020)</strong></td>
+                                        <td><strong>Online (Until 25 May 2020)</strong></td>
+                                        <td>40 € (₺ for equal price)</td>
+                                        <td>20 € (₺ for equal price)</td>
+                                        <td>Free</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Normal (Until 25 May 2020)</strong></td>
                                         <td>50 € (₺ for equal price)</td>
                                         <td>20 € (₺ for equal price)</td>
                                         <td>Free</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Late</strong></td>
+                                        <td><strong>Late Online</strong></td>
+                                        <td>70 € (₺ for equal price)</td>
+                                        <td>25 € (₺ for equal price)</td>
+                                        <td>Free</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Late Normal</strong></td>
                                         <td>80 € (₺ for equal price)</td>
                                         <td>30 € (₺ for equal price)</td>
                                         <td>Free</td>

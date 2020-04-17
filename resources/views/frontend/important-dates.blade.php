@@ -26,7 +26,7 @@
                     <div class="td-page-content">
                         <p>Registration and Abstract Submission Date: 19 Apr 2020<br />
                             Full Text Deadline: 14 Jun 2020<br />
-                            Symposium Date: 29-31 May 2020</p>
+                            Symposium Date: 4-5 July 2020</p>
                     </div>
                 </div>
             </div>

@@ -485,7 +485,7 @@
                                     <h3 class="kt-footer__title">ABOUT US</h3>
                                     <div class="kt-footer__content">
                                         International Symposium for Environmental Science and Engineering Research (ISESER2020)<br>
-                                        ISESER2020 which will be held on 29-31 May 2020 in, Manisa.
+                                        ISESER2020 which will be held on 4-5 July 2020 in, Manisa.
                                         <div class="footer-email-wrap">Contact us: <a href="tel:iseser@iseser.com"><span>iseser@iseser.com</span></a>
                                             <br>
                                             <a href="tel:+903322238630">Şükrü Dursun (office)</a>: +903322238630

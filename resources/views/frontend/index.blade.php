@@ -556,7 +556,7 @@
                                 to
                                 attend the International Symposium for Environmental Science and Engineering
                                 Research
-                                2020 which will be held on 29-31 May 2020 in, Manisa.
+                                2020 which will be held on 4-5 July 2020 in, Manisa.
                                 This event will be a useful for
                                 researchers, engineers, students, academics and anyone interested in environmental
                                 engineering and science. Through the conference, it will be possible to establish
