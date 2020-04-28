@@ -174,7 +174,7 @@ class SubmissionController extends Controller
 
     public function destroy($id)
     {
-        Gorevler::where('id', $id)->get([ 'pap_status' => '3' ]);
+        Gorevler::where('id', $id)->update([ 'pap_status' => '3' ]);
 
         return response(null, 204);
     }
