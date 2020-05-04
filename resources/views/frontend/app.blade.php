@@ -1061,8 +1061,8 @@
         <div class="td-mobile-content">
             <div class="menu-td-demo-header-menu-container">
                 <ul id="menu-td-demo-header-menu" class="td-mobile-main-menu">
-                    <li id="menu-item-279"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-278 current_page_item menu-item-first menu-item-279">
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398">
                         <a href="/">HOME</a></li>
                     <li id="menu-item-398"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398">
@@ -1207,7 +1207,7 @@
                         </div>
                         <div class="menu-td-demo-header-menu-container">
                             <ul id="menu-td-demo-header-menu-1" class="sf-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-278 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-279">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-374">
                                     <a href="/">HOME</a></li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-398">
                                     <a href="#">COMMITEES</a>
@@ -1318,16 +1318,16 @@
                 <div class="td-pb-span td-sub-footer-menu">
                     <div class="menu-td-demo-footer-menu-container">
                         <ul id="menu-td-demo-footer-menu" class="td-subfooter-menu">
-                            <li id="menu-item-444"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-278 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-444">
+                            <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-445">
                                 <a href="/" aria-current="page">HOME</a></li>
-                            <li id="menu-item-445"
+                            <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-445">
                                 <a href="/sponsors/">SPONSORS</a></li>
-                            <li id="menu-item-901"
+                            <li
                                 class="menu-item menu-item-type-custom menu-item-object-custom td-menu-item td-normal-menu menu-item-901">
                                 <a href="https://portal.iseser.com/">USER AREA</a></li>
-                            <li id="menu-item-443"
+                            <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-443">
                                 <a href="/contact/">CONTACT</a></li>
                         </ul>

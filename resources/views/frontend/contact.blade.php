@@ -19,6 +19,28 @@
                     <div class="vc_row td_uid_2_5c91424644f16_rand  wpb_row td-pb-row">
                         <div class="vc_column td_uid_3_5c914246450a0_rand  wpb_column vc_column_container td-pb-span12">
                             <div class="wpb_wrapper">
+                                <div class="td_block_wrap td_block_trending_now td_uid_4_5c91421deb035_rand td-pb-border-top td_block_template_1"
+                                     data-td-block-uid="td_uid_4_5c91421deb035">
+                                    <div id=td_uid_4_5c91421deb035 class="td_block_inner">
+                                        <div class="td-block-row">
+                                            <div class="td-trending-now-wrapper" id="td_uid_4_5c91421deb035"
+                                                 data-start="">
+                                                <div class="td-trending-now-title">!</div>
+                                                <div class="td-trending-now-display-area">
+                                                    <div class="td_module_trending_now td_module_no_thumb td-trending-now-post-0 td-trending-now-post">
+                                                        <h3 class="entry-title td-module-title"><a
+                                                                    href="symposium-announced/"
+                                                                    rel="bookmark"
+                                                                    title="ANNOUNCEMENT.">ANNOUNCEMENT</a></h3>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wpb_wrapper td_block_separator td_block_wrap vc_separator td_uid_5_5c91421dec025_rand  td_separator_solid td_separator_center">
+                                    <span style="border-color:#EBEBEB;border-width:1px;width:100%;"></span></div>
 
                                 <div class="td_block_wrap td_block_text_with_title td_uid_5_5c91424645514_rand td-pb-border-top td_block_template_1"
                                      data-td-block-uid="td_uid_5_5c91424645514">

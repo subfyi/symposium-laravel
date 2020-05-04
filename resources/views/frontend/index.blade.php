@@ -28,18 +28,6 @@
                         <div class="wpb_wrapper">
                             <div class="td_block_wrap td_block_trending_now td_uid_4_5c91421deb035_rand td-pb-border-top td_block_template_1"
                                  data-td-block-uid="td_uid_4_5c91421deb035">
-                                <script>var block_td_uid_4_5c91421deb035 = new tdBlock();
-                                    block_td_uid_4_5c91421deb035.id = "td_uid_4_5c91421deb035";
-                                    block_td_uid_4_5c91421deb035.atts = '{"limit":5,"sort":"","post_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","category_id":"","category_ids":"","custom_title":"","custom_url":"","show_child_cat":"","sub_cat_ajax":"","ajax_pagination":"","header_color":"","header_text_color":"","ajax_pagination_infinite_stop":"","td_column_number":3,"td_ajax_preloading":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","color_preset":"","border_top":"","class":"td_uid_4_5c91421deb035_rand","el_class":"","offset":"","css":"","tdc_css":"","tdc_css_class":"td_uid_4_5c91421deb035_rand","tdc_css_class_style":"td_uid_4_5c91421deb035_rand_style","live_filter":"","live_filter_cur_post_id":"","live_filter_cur_post_author":"","block_template_id":""}';
-                                    block_td_uid_4_5c91421deb035.td_column_number = "3";
-                                    block_td_uid_4_5c91421deb035.block_type = "td_block_trending_now";
-                                    block_td_uid_4_5c91421deb035.post_count = "1";
-                                    block_td_uid_4_5c91421deb035.found_posts = "1";
-                                    block_td_uid_4_5c91421deb035.header_color = "";
-                                    block_td_uid_4_5c91421deb035.ajax_pagination_infinite_stop = "";
-                                    block_td_uid_4_5c91421deb035.max_num_pages = "1";
-                                    tdBlocksArray.push(block_td_uid_4_5c91421deb035);
-                                </script>
                                 <div id=td_uid_4_5c91421deb035 class="td_block_inner">
                                     <div class="td-block-row">
                                         <div class="td-trending-now-wrapper" id="td_uid_4_5c91421deb035"
@@ -60,6 +48,10 @@
                             </div>
                             <div class="wpb_wrapper td_block_separator td_block_wrap vc_separator td_uid_5_5c91421dec025_rand  td_separator_solid td_separator_center">
                                 <span style="border-color:#EBEBEB;border-width:1px;width:100%;"></span></div>
+                        </div>
+
+                        <div class="wpb_wrapper">
+
                             <div class="wpb_revslider_element wpb_content_element">
                                 <div id="rev_slider_3_1_wrapper"
                                      class="rev_slider_wrapper fullwidthbanner-container"
