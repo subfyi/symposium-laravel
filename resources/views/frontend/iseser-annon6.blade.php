@@ -1,16 +1,16 @@
 @extends('frontend.app')
 
 @section('css')
-    <title>ISESER 2019 will be held on 25-27 May 2019 at Konya. - ISESER</title>
+    <title>ISESER 2020 ANNOUNCEMENT</title>
 
     <meta name="description"
-          content="Important Dates were announced in link below: https://iseser.com/important-dates/ Full text preparation and registiration forms may be found in documents"/>
+          content="ISESER 2020 ANNOUNCEMENT"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="ISESER 2019 will be held on 25-27 May 2019 at Konya. - ISESER"/>
+    <meta property="og:title" content="ISESER 2020 ANNOUNCEMENT - ISESER"/>
     <meta property="og:description"
-          content="Important Dates were announced in link below: https://iseser.com/important-dates/ Full text preparation and registiration forms may be found in documents"/>
-    <meta property="og:url" content="https://iseser.com/iseser-2019-will-be-held-on-25-27-may-2019-at-konya/"/>
+          content="ISESER 2020 ANNOUNCEMENT"/>
+    <meta property="og:url" content="https://iseser.com/symposium-announced/"/>
     <meta property="og:site_name" content="ISESER"/>
     <meta property="article:section" content="Genel"/>
     <meta property="article:published_time" content="2018-12-19T22:01:55+00:00"/>
@@ -18,8 +18,8 @@
     <meta property="og:updated_time" content="2018-12-20T19:36:32+00:00"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:description"
-          content="Important Dates were announced in link below: https://iseser.com/important-dates/ Full text preparation and registiration forms may be found in documents"/>
-    <meta name="twitter:title" content="ISESER 2019 will be held on 25-27 May 2019 at Konya. - ISESER"/>
+          content="ISESER 2020 ANNOUNCEMENT"/>
+    <meta name="twitter:title" content="ISESER 2020 ANNOUNCEMENT"/>
 @endsection
 
 @section('content')
@@ -123,7 +123,7 @@
                                                     this paper to be published in Turkish Journal and please choose the option of (TR-Only Journal).
                                             </ul>
                                             <p><b>It is forbidden to publish same full paper both in the proceeding book and the journal.*</b> Our
-                                                Sponsor journal list in <a href="/sponsors/" >Sponsors</a> page. </p>
+                                                Sponsor journal list in <a href="/sponsors/">Sponsors</a> page. </p>
                                             <p>If you have question, send mail to <a
                                                         href="mailto:iseser@iseser.com"><span>iseser@iseser.com</span></a>.
                                             </p>
