@@ -50,8 +50,7 @@
                                                     <h3 class="entry-title td-module-title"><a
                                                                 href="symposium-announced/"
                                                                 rel="bookmark"
-                                                                title="2019 Symposium proceeding book was announced.">2019 Symposium proceeding book was
-                                                            announced.</a></h3>
+                                                                title="ANNOUNCEMENT.">ANNOUNCEMENT</a></h3>
                                                 </div>
                                             </div>
 

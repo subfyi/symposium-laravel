@@ -33,13 +33,16 @@
                                                             Cultural Center, Uncubozköy Campus</b></a>, Manisa. </p>
                                                 <ul>
                                                     <li>
-                                                        <strong>Registration</strong>:  29th May, Friday between 14:00-17:00
+                                                        <strong>Registration</strong>: 4th July, Saturday between 09:00-12:00
                                                     </li>
                                                     <li>
-                                                        <strong>Opening Ceremony</strong>: 30th May, Saturday
+                                                        <strong>Opening Ceremony</strong>: 4th May, Saturday
                                                     </li>
                                                     <li>
-                                                        <strong>Presentations</strong>: 31th May, Sunday
+                                                        <strong>Presentations</strong>: 4-5 July 2020
+                                                    </li>
+                                                    <li>
+                                                        <strong>Video Presentations will be available </strong>: 4-5 July 2020
                                                     </li>
                                                 </ul>
 

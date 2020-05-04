@@ -24,9 +24,12 @@
                     <div class="td-block-title-wrap"><h1 class="block-title"><span>IMPORTANT DATES</span></h1></div>
 
                     <div class="td-page-content">
-                        <p>Registration and Abstract Submission Date: 19 Apr 2020<br />
-                            Full Text Deadline: 14 Jun 2020<br />
-                            Symposium Date: 4-5 July 2020</p>
+                        <ul>
+                            <li>Registration and Abstract Submission Date: 19 Apr 2020</li>
+                            <li>Full Text Deadline: 14 June 2020</li>
+                            <li>Presentation Video Deadline: 25 June 2020</li>
+                            <li>Symposium Date: 4-5 July 2020</li>
+                        </ul>
                     </div>
                 </div>
             </div>

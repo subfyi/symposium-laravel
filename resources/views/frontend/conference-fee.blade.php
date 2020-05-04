@@ -35,7 +35,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Online (Until 25 May 2020)</strong></td>
+                                        <td><strong>Video (Until 25 May 2020)</strong></td>
                                         <td>40 € (₺ for equal price)</td>
                                         <td>20 € (₺ for equal price)</td>
                                         <td>Free</td>
@@ -47,7 +47,7 @@
                                         <td>Free</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Late Online</strong></td>
+                                        <td><strong>Late Video</strong></td>
                                         <td>70 € (₺ for equal price)</td>
                                         <td>25 € (₺ for equal price)</td>
                                         <td>Free</td>

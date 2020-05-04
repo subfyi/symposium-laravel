@@ -97,7 +97,7 @@ class HomeGetController extends HomeController
 
     Public function get_iseser_annon()
     {
-        return view('frontend.iseser-annon2');
+        return view('frontend.iseser-annon6');
     }
 
     public function get_hakkimizda(){
