@@ -84,6 +84,19 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="tg-0pky">Marcelo Enrique Conti, Rome sapienza University, Italy
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Petr Madera, Mendel University, Czech Republic
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Shahabuddin Memon, Sindh University, National Centre of Excellence,
+                                    Analytical Chemistry Director, Jamshoro, Pakistan
+                                </td>
+                            </tr>
+                            <tr>
                                 <td class="tg-0lax">Suzana (Kuci) Golemi, University of Shkodra &#8220;Luigj Gurakuqi&#8221;, Albania</td>
                             </tr>
                             <tr>
