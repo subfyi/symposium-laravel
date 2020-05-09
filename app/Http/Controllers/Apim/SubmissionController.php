@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Apim;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Gorevler;
+use App\Models\Gorevicerik;
 use App\Models\Parameters;
 use App\Models\Pauthor;
 use Exception;
@@ -20,6 +21,11 @@ class SubmissionController extends Controller
 
         if(auth('api')->user()->yetki != 9) {
             $data = $data->where('pap_creater', auth('api')->user()->id);
+        }
+
+        $presentation = request()->query('presentation');
+        if ($presentation) {
+            $data = $data->whereNotNull('video_presentation_url');
         }
 
         $sort = request()->query('sort');
@@ -46,7 +52,7 @@ class SubmissionController extends Controller
 
     public function show($id)
     {
-        $all = Gorevler::with('user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya', 'poster_presentation_dosya')->findOrFail($id);
+        $all = Gorevler::with('user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya', 'poster_presentation_dosya', 'icerikler', 'icerikler.user')->findOrFail($id);
 
         if(auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
             throw new Exception("Yetkiniz yok");
@@ -82,7 +88,9 @@ class SubmissionController extends Controller
             'slug' => str_slug($request->pap_title),
             'abstract_dosya_id' => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : NULL,
             'full_paper_dosya_id' => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : NULL,
-            'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL
+            'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL,
+            'video_id' => isset($request->video) ? $request->video["id"] : NULL,
+            'video_presentation_url' => $request->video_presentation_url
         ])->id;
 
         if(isset($request->authors)) {
@@ -134,7 +142,9 @@ class SubmissionController extends Controller
             'slug' => str_slug($request->pap_title),
             'abstract_dosya_id' => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : NULL,
             'full_paper_dosya_id' => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : NULL,
-            'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL
+            'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL,
+            'video_id' => isset($request->video) ? $request->video["id"] : NULL,
+            'video_presentation_url' => $request->video_presentation_url
         ]);
 
         if(isset($request->authors)) {
@@ -167,6 +177,27 @@ class SubmissionController extends Controller
                     Pauthor::where('id', $dest_id)->update($data);
                 }
             }
+        }
+        
+        if(isset($request->icerikler)) {
+            $ids = [];
+
+            foreach($request->icerikler as $icerik) {
+                $data = [
+                    'slug' => $all->slug,
+                    'isicerik' => $icerik['isicerik']
+                ];
+
+                if(isset($icerik['id'])) {
+                    Gorevicerik::where('id', $icerik['id'])->update($data);
+                    $ids[] = $icerik['id'];
+                } else {
+                    $data['grv_icerik_olusturan'] = auth('api')->id();
+                    $ids[] = Gorevicerik::create($data)->id;
+                }
+            }
+
+            Gorevicerik::where('slug', $all->slug)->whereNotIn('id', $ids)->delete();
         }
 
         return $id;
