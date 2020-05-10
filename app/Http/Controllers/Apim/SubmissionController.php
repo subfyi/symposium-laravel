@@ -16,7 +16,7 @@ class SubmissionController extends Controller
     {
         $itemPerPage = request()->query('itemPerPage');
         $query = request()->query('query');
-        $data = Gorevler::with(['user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya', 'poster_presentation_dosya'])
+        $data = Gorevler::with(['user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya', 'poster_presentation_dosya', 'video'])
             ->where('pap_status', '!=', 3);
 
         if(auth('api')->user()->yetki != 9) {
@@ -52,7 +52,7 @@ class SubmissionController extends Controller
 
     public function show($id)
     {
-        $all = Gorevler::with('user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya', 'poster_presentation_dosya', 'icerikler', 'icerikler.user')->findOrFail($id);
+        $all = Gorevler::with('user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya', 'poster_presentation_dosya', 'icerikler', 'icerikler.user', 'video')->findOrFail($id);
 
         if(auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
             throw new Exception("Yetkiniz yok");

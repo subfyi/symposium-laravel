@@ -166,6 +166,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
 
         App\Providers\GoogleDriveServiceProvider::class,
+        App\Providers\GoogleDriveIslemServiceProvider::class,
+
     ],
 
     /*

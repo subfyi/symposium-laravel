@@ -11,6 +11,10 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, PUT, POST, PATCH, DELETE, OPTIONS');
@@ -32,6 +36,10 @@ Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Ap
     Route::apiResource('author', 'AuthorController');
     Route::apiResource('profile', 'ProfileController');
 
+    Route::get('/gfile/{id}/download', 'GDriveFileController@download');
+    Route::post('/gupload', 'GDriveFileController@create');
+    Route::post('/guploadbitti', 'GDriveFileController@uploadbitti');
+    Route::get('/gfile/{id}/thumblink', 'GDriveFileController@thumblink');
 });
 
 Route::get('/girisyap', 'HomeGetController@get_login');
