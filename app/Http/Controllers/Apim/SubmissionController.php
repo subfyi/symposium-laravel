@@ -25,7 +25,7 @@ class SubmissionController extends Controller
 
         $presentation = request()->query('presentation');
         if ($presentation) {
-            $data = $data->whereNotNull('video_presentation_url');
+            $data = $data->where('video_approved', 1);
         }
 
         $sort = request()->query('sort');
@@ -90,7 +90,7 @@ class SubmissionController extends Controller
             'full_paper_dosya_id' => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : NULL,
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL,
             'video_id' => isset($request->video) ? $request->video["id"] : NULL,
-            'video_presentation_url' => $request->video_presentation_url
+            'video_approved' => $request->video_approved
         ])->id;
 
         if(isset($request->authors)) {
@@ -144,7 +144,7 @@ class SubmissionController extends Controller
             'full_paper_dosya_id' => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : NULL,
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : NULL,
             'video_id' => isset($request->video) ? $request->video["id"] : NULL,
-            'video_presentation_url' => $request->video_presentation_url
+            'video_approved' => $request->video_approved
         ]);
 
         if(isset($request->authors)) {
