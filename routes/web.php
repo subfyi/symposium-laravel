@@ -42,6 +42,10 @@ Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Ap
     Route::get('/gfile/{id}/thumblink', 'GDriveFileController@thumblink');
 });
 
+Route::group(['prefix' => 'api', 'namespace' => 'Apim', 'as' => 'api.'], function () {
+    Route::post('register', 'KullaniciController@register');
+});
+
 Route::get('/girisyap', 'HomeGetController@get_login');
 Route::get('/cikisyap', 'HomeGetController@get_logout');
 
