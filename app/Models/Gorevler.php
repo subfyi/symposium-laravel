@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gorevler extends Model
 {
-    protected $table='gorevler';
-    protected $fillable=['pap_title','pap_topic','pap_creater','pap_type','pre_type','slug','pap_status','pap_payment',
-        'pap_abstract','pap_keyword','pap_topic_p','mes_congress', 'abstract_dosya_id', 'full_paper_dosya_id', 'poster_presentation_id', 'video_id', 'video_approved'];
+    protected $table = 'gorevler';
+    protected $fillable = [
+        'pap_title', 'pap_topic', 'pap_creater', 'pap_type',
+        'pre_type', 'slug', 'pap_status', 'pap_payment',
+        'pap_abstract', 'pap_keyword', 'pap_topic_p', 'mes_congress', 'abstract_dosya_id',
+        'full_paper_dosya_id', 'poster_presentation_id',
+        'video_id', 'video_approved', 'title_year'
+    ];
 
     public function user()
     {
@@ -24,7 +29,7 @@ class Gorevler extends Model
     {
         return $this->hasMany('App\Models\Gorevicerik', 'slug', 'slug');
     }
-    
+
     public function parampre()
     {
         return $this->belongsTo('App\Models\Parameters', 'pre_type', 'id');
