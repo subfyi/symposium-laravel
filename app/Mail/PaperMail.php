@@ -21,6 +21,8 @@ class PaperMail extends Mailable
     public function __construct($user)
     {
         $this->user = $user;
+
+        $this->to($user->email);
     }
 
     /**

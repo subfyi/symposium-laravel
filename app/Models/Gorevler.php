@@ -12,7 +12,7 @@ class Gorevler extends Model
         'pre_type', 'slug', 'pap_status', 'pap_payment',
         'pap_abstract', 'pap_keyword', 'pap_topic_p', 'mes_congress', 'abstract_dosya_id',
         'full_paper_dosya_id', 'poster_presentation_id',
-        'video_id', 'video_approved', 'title_year'
+        'video_id', 'video_approved', 'title_year', 'paper_approved'
     ];
 
     public function user()

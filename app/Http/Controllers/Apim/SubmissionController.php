@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Apim;
 
 use App\Http\Controllers\Controller;
+use App\Mail\PaperApprovedMail;
+use App\Mail\PaperMail;
 use Illuminate\Http\Request;
 use App\Models\Gorevler;
 use App\Models\Gorevicerik;
+use App\Models\Kullanicilar;
 use App\Models\Parameters;
 use App\Models\Pauthor;
+use Illuminate\Support\Facades\Mail;
 use Exception;
 
 class SubmissionController extends Controller
@@ -83,7 +87,7 @@ class SubmissionController extends Controller
             }
         }
 
-        $id = Gorevler::create([
+        $gorev = Gorevler::create([
             'pap_title'              => $request->pap_title,
             'pap_abstract'           => $request->pap_abstract,
             'pap_keyword'            => $pap_keywords,
@@ -99,7 +103,10 @@ class SubmissionController extends Controller
             'video_id'               => isset($request->video) ? $request->video["id"] : null,
             'video_approved'         => $request->video_approved,
             'title_year'             => isset($request->title_year) ? $request->title_year : "2020",
-        ])->id;
+            'paper_approved'         => isset($request->paper_approved) ? $request->paper_approved : 0
+        ]);
+
+        $id = $gorev->id;
 
         if (isset($request->authors)) {
             foreach ($request->authors as $author) {
@@ -115,6 +122,8 @@ class SubmissionController extends Controller
             }
         }
 
+        Mail::send(new PaperMail(auth('api')->user()));
+       
         return $id;
     }
 
@@ -139,6 +148,8 @@ class SubmissionController extends Controller
             }
         }
 
+        $old_gorev = Gorevler::where('id', $id)->first();
+
         Gorevler::where('id', $id)->update([
             'pap_title'              => $request->pap_title,
             'pap_abstract'           => $request->pap_abstract,
@@ -154,6 +165,7 @@ class SubmissionController extends Controller
             'video_id'               => isset($request->video) ? $request->video["id"] : null,
             'video_approved'         => $request->video_approved,
             'title_year'             => isset($request->title_year) ? $request->title_year : "2020",
+            'paper_approved'         => isset($request->paper_approved) ? $request->paper_approved : 0
         ]);
 
         if (isset($request->authors)) {
@@ -207,6 +219,13 @@ class SubmissionController extends Controller
             }
 
             Gorevicerik::where('slug', $all->slug)->whereNotIn('id', $ids)->delete();
+        }
+
+        if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
+            $user = Kullanicilar::where('id', $old_gorev->pap_creater)->first();
+            $gorev = Gorevler::where('id', $id)->first();
+
+            Mail::send(new PaperApprovedMail($user, $gorev));
         }
 
         return $id;
