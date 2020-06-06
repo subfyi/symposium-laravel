@@ -116,14 +116,14 @@ class SubmissionController extends Controller
                     'p_mail'     => $author['p_mail'],
                     'name'       => $author['name'],
                     'surname'    => $author['surname'],
+                    'adress'    => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
                 ]);
             }
         }
 
-        Mail::send(new PaperMail(auth('api')->user()));
-       
+
         return $id;
     }
 
@@ -187,6 +187,7 @@ class SubmissionController extends Controller
                     'p_mail'     => $author['p_mail'],
                     'name'       => $author['name'],
                     'surname'    => $author['surname'],
+                    'adress'    => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
                 ];
@@ -225,7 +226,6 @@ class SubmissionController extends Controller
             $user = Kullanicilar::where('id', $old_gorev->pap_creater)->first();
             $gorev = Gorevler::where('id', $id)->first();
 
-            Mail::send(new PaperApprovedMail($user, $gorev));
         }
 
         return $id;
