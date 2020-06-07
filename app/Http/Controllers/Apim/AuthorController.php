@@ -30,7 +30,7 @@ class AuthorController extends Controller
             });
         }
 
-        $data = $data->select('p_mail', 'name', 'surname')->distinct();
+        $data = $data->select('p_mail', 'name', 'adress', 'surname')->distinct();
 
         if ($itemPerPage == -1) {
             return [
