@@ -23,7 +23,8 @@ class PaperApprovedMail extends Mailable
         $this->user = $user;
         $this->paper = $paper;
 
-        $this->to($user->email);
+        $this->to($user->p_mail);
+        die("Test ".$user->p_mail);
     }
 
     /**
