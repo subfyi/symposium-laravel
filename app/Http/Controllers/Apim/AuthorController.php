@@ -31,7 +31,7 @@ class AuthorController extends Controller
             });
         }
 
-        $data = $data->select(DB::raw('DISTINCT(p_mail)'), 'name', 'adress', 'surname');
+        $data = $data->select('p_mail', 'name', 'adress', 'surname')->groupBy('p_mail');
 
         if ($itemPerPage == -1) {
             return [
