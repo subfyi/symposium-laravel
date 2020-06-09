@@ -225,7 +225,7 @@ class SubmissionController extends Controller
         if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
             $gorev = Gorevler::where('id', $id)->first();
             $user = Pauthor::where('p_id', $gorev->id)->where('correspond', 1)->first();
-            
+            die("denem");
             Mail::send(new PaperApprovedMail($user, $gorev));
         }
 
