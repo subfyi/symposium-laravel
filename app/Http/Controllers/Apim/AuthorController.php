@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Gorevler;
 use App\Models\Parameters;
 use App\Models\Pauthor;
+use Illuminate\Support\Facades\DB;
 
 class AuthorController extends Controller
 {
@@ -30,7 +31,7 @@ class AuthorController extends Controller
             });
         }
 
-        $data = $data->select('p_mail', 'name', 'adress', 'surname')->distinct();
+        $data = $data->select(DB::raw('DISTINCT(p_mail)'), 'name', 'adress', 'surname');
 
         if ($itemPerPage == -1) {
             return [
