@@ -223,8 +223,8 @@ class SubmissionController extends Controller
         }
 
         if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
-            $user = Kullanicilar::where('id', $old_gorev->pap_creater)->first();
             $gorev = Gorevler::where('id', $id)->first();
+            $user = Pauthor::where('p_id', $gorev->id)->where('correspond', 1)->first();
 
         }
 
