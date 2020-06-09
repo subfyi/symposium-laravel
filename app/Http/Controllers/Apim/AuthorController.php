@@ -31,7 +31,10 @@ class AuthorController extends Controller
             });
         }
 
-        $data = $data->select('p_mail', 'name', 'adress', 'surname')->groupBy('p_mail');
+        $data = $data->select('p_mail',
+            DB::raw('MIN(name) as name'),
+            DB::raw('MIN(adress) as adress'),
+            DB::raw('MIN(surname) as surname'))->groupBy('p_mail');
 
         if ($itemPerPage == -1) {
             return [
