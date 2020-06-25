@@ -37,6 +37,22 @@ class SubmissionController extends Controller
             $data = $data->where('video_approved', 1);
         }
 
+        $year = request()->query('year');
+        if ($year) {
+            $data = $data->where('title_year', $year);
+        }
+
+        $posters = request()->query('posters');
+        if ($posters) {
+            $data = $data->where('pre_type', 98);
+        }
+
+        $orals = request()->query('orals');
+        if ($orals) {
+            $data = $data
+                ->whereIn('pre_type', [463,116,97]);
+        }
+
         $sort = request()->query('sort');
         if ($sort) {
             $data = $data->orderBy($sort, request()->query('desc') == "true" ? 'desc' : 'ASC');
