@@ -28,7 +28,7 @@ class SubmissionController extends Controller
 
         $data = $data->where('title_year', '2020');
 
-        if (auth('api')->user()->yetki != 9) {
+        if (auth('api')->check() && auth('api')->user()->yetki != 9) {
             $data = $data->where('pap_creater', auth('api')->user()->id);
         }
 
@@ -65,7 +65,7 @@ class SubmissionController extends Controller
             'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya',
             'poster_presentation_dosya', 'icerikler', 'icerikler.user', 'video')->findOrFail($id);
 
-        if (auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
+        if (auth('api')->check() && auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
             throw new Exception("Yetkiniz yok");
         }
 

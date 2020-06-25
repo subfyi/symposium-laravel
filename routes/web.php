@@ -35,6 +35,7 @@ Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Ap
     Route::apiResource('submission', 'SubmissionController');
     Route::apiResource('author', 'AuthorController');
     Route::apiResource('profile', 'ProfileController');
+    Route::post('/contact', 'ContactController@submit');
 
     Route::get('/gfile/{id}/download', 'GDriveFileController@download');
     Route::post('/gupload', 'GDriveFileController@create');
