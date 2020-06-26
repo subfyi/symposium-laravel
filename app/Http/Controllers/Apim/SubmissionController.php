@@ -20,11 +20,13 @@ class SubmissionController extends Controller
     {
         $itemPerPage = request()->query('itemPerPage');
         $query       = request()->query('query');
-        $data        = Gorevler::with([
-            'user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre',
-            'parampap', 'abstract_dosya', 'full_paper_dosya',
-            'poster_presentation_dosya', 'video'
-        ])->where('pap_status', '!=', 3);
+
+            $data = Gorevler::with([
+                'user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre',
+                'parampap', 'abstract_dosya', 'full_paper_dosya',
+                'poster_presentation_dosya', 'video'
+            ])->where('pap_status', '!=', 3);
+
 
         $data = $data->where('title_year', '2020');
 
@@ -66,13 +68,23 @@ class SubmissionController extends Controller
         }
 
         if ($itemPerPage == -1) {
-            return [
+            $ret =  [
                 "data"      => $data->get(),
                 "last_page" => 1
             ];
         } else {
-            return $data->paginate($itemPerPage);
+            $ret = $data->paginate($itemPerPage);
         }
+
+        if (!auth('api')->check()) {
+            foreach($ret['data'] as $row) {
+                foreach ($row["authors"] as $author) {
+                    $author["p_mail"] = NULL;
+                }
+            }
+        }
+
+        return $ret;
     }
 
     public function show($id)
