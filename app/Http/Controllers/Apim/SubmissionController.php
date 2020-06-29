@@ -30,14 +30,15 @@ class SubmissionController extends Controller
 
         $data = $data->where('title_year', '2020');
 
-        if (auth('api')->check() && auth('api')->user()->yetki != 9) {
-            $data = $data->where('pap_creater', auth('api')->user()->id);
-        }
-
         $presentation = request()->query('presentation');
         if ($presentation) {
             $data = $data->where('video_approved', 1);
         }
+
+        if ((auth('api')->check() && auth('api')->user()->yetki != 9) &&  !$presentation) {
+            $data = $data->where('pap_creater', auth('api')->user()->id);
+        }
+
 
         $year = request()->query('year');
         if ($year) {
