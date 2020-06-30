@@ -94,7 +94,9 @@ class SubmissionController extends Controller
             'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya',
             'poster_presentation_dosya', 'icerikler', 'icerikler.user', 'video')->findOrFail($id);
 
-
+        if ((auth('api')->check() && auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id)  &&  !$all->video_approved) {
+            throw new Exception("Yetkiniz yok");
+        }
         return $all;
     }
 
