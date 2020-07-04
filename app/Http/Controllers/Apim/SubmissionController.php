@@ -258,6 +258,7 @@ class SubmissionController extends Controller
         }
 
         if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
+
             Mail::send(new PaperApprovedMail($user, $gorev));
         }
 
