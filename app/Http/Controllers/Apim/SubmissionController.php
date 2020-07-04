@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Apim;
 
 use App\Http\Controllers\Controller;
 use App\Mail\PaperApprovedMail;
+use App\Mail\PaperCommentMail;
 use App\Mail\PaperMail;
 use Illuminate\Http\Request;
 use App\Models\Gorevler;
@@ -21,11 +22,11 @@ class SubmissionController extends Controller
         $itemPerPage = request()->query('itemPerPage');
         $query       = request()->query('query');
 
-            $data = Gorevler::with([
-                'user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre',
-                'parampap', 'abstract_dosya', 'full_paper_dosya',
-                'poster_presentation_dosya', 'video'
-            ])->where('pap_status', '!=', 3);
+        $data = Gorevler::with([
+            'user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre',
+            'parampap', 'abstract_dosya', 'full_paper_dosya',
+            'poster_presentation_dosya', 'video'
+        ])->where('pap_status', '!=', 3);
 
 
         $data = $data->where('title_year', '2020');
@@ -35,7 +36,7 @@ class SubmissionController extends Controller
             $data = $data->where('video_approved', 1);
         }
 
-        if ((auth('api')->check() && auth('api')->user()->yetki != 9) && !$presentation) {
+        if ((auth('api')->check() && auth('api')->user()->yetki != 9) && ! $presentation) {
             $data = $data->where('pap_creater', auth('api')->user()->id);
         }
 
@@ -53,7 +54,7 @@ class SubmissionController extends Controller
         $orals = request()->query('orals');
         if ($orals) {
             $data = $data
-                ->whereIn('pre_type', [463,116,97]);
+                ->whereIn('pre_type', [463, 116, 97]);
         }
 
         $sort = request()->query('sort');
@@ -69,7 +70,7 @@ class SubmissionController extends Controller
         }
 
         if ($itemPerPage == -1) {
-            $ret =  [
+            $ret = [
                 "data"      => $data->get(),
                 "last_page" => 1
             ];
@@ -77,10 +78,10 @@ class SubmissionController extends Controller
             $ret = $data->paginate($itemPerPage);
         }
 
-        if (!auth('api')->check()) {
-            foreach($ret['data'] as $row) {
+        if ( ! auth('api')->check()) {
+            foreach ($ret['data'] as $row) {
                 foreach ($row["authors"] as $author) {
-                    $author["p_mail"] = NULL;
+                    $author["p_mail"] = null;
                 }
             }
         }
@@ -94,9 +95,10 @@ class SubmissionController extends Controller
             'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya',
             'poster_presentation_dosya', 'icerikler', 'icerikler.user', 'video')->findOrFail($id);
 
-        if ((auth('api')->check() && auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id)  &&  !$all->video_approved) {
+        if ((auth('api')->check() && auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) && ! $all->video_approved) {
             throw new Exception("Yetkiniz yok");
         }
+
         return $all;
     }
 
@@ -144,7 +146,7 @@ class SubmissionController extends Controller
                     'p_mail'     => $author['p_mail'],
                     'name'       => $author['name'],
                     'surname'    => $author['surname'],
-                    'adress'    => $author['adress'],
+                    'adress'     => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
                 ]);
@@ -215,7 +217,7 @@ class SubmissionController extends Controller
                     'p_mail'     => $author['p_mail'],
                     'name'       => $author['name'],
                     'surname'    => $author['surname'],
-                    'adress'    => $author['adress'],
+                    'adress'     => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
                 ];
@@ -228,6 +230,9 @@ class SubmissionController extends Controller
                 }
             }
         }
+
+        $gorev = Gorevler::where('id', $id)->first();
+        $user  = Pauthor::where('p_id', $gorev->id)->where('correspond', 1)->first();
 
         if (isset($request->icerikler)) {
             $ids = [];
@@ -244,6 +249,8 @@ class SubmissionController extends Controller
                 } else {
                     $data['grv_icerik_olusturan'] = auth('api')->id();
                     $ids[]                        = Gorevicerik::create($data)->id;
+
+                    Mail::send(new PaperCommentMail($user, $gorev));
                 }
             }
 
@@ -251,9 +258,6 @@ class SubmissionController extends Controller
         }
 
         if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
-            $gorev = Gorevler::where('id', $id)->first();
-            $user = Pauthor::where('p_id', $gorev->id)->where('correspond', 1)->first();
-
             Mail::send(new PaperApprovedMail($user, $gorev));
         }
 

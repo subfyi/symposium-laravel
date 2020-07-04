@@ -23,7 +23,7 @@ class PaperCommentMail extends Mailable
         $this->user = $user;
         $this->paper = $paper;
 
-        $this->to($user->p_mail);
+        $this->to($user->p_mail)->cc("iseser@iseser.com");
     }
 
     /**
