@@ -35,7 +35,7 @@ class AdminPostController extends Controller
 
     public function post_profile(Request $request)
     {
-        $tarih = str_slug(Carbon::now());
+        $tarih = Str::slug(Carbon::now());
         $file = $request->all();
         if (isset($file['logo'])) {
             $validator = Validator::make($file, [
@@ -48,7 +48,7 @@ class AdminPostController extends Controller
 
             $logo = Input::file('logo');
             $logo_uzanti = Input::file('logo')->getClientOriginalExtension();
-            $logo_isim = str_slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
+            $logo_isim = Str::slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
 
             Storage::disk('uploads')->makeDirectory('img');
             Image::make($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
@@ -121,7 +121,7 @@ class AdminPostController extends Controller
     public function post_user_edit($slug, Request $request)
     {
         unset($request['_token']);
-        $tarih = str_slug(Carbon::now());
+        $tarih = Str::slug(Carbon::now());
         $file = $request->all();
         if (isset($file['logo'])) {
             $validator = Validator::make($file, [
@@ -134,7 +134,7 @@ class AdminPostController extends Controller
 
             $logo = Input::file('logo');
             $logo_uzanti = Input::file('logo')->getClientOriginalExtension();
-            $logo_isim = str_slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
+            $logo_isim = Str::slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
 
             Storage::disk('uploads')->makeDirectory('img');
             Image::make($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
@@ -197,7 +197,7 @@ class AdminPostController extends Controller
     public function post_user_add(Request $request)
     {
         unset($request['_token']);
-        $tarih = str_slug(Carbon::now());
+        $tarih = Str::slug(Carbon::now());
         $file = $request->all();
         if (isset($file['logo'])) {
             $validator = Validator::make($file, [
@@ -210,7 +210,7 @@ class AdminPostController extends Controller
 
             $logo = Input::file('logo');
             $logo_uzanti = Input::file('logo')->getClientOriginalExtension();
-            $logo_isim = str_slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
+            $logo_isim = Str::slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
 
             Storage::disk('uploads')->makeDirectory('img');
             Image::make($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
@@ -222,7 +222,7 @@ class AdminPostController extends Controller
                 $file['logo'] = $logo_isim;
                 unset($file['eski_logo']);
             }
-            $slug = str_slug($request->name) . "-" . $tarih;
+            $slug = Str::slug($request->name) . "-" . $tarih;
 
             $file['password'] = Hash::make($file['password']);
 
@@ -257,8 +257,8 @@ class AdminPostController extends Controller
         }
 
         unset($request['_token']);
-        $tarih = str_slug(Carbon::now());
-        $slug = str_slug($request->baslik) . "-" . $tarih;
+        $tarih = Str::slug(Carbon::now());
+        $slug = Str::slug($request->baslik) . "-" . $tarih;
 
         $request->merge(['slug' => $slug, 'yazar' => Auth::user()->id]);
 
@@ -313,8 +313,8 @@ class AdminPostController extends Controller
         }
 
         unset($request['_token']);
-        $tarih = str_slug(Carbon::now());
-        $slug = str_slug($request->baslik) . "-" . $tarih;
+        $tarih = Str::slug(Carbon::now());
+        $slug = Str::slug($request->baslik) . "-" . $tarih;
 
         $request->merge(['slug' => $slug, 'yazar' => Auth::user()->id]);
 
@@ -369,8 +369,8 @@ class AdminPostController extends Controller
 
         try {
             unset($request['_token']);
-            $tarih = str_slug(Carbon::now());
-            $slug = str_slug($request->baslik) . "-" . $tarih;
+            $tarih = Str::slug(Carbon::now());
+            $slug = Str::slug($request->baslik) . "-" . $tarih;
             $resimler = $request->file('resimler');
             if (!empty($resimler)) {
                 $i = 0;
@@ -455,8 +455,8 @@ class AdminPostController extends Controller
             return response(['durum' => 'error', 'baslik' => 'Hatalı', 'icerik' => 'eksik alan ' . $mesaj]);
         }
 
-        $tarih = str_slug(Carbon::now());
-        $slug = str_slug(Auth::user()->name) . "-" . $tarih;
+        $tarih = Str::slug(Carbon::now());
+        $slug = Str::slug(Auth::user()->name) . "-" . $tarih;
         $arrayimsi = "";
         $arrayimsi_r = "";
 
@@ -468,7 +468,7 @@ class AdminPostController extends Controller
                 $i = 0;
                 foreach ($resimler as $resim) {
                     $resim_uzanti = $resim->getClientOriginalExtension();
-                    $resim_isim = $tarih . '_' . $i . "_" . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                    $resim_isim = $tarih . '_' . $i . "_" . Str::slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
                     $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
 
@@ -541,7 +541,7 @@ class AdminPostController extends Controller
             return response(['durum' => 'error', 'baslik' => 'Hatalı', 'icerik' => 'eksik alan ' . $mesaj]);
         }
 
-        $tarih = str_slug(Carbon::now());
+        $tarih = Str::slug(Carbon::now());
         $arrayimsi = "";
         $arrayimsi_r = "";
         unset($request['_token']);
@@ -551,7 +551,7 @@ class AdminPostController extends Controller
                 $i = $request->sayi;
                 foreach ($resimler as $resim) {
                     $resim_uzanti = $resim->getClientOriginalExtension();
-                    $resim_isim = $tarih . '_' . $i . "_" . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                    $resim_isim = $tarih . '_' . $i . "_" . Str::slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
                     $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
 
@@ -679,7 +679,7 @@ class AdminPostController extends Controller
         }
 
         try {
-            $slug = str_slug($request->ad);
+            $slug = Str::slug($request->ad);
             $request->merge(['slug' => $slug]);
             Kategori::create($request->all());
             return response(['durum' => 'success', 'baslik' => 'Başarılı', 'icerik' => 'Kayıt başarı ile yapıldı']);
@@ -707,11 +707,11 @@ class AdminPostController extends Controller
     {
         $resim = $request->file('dosya');
 
-        $tarih = str_slug(Carbon::now());
+        $tarih = Str::slug(Carbon::now());
 
         $resim_uzanti = $resim->getClientOriginalExtension();
         $resim_boyutu = $resim->getSize();
-        $resim_isim = $tarih . '_' . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+        $resim_isim = $tarih . '_' . Str::slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
         $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
         $auth_user = Auth::user();
@@ -754,8 +754,8 @@ class AdminPostController extends Controller
             return response(['durum' => 'error', 'baslik' => 'Hatalı', 'icerik' => 'eksik alan ' . $mesaj]);
         } else {
 
-            $tarih = str_slug(Carbon::now());
-            $slug = str_slug($request->pap_title) . "-" . $tarih;
+            $tarih = Str::slug(Carbon::now());
+            $slug = Str::slug($request->pap_title) . "-" . $tarih;
             unset($request['_token']);
 
             $pap_keywords = "";
@@ -815,7 +815,7 @@ class AdminPostController extends Controller
                 $resim = $dosyalar;
                 $resim_uzanti = pathinfo($dosyalar, PATHINFO_EXTENSION);
                 $resim_boyutu = Storage::disk('uploads')->size('dosya/gecici/'.$dosyalar);
-                $resim_isim = $tarih . '_' . str_slug(pathinfo($dosyalar, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                $resim_isim = $tarih . '_' . Str::slug(pathinfo($dosyalar, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
                 $resim_isim_r = pathinfo($dosyalar, PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
                 Storage::disk('uploads')->makeDirectory('dosya/' . $d_slug);
@@ -836,7 +836,7 @@ class AdminPostController extends Controller
                 $resim = $fdosyalar;
                 $resim_uzanti = pathinfo($resim, PATHINFO_EXTENSION);
                 $resim_boyutu = Storage::disk('uploads')->size('dosya/gecici/'.$resim);
-                $resim_isim = $tarih . '_' . str_slug(pathinfo($resim, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                $resim_isim = $tarih . '_' . Str::slug(pathinfo($resim, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
                 $resim_isim_r = pathinfo($resim, PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
                 Storage::disk('uploads')->makeDirectory('dosya/' . $d_slug);
@@ -857,7 +857,7 @@ class AdminPostController extends Controller
                 $resim = $pdosyalar;
                 $resim_uzanti = pathinfo($resim, PATHINFO_EXTENSION);
                 $resim_boyutu = Storage::disk('uploads')->size('dosya/gecici/'.$resim);
-                $resim_isim = $tarih . '_' . str_slug(pathinfo($resim, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                $resim_isim = $tarih . '_' . Str::slug(pathinfo($resim, PATHINFO_FILENAME)) . '.' . $resim_uzanti;
                 $resim_isim_r = pathinfo($resim, PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
                 Storage::disk('uploads')->makeDirectory('dosya/' . $d_slug);
@@ -900,8 +900,8 @@ class AdminPostController extends Controller
             return response(['durum' => 'error', 'baslik' => 'Hatalı', 'icerik' => 'eksik alan ' . $mesaj]);
         }
         $uid = $request->pap_whos;
-        $tarih = str_slug(Carbon::now());
-        $slug = str_slug($request->pap_title) . "-" . $tarih;
+        $tarih = Str::slug(Carbon::now());
+        $slug = Str::slug($request->pap_title) . "-" . $tarih;
 
         unset($request['_token']);
         $dosyalar = $request->file('dosyalar');
@@ -916,7 +916,7 @@ class AdminPostController extends Controller
                 foreach ($dosyalar as $resim) {
                     $resim_uzanti = $resim->getClientOriginalExtension();
                     $resim_boyutu = $resim->getSize();
-                    $resim_isim = $tarih . '_' . $i . "_" . str_slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
+                    $resim_isim = $tarih . '_' . $i . "_" . Str::slug(pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $resim_uzanti;
                     $resim_isim_r = pathinfo($resim->getClientOriginalName(), PATHINFO_FILENAME) . '.' . $resim_uzanti;
 
                     Storage::disk('uploads')->makeDirectory('dosya/' . $d_slug);

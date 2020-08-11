@@ -11,16 +11,12 @@
 |
 */
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
 
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, PUT, POST, PATCH, DELETE, OPTIONS');
 
-
-Auth::routes();
 
 Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Apim', 'as' => 'api.'], function () {
     Route::get('parameters/{type}', 'TurlerController@nlist');
@@ -47,9 +43,6 @@ Route::group(['prefix' => 'api', 'namespace' => 'Apim', 'as' => 'api.'], functio
     Route::post('register', 'KullaniciController@register');
     Route::post('forgot', 'KullaniciController@forgot');
 });
-
-Route::get('/403', 'HomeGetController@get_403');
-Route::get('/404', 'HomeGetController@get_403');
 
 Route::post('/sf_attribute_update', 'AdminPostController@post_sf_attribute_update');
 Route::post('/isf_attribute_update', 'AdminPostController@post_isf_attribute_update');

@@ -11,6 +11,7 @@ use App\Facades\GoogleDrive;
 use Illuminate\Http\Request;
 use \Google_Http_MediaFileUpload;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class GDriveFileController extends Controller
 {
@@ -94,8 +95,8 @@ class GDriveFileController extends Controller
 
         $folder_id = GoogleDrive::klasor($request->slug);
 
-        $tarih = str_slug(Carbon::now('Europe/Istanbul'));
-        $realfilename = str_slug($tarih."-". rand(100, 999) ."-". pathinfo($request->filename, PATHINFO_FILENAME)) . '.' .pathinfo($request->filename, PATHINFO_EXTENSION);
+        $tarih = Str::slug(Carbon::now('Europe/Istanbul'));
+        $realfilename = Str::slug($tarih."-". rand(100, 999) ."-". pathinfo($request->filename, PATHINFO_FILENAME)) . '.' .pathinfo($request->filename, PATHINFO_EXTENSION);
 
         $file = new \Google_Service_Drive_DriveFile();
         $file->name = $realfilename;

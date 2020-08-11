@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use Auth;
 use App\Mail\WelcomeMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use View;
 use App\User;
 use App\Http\Controllers\Controller;
@@ -75,7 +76,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-        $tarih = str_slug(Carbon::now());
+        $tarih = Str::slug(Carbon::now());
         $user =  User::create([
             'name' => $data['name'],
             'surname' => $data['surname'],
@@ -89,7 +90,7 @@ class RegisterController extends Controller
             'department' => $data['department'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'slug' => str_slug($data['name']).'_'.$tarih,
+            'slug' => Str::slug($data['name']).'_'.$tarih,
         ]);
 
         Mail::to($data['email'])->send(new WelcomeMail($user));

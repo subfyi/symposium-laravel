@@ -3,7 +3,6 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Auth;
 
 class Admin
 {
@@ -16,9 +15,10 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->yetki() > 7) {
+        if (auth('api')->check() && auth('api')->user()->yetki > 7) {
             return $next($request);
         }
+
         return response(null, 403);
     }
 }

@@ -14,6 +14,7 @@ use App\Models\Parameters;
 use App\Models\Pauthor;
 use Illuminate\Support\Facades\Mail;
 use Exception;
+use Illuminate\Support\Str;
 
 class SubmissionController extends Controller
 {
@@ -126,7 +127,7 @@ class SubmissionController extends Controller
             'pap_type'               => $request->pap_type,
             'mes_congress'           => $request->mes_congress,
             'pap_creater'            => auth('api')->user()->id,
-            'slug'                   => str_slug($request->pap_title),
+            'slug'                   => Str::slug($request->pap_title),
             'abstract_dosya_id'      => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : null,
             'full_paper_dosya_id'    => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : null,
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : null,
@@ -188,7 +189,7 @@ class SubmissionController extends Controller
             'pre_type'               => $request->pre_type,
             'pap_type'               => $request->pap_type,
             'mes_congress'           => $request->mes_congress,
-            'slug'                   => str_slug($request->pap_title),
+            'slug'                   => Str::slug($request->pap_title),
             'abstract_dosya_id'      => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : null,
             'full_paper_dosya_id'    => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : null,
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : null,
