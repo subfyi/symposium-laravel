@@ -19,6 +19,6 @@ class Kullanici
         if (Auth::check() && Auth::user()->yetki() > 1) {
             return $next($request);
         }
-        return redirect('/403');
+        return response(null, 403);
     }
 }

@@ -19,6 +19,6 @@ class Izleyici
         if (Auth::check() && Auth::user()->yetki() > 0) {
             return $next($request);
         }
-        return redirect('/403');
+        return response(null, 403);
     }
 }

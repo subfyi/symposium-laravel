@@ -16,9 +16,9 @@ class Temsilci
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->yetki() > 2) {
+        if (Auth::check() && (Auth::user()->yetki() > 3 || Auth::user()->takipcisi() == 6 || Auth::user()->takipcisi() == 10)) {
             return $next($request);
         }
-        return redirect('/403');
+        return response(null, 403);
     }
 }
