@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Models\Bildirim;
 use Carbon\Carbon;
 use App\Models\Parameters;
 use Google_Service_Drive;
@@ -31,7 +30,7 @@ class ParameterService
         if(empty($array)) return ;
         $str = "";
         foreach($array as $key => $value) {
-    
+
             $str.=$key."=".$value;
             $str.='|';
         }

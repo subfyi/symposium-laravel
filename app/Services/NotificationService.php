@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Models\Bildirim;
 use Carbon\Carbon;
 use Google_Service_Drive;
 use Google_Service_Drive_DriveFile;
@@ -30,7 +29,7 @@ class NotificationService
     {
         if($user_id == NULL)
             return false;
-            
+
         Bildirim::create([
             'user_id' => $user_id,
             'data' => json_encode($data),
