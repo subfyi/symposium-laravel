@@ -4,26 +4,23 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
-use Carbon\Carbon;
 
-class UserActivity
+class RedirectIfAuthenticated
 {
     /**
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
+     * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $guard = null)
     {
-        if(Auth::check())
-        {
-            $expiresAt= Carbon::now()->addMinutes(5);
-            Cache::put('user-is-online-' .Auth::user()->id,true,$expiresAt);
-
+        if (Auth::guard($guard)->check()) {
+            return redirect('/home');
         }
+
         return $next($request);
     }
 }

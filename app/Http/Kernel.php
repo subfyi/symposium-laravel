@@ -35,7 +35,6 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\UserActivity::class,
         ],
 
         'api' => [
@@ -59,10 +58,10 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'SAdmin' => \App\Http\Middleware\SAdmin::class,
         'Admin' => \App\Http\Middleware\Admin::class,
         'Temsilci' => \App\Http\Middleware\Temsilci::class,
-        'Kontrolcu' => \App\Http\Middleware\Temsilci::class,
         'Kullanici' => \App\Http\Middleware\Kullanici::class,
         'Izleyici' => \App\Http\Middleware\Izleyici::class,
     ];

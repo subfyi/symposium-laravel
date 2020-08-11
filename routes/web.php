@@ -11,11 +11,16 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, PUT, POST, PATCH, DELETE, OPTIONS');
 
-use Illuminate\Support\Facades\Route;
+
+Auth::routes();
 
 Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Apim', 'as' => 'api.'], function () {
     Route::get('parameters/{type}', 'TurlerController@nlist');
@@ -40,4 +45,18 @@ Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Ap
 
 Route::group(['prefix' => 'api', 'namespace' => 'Apim', 'as' => 'api.'], function () {
     Route::post('register', 'KullaniciController@register');
+    Route::post('forgot', 'KullaniciController@forgot');
 });
+
+Route::get('/403', 'HomeGetController@get_403');
+Route::get('/404', 'HomeGetController@get_403');
+
+Route::post('/sf_attribute_update', 'AdminPostController@post_sf_attribute_update');
+Route::post('/isf_attribute_update', 'AdminPostController@post_isf_attribute_update');
+Route::post('/sfc_attribute_update', 'AdminPostController@post_sfc_attribute_update');
+
+Route::post('/f_delete', 'AdminPostController@post_f_delete');
+Route::post('/file_delete', 'AdminPostController@post_file_delete');
+Route::post('/dosya-sil', 'AdminPostController@post_dosya_sil');
+
+Route::post('/upload', 'AdminPostController@post_upload');

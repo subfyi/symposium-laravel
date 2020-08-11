@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Apim;
 
+use App\Mail\ResetMail;
 use App\Models\Kullanicilar;
 use App\Http\Controllers\Controller;
-use App\Http\Middleware\Kullanici;
-use Auth;
 use Error;
-use View;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
@@ -18,47 +18,88 @@ use Throwable;
 
 class KullaniciController extends Controller
 {
-    public function json() {
+    public function json()
+    {
         return [
-            "myId" => auth('api')->id(),
+            "myId"         => auth('api')->id(),
             "kullanicilar" => Kullanicilar::orderBy('name', 'asc')->select('id', 'name', 'surname', 'email')->get()
         ];
     }
 
-    public function myself() {
+    public function myself()
+    {
         return Kullanicilar::where('id', auth('api')->id())->select('id', 'name', 'surname', 'email', 'yetki')->first();
     }
 
-    public function me(Request $request) {
+    public function me(Request $request)
+    {
         return [
             "user_id" => auth('api')->user()->id
         ];
     }
 
-    public function register(Request $request) {
+    public function register(Request $request)
+    {
         try {
             Kullanicilar::create([
-                'name' => $request->name,
-                'surname' => $request->surname,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'yetki' => 1,
-                'iletisim' => $request->iletisim,
-                'address' => $request->address,
-                'u_title' => $request->title,
-                'u_type' => $request->type,
-                'gender' => $request->gender,
-                'status' => 2,
+                'name'        => $request->name,
+                'surname'     => $request->surname,
+                'email'       => $request->email,
+                'password'    => Hash::make($request->password),
+                'yetki'       => 1,
+                'iletisim'    => $request->iletisim,
+                'address'     => $request->address,
+                'u_title'     => $request->title,
+                'u_type'      => $request->type,
+                'gender'      => $request->gender,
+                'status'      => 2,
                 'institution' => $request->institution,
-                'faculty' => $request->faculty,
-                'department' => $request->department
+                'faculty'     => $request->faculty,
+                'department'  => $request->department
             ]);
-        } catch(\Throwable $e)  {
-            if(strpos($e->getMessage(), "Integrity constraint violation") !== false) {
+        } catch (\Throwable $e) {
+            if (strpos($e->getMessage(), "Integrity constraint violation") !== false) {
                 throw new Error("The same e-mail is already registered on our system.");
             } else {
                 throw $e;
             }
         }
+    }
+
+
+    public function forgot(Request $request)
+    {
+
+        $user = Kullanicilar::where('email', '=', $request->email)->first();
+
+        //Check if the user exists
+        if (!$user) {
+            throw new Error("The e-mail is not registered on our system.");
+        }
+
+        DB::table('password_resets')->insert([
+            'email' => $request->email,
+            'token' => str_random(60),
+        ]);
+
+        //Get the token just created above
+        $tokenData = DB::table('password_resets')->where('email', $request->email)->first();
+
+        if ($this->sendResetEmail($request->email, $tokenData->token)) {
+            return redirect()->back()->with('status', trans('A reset link has been sent to your email address.'));
+        } else {
+            return redirect()->back()->withErrors(['error' => trans('A Network Error occurred. Please try again.')]);
+        }
+
+    }
+
+    private function sendResetEmail($email, $token)
+    {
+        //Retrieve the user from the database
+        $user = Kullanicilar::where('email', $email)->first();
+        //Generate, the password reset link. The token generated is embedded in the link
+        $link = config('base_url').'password/reset/'.$token.'?email='.urlencode($user->email);
+
+        Mail::send(new ResetMail($user, $link));
     }
 }
