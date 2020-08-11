@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class GoogleDriveIslem
 {
   protected $service;
-  protected $folder = "1y1OsekCEKD3xXVKFI2KZKojbzfbLVG45";
+  protected $folder = "14H2cgMOzS7nzMePkJgvzFzMZqZisEwsM";
 
   public function __construct()
   {
@@ -32,14 +32,14 @@ class GoogleDriveIslem
       "q" => "parents in '$this->folder' and name = '$name'",
       "fields" => 'files(id)'
     ]);
-    
+
     if(count($folder->files) == 0) {
       $fileMetadata = new Google_Service_Drive_DriveFile(array(
         'name' => $name,
         'parents' => array($this->folder),
         'mimeType' => 'application/vnd.google-apps.folder'
       ));
-      
+
       $file = $this->service->files->create($fileMetadata, array('fields' => 'id'));
       return $file->id;
     }
@@ -54,5 +54,5 @@ class GoogleDriveIslem
     ]);
 
     return $file->files[0];
-  } 
+  }
 }
