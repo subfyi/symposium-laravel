@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Apim;
 
 use App\Mail\ResetMail;
+use App\Mail\ResetMailProve;
 use App\Models\Kullanicilar;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
@@ -78,39 +79,58 @@ class KullaniciController extends Controller
         if ( ! $user) {
             throw new Error("The e-mail is not registered on our system.");
         }
-
-        DB::table('password_resets')->insert([
+        $data      = [
             'email'      => $request->email,
             'token'      => Str::random(60),
             'created_at' => new Carbon(now())
-        ]);
+        ];
+        $tokenData = DB::table('password_resets')->insert($data);
 
-        //Get the token just created above
-        $tokenData = DB::table('password_resets')->where('email', $user->email)->first();
+        //Generate, the password reset link. The token generated is embedded in the link
+        $link = 'https://iseser.com/auth/reset-password/'.urlencode($data['token']).'/'.urlencode($data['email']);
 
-        if ($tokenData->token) {
+        Mail::send(new ResetMail($user, $link));
 
-            //Generate, the password reset link. The token generated is embedded in the link
-            $link = 'https://iseser.com/auth/reset-password/'.$tokenData->token.'?email='.urlencode($user->email);
+        return 1;
+    }
 
-            Mail::send(new ResetMail($user, $link));
+    public function resetGet()
+    {
+        $data = DB::table('password_resets')
+                  ->where('email', request()->query('email'))
+                  ->where('token', request()->query('token'))
+                  ->first();
 
-            return 1;
-        } else {
-            return 0;
+        if ( ! $data) {
+            throw new Error('Link is invalid');
         }
-
     }
 
     public function reset(Request $request)
     {
+        $data = DB::table('password_resets')
+                  ->where('email', $request->email)
+                  ->where('token', $request->token)
+                  ->first();
+
+        if ( ! $data) {
+            throw new Error('Link is invalid');
+        }
+
+
         $user = Kullanicilar::where('email', '=', $request->email)->first();
         try {
             $user->update([
-                'password'    => Hash::make($request->password),
+                'password' => Hash::make($request->password),
             ]);
 
+
+
             Mail::send(new ResetMailProve($user));
+
+            DB::table('password_resets')
+              ->where('email', $request->email)
+              ->where('token', $request->token)->delete();
         } catch (\Throwable $e) {
             if (strpos($e->getMessage(), "Integrity constraint violation") !== false) {
                 throw new Error("The same e-mail is already registered on our system.");

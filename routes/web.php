@@ -42,7 +42,8 @@ Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Ap
 Route::group(['prefix' => 'api', 'namespace' => 'Apim', 'as' => 'api.'], function () {
     Route::post('register', 'KullaniciController@register');
     Route::post('forgot', 'KullaniciController@forgot');
-    Route::post('reset/{id}', 'KullaniciController@forgot');
+    Route::post('reset', 'KullaniciController@reset');
+    Route::get('reset', 'KullaniciController@resetGet');
 });
 
 Route::post('/sf_attribute_update', 'AdminPostController@post_sf_attribute_update');
