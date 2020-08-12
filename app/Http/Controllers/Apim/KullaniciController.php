@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Apim;
 use App\Mail\ResetMail;
 use App\Models\Kullanicilar;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Error;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 use Throwable;
 
@@ -73,33 +75,48 @@ class KullaniciController extends Controller
         $user = Kullanicilar::where('email', '=', $request->email)->first();
 
         //Check if the user exists
-        if (!$user) {
+        if ( ! $user) {
             throw new Error("The e-mail is not registered on our system.");
         }
 
         DB::table('password_resets')->insert([
-            'email' => $request->email,
-            'token' => str_random(60),
+            'email'      => $request->email,
+            'token'      => Str::random(60),
+            'created_at' => new Carbon(now())
         ]);
 
         //Get the token just created above
-        $tokenData = DB::table('password_resets')->where('email', $request->email)->first();
+        $tokenData = DB::table('password_resets')->where('email', $user->email)->first();
 
-        if ($this->sendResetEmail($request->email, $tokenData->token)) {
-            return redirect()->back()->with('status', trans('A reset link has been sent to your email address.'));
+        if ($tokenData->token) {
+
+            //Generate, the password reset link. The token generated is embedded in the link
+            $link = 'https://iseser.com/auth/reset-password/'.$tokenData->token.'?email='.urlencode($user->email);
+
+            Mail::send(new ResetMail($user, $link));
+
+            return 1;
         } else {
-            return redirect()->back()->withErrors(['error' => trans('A Network Error occurred. Please try again.')]);
+            return 0;
         }
 
     }
 
-    private function sendResetEmail($email, $token)
+    public function reset(Request $request)
     {
-        //Retrieve the user from the database
-        $user = Kullanicilar::where('email', $email)->first();
-        //Generate, the password reset link. The token generated is embedded in the link
-        $link = config('base_url').'password/reset/'.$token.'?email='.urlencode($user->email);
+        $user = Kullanicilar::where('email', '=', $request->email)->first();
+        try {
+            $user->update([
+                'password'    => Hash::make($request->password),
+            ]);
 
-        Mail::send(new ResetMail($user, $link));
+            Mail::send(new ResetMailProve($user));
+        } catch (\Throwable $e) {
+            if (strpos($e->getMessage(), "Integrity constraint violation") !== false) {
+                throw new Error("The same e-mail is already registered on our system.");
+            } else {
+                throw $e;
+            }
+        }
     }
 }
