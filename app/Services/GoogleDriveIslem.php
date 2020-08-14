@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class GoogleDriveIslem
 {
   protected $service;
-  protected $folder = "14H2cgMOzS7nzMePkJgvzFzMZqZisEwsM";
+  protected $folder = "1y1OsekCEKD3xXVKFI2KZKojbzfbLVG45";
 
   public function __construct()
   {

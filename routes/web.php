@@ -25,6 +25,13 @@ Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Ap
     Route::patch('parameters/{type}/{id}', 'TurlerController@npatch');
     Route::delete('parameters/{type}/{id}', 'TurlerController@ndel');
 
+
+    Route::apiResource('typelanguage', 'TypeLanguageController');
+    Route::apiResource('typetopic', 'TypeTopicController');
+    Route::apiResource('typepublish', 'TypePublishController');
+    Route::apiResource('typepresentation', 'TypePresentationController');
+
+
     Route::get('myself', 'KullaniciController@myself');
     Route::get('users', 'KullaniciController@json');
     Route::apiResource('kullanicilar', 'UsersController');

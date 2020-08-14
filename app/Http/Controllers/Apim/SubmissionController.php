@@ -119,8 +119,8 @@ class SubmissionController extends Controller
         }
 
         $gorev = Articles::create([
-            'en_title'              => $request->en_title,
-            'en_abstract'           => $request->en_abstract,
+            'en_title'               => $request->en_title,
+            'en_abstract'            => $request->en_abstract,
             'pap_keyword'            => $pap_keywords,
             'pap_topic_p'            => $request->pap_topic_p,
             'pre_type'               => $request->pre_type,
@@ -182,8 +182,8 @@ class SubmissionController extends Controller
         $old_gorev = Articles::where('id', $id)->first();
 
         Articles::where('id', $id)->update([
-            'en_title'              => $request->en_title,
-            'en_abstract'           => $request->en_abstract,
+            'en_title'               => $request->en_title,
+            'en_abstract'            => $request->en_abstract,
             'pap_keyword'            => $pap_keywords,
             'pap_topic_p'            => $request->pap_topic_p,
             'pre_type'               => $request->pre_type,
