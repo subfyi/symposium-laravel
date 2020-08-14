@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Gorevler extends Model
+class Articles extends Model
 {
-    protected $table = 'gorevler';
+    protected $table = 'articles';
     protected $fillable = [
-        'pap_title', 'pap_topic', 'pap_creater', 'pap_type',
+        'en_title', 'pap_topic', 'pap_creater', 'pap_type',
         'pre_type', 'slug', 'pap_status', 'pap_payment',
-        'pap_abstract', 'pap_keyword', 'pap_topic_p', 'mes_congress', 'abstract_dosya_id',
+        'en_abstract', 'pap_keyword', 'pap_topic_p', 'mes_congress', 'abstract_dosya_id',
         'full_paper_dosya_id', 'poster_presentation_id',
         'video_id', 'video_approved', 'title_year', 'paper_approved'
     ];

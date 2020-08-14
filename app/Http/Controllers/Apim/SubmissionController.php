@@ -7,7 +7,7 @@ use App\Mail\PaperApprovedMail;
 use App\Mail\PaperCommentMail;
 use App\Mail\PaperMail;
 use Illuminate\Http\Request;
-use App\Models\Gorevler;
+use App\Models\Articles;
 use App\Models\Gorevicerik;
 use App\Models\Kullanicilar;
 use App\Models\Parameters;
@@ -23,7 +23,7 @@ class SubmissionController extends Controller
         $itemPerPage = request()->query('itemPerPage');
         $query       = request()->query('query');
 
-        $data = Gorevler::with([
+        $data = Articles::with([
             'user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre',
             'parampap', 'abstract_dosya', 'full_paper_dosya',
             'poster_presentation_dosya', 'video'
@@ -66,7 +66,7 @@ class SubmissionController extends Controller
         if ($query) {
             $data = $data->where(function ($query2) use ($query) {
                 $query2
-                    ->where('pap_title', 'LIKE', '%'.$query.'%');
+                    ->where('en_title', 'LIKE', '%'.$query.'%');
             });
         }
 
@@ -92,7 +92,7 @@ class SubmissionController extends Controller
 
     public function show($id)
     {
-        $all = Gorevler::with('user', 'authors', 'dosyalar', 'dosyalar.user', 'topic',
+        $all = Articles::with('user', 'authors', 'dosyalar', 'dosyalar.user', 'topic',
             'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya',
             'poster_presentation_dosya', 'icerikler', 'icerikler.user', 'video')->findOrFail($id);
 
@@ -118,16 +118,16 @@ class SubmissionController extends Controller
             }
         }
 
-        $gorev = Gorevler::create([
-            'pap_title'              => $request->pap_title,
-            'pap_abstract'           => $request->pap_abstract,
+        $gorev = Articles::create([
+            'en_title'              => $request->en_title,
+            'en_abstract'           => $request->en_abstract,
             'pap_keyword'            => $pap_keywords,
             'pap_topic_p'            => $request->pap_topic_p,
             'pre_type'               => $request->pre_type,
             'pap_type'               => $request->pap_type,
             'mes_congress'           => $request->mes_congress,
             'pap_creater'            => auth('api')->user()->id,
-            'slug'                   => Str::slug($request->pap_title),
+            'slug'                   => Str::slug($request->en_title),
             'abstract_dosya_id'      => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : null,
             'full_paper_dosya_id'    => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : null,
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : null,
@@ -160,7 +160,7 @@ class SubmissionController extends Controller
 
     public function update(Request $request, $id)
     {
-        $all = Gorevler::with('user')->findOrFail($id);
+        $all = Articles::with('user')->findOrFail($id);
 
         if (auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
             throw new Exception("Yetkiniz yok");
@@ -179,17 +179,17 @@ class SubmissionController extends Controller
             }
         }
 
-        $old_gorev = Gorevler::where('id', $id)->first();
+        $old_gorev = Articles::where('id', $id)->first();
 
-        Gorevler::where('id', $id)->update([
-            'pap_title'              => $request->pap_title,
-            'pap_abstract'           => $request->pap_abstract,
+        Articles::where('id', $id)->update([
+            'en_title'              => $request->en_title,
+            'en_abstract'           => $request->en_abstract,
             'pap_keyword'            => $pap_keywords,
             'pap_topic_p'            => $request->pap_topic_p,
             'pre_type'               => $request->pre_type,
             'pap_type'               => $request->pap_type,
             'mes_congress'           => $request->mes_congress,
-            'slug'                   => Str::slug($request->pap_title),
+            'slug'                   => Str::slug($request->en_title),
             'abstract_dosya_id'      => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : null,
             'full_paper_dosya_id'    => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : null,
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : null,
@@ -232,7 +232,7 @@ class SubmissionController extends Controller
             }
         }
 
-        $gorev = Gorevler::where('id', $id)->first();
+        $gorev = Articles::where('id', $id)->first();
         $user  = Pauthor::where('p_id', $gorev->id)->where('correspond', 1)->first();
 
         if (isset($request->icerikler)) {
@@ -268,7 +268,7 @@ class SubmissionController extends Controller
 
     public function destroy($id)
     {
-        Gorevler::where('id', $id)->update(['pap_status' => '3']);
+        Articles::where('id', $id)->update(['pap_status' => '3']);
 
         return response(null, 204);
     }

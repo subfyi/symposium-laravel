@@ -88,7 +88,7 @@ return [
 
     'prefix' => env(
         'CACHE_PREFIX',
-        'symposium_iseser_cache'
+        'symposium_cache'
     ),
 
 ];

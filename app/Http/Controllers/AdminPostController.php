@@ -8,7 +8,7 @@ use App\Models\Feedback;
 use App\Models\Feedbackdata;
 use App\Models\Gorevfiles;
 use App\Models\Gorevicerik;
-use App\Models\Gorevler;
+use App\Models\Articles;
 use App\Models\Parameters;
 use App\Models\Pauthor;
 use App\Models\Sss;
@@ -692,7 +692,7 @@ class AdminPostController extends Controller
     public function post_gorev_sil(Request $request)
     {
         try {
-            Gorevler::where('id', $request->id)->update([
+            Articles::where('id', $request->id)->update([
                 'pap_status' => 3,
             ]);
             return response(['durum' => 'success', 'baslik' => 'success', 'icerik' => 'Deleted']);
@@ -771,7 +771,7 @@ class AdminPostController extends Controller
                 }
             }
 
-            $gorevid = Gorevler::create([
+            $gorevid = Articles::create([
                 'pap_title' => $request->pap_title,
                 'pap_abstract' => $request->pap_abstract,
                 'pap_keyword' => $pap_keywords,
@@ -908,7 +908,7 @@ class AdminPostController extends Controller
         try {
 
             $request->merge(['slug' => $slug, 'pap_creater' => $request->pap_whos]);
-            Gorevler::create($request->all());
+            Articles::create($request->all());
             $d_slug = Kullanicilar::where('id', '=', $uid)->first()->slug;
 
             if (!empty($dosyalar)) {

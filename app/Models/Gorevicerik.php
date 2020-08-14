@@ -18,7 +18,7 @@ class Gorevicerik extends Model
 
     public function malzeme()
     {
-        return $this->belongsTo('App\Gorevler', 'slug', 'slug');
+        return $this->belongsTo('App\Articles', 'slug', 'slug');
     }
 
     public function yorumlar()

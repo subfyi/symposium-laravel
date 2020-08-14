@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Apim;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Gorevler;
+use App\Models\Articles;
 use App\Models\Parameters;
 use App\Models\Pauthor;
 use Illuminate\Support\Facades\DB;
