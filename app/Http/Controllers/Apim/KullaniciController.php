@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Apim;
 
 use App\Mail\ResetMail;
-use App\Mail\ResetMailProve;
 use App\Models\Kullanicilar;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
@@ -13,11 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Intervention\Image\Facades\Image;
-use Throwable;
 
 class KullaniciController extends Controller
 {
@@ -79,15 +74,15 @@ class KullaniciController extends Controller
         if ( ! $user) {
             throw new Error("The e-mail is not registered on our system.");
         }
-        $data      = [
+        $data = [
             'email'      => $request->email,
             'token'      => Str::random(60),
             'created_at' => new Carbon(now())
         ];
-        $tokenData = DB::table('password_resets')->insert($data);
+        DB::table('password_resets')->insert($data);
 
         //Generate, the password reset link. The token generated is embedded in the link
-        $link = 'https://iseser.com/auth/reset-password/'.urlencode($data['token']).'/'.urlencode($data['email']);
+        $link = 'https://portal.iseser.com/auth/reset-password/'.urlencode($data['token']).'/'.urlencode($data['email']);
 
         Mail::send(new ResetMail($user, $link));
 
@@ -124,9 +119,7 @@ class KullaniciController extends Controller
                 'password' => Hash::make($request->password),
             ]);
 
-
-
-            Mail::send(new ResetMailProve($user));
+            //Mail::send(new ResetMailProve($user));
 
             DB::table('password_resets')
               ->where('email', $request->email)
