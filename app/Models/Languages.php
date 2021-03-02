@@ -3,16 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Languages extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'languages';
     protected $fillable = [
-        'active', 'name','created_by', 'updated_by',
+        'code', 'name', 'rtl'
     ];
 
     protected $dates = [
-        'updated_at',
         'created_at',
+        'updated_at',
+        'deleted_at'
     ];
 }

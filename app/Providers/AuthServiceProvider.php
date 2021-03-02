@@ -5,6 +5,7 @@ namespace App\Providers;
 use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -26,8 +27,18 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::routes();
+        Passport::routes(function ($router) {
+            $router->forAuthorization();
 
-        //
+            $router->forAccessTokens();
+
+            $router->forTransientTokens();
+            $router->forClients();
+            $router->forPersonalAccessTokens();
+        });
+
+        Route::post('/oauth/token', [
+            'uses' => '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken'
+        ]);
     }
 }

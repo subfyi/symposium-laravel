@@ -95,7 +95,7 @@ class GDriveFileController extends Controller
 
         $folder_id = GoogleDrive::klasor($request->slug);
 
-        $tarih = Str::slug(Carbon::now('Europe/Istanbul'));
+        $tarih =  Str::slug(Carbon::now('Europe/Istanbul'));
         $realfilename = Str::slug($tarih."-". rand(100, 999) ."-". pathinfo($request->filename, PATHINFO_FILENAME)) . '.' .pathinfo($request->filename, PATHINFO_EXTENSION);
 
         $file = new \Google_Service_Drive_DriveFile();

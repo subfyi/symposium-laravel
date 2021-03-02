@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\BaseMail;
+
 return [
 
     /*
@@ -152,6 +154,7 @@ return [
 
         App\Providers\GoogleDriveServiceProvider::class,
         App\Providers\GoogleDriveIslemServiceProvider::class,
+        Vedmant\FeedReader\FeedReaderServiceProvider::class
 
     ],
 
@@ -196,6 +199,12 @@ return [
         'Session' => Illuminate\Support\Facades\Session::class,
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
-        'Validator' => Illuminate\Support\Facades\Validator::class
+        'Validator' => Illuminate\Support\Facades\Validator::class,
+        'Webp' => Buglinjo\LaravelWebp\Facades\Webp::class,
+        'FeedReader' => Vedmant\FeedReader\Facades\FeedReader::class,
+        'Arr' => Illuminate\Support\Arr::class,
+        'Str' => Illuminate\Support\Str::class,
+        'MHelper' => BaseMail::class,
+        'Carbon' => Illuminate\Support\Carbon::class
     ],
 ];

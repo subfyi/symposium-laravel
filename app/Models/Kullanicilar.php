@@ -8,21 +8,7 @@ class Kullanicilar extends Model
 {
     protected $table='users';
     protected $guarded = array('password');
-
-    public function utitle()
-    {
-        return $this->belongsTo('App\Models\Parameters', 'u_title', 'id');
-    }
-
-    public function utype()
-    {
-        return $this->belongsTo('App\Models\Parameters', 'u_type', 'id');
-    }
-
-    public function genderdata()
-    {
-        return $this->belongsTo('App\Models\Parameters', 'gender', 'id');
-    }
+    protected $with = ['utitle','utype','ugender'];
 
     protected $fillable = [
         'name',
@@ -38,6 +24,20 @@ class Kullanicilar extends Model
         'faculty',
         'department',
         'slug',
-        'iletisim'
+        'iletisim',
+        'yetki'
     ];
+
+    function utitle() {
+        return $this->belongsTo('App\Models\Parameters', 'u_title', 'id')->where('type', 'titlecon');
+    }
+    function utype() {
+        return $this->belongsTo('App\Models\Parameters', 'u_type', 'id')->where('type', 'materialcon');
+    }
+    function ugender() {
+        return $this->belongsTo('App\Models\Parameters', 'gender', 'id')->where('type', 'gender');
+    }
+
+    protected $hidden = ['password'];
+
 }

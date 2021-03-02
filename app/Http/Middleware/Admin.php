@@ -15,7 +15,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (auth('api')->check() && auth('api')->user()->yetki > 7) {
+        if (auth('api')->check() && auth('api')->user()->role > 7) {
             return $next($request);
         }
 

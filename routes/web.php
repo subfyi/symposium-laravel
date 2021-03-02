@@ -11,54 +11,118 @@
 |
 */
 
+use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\Apim\ArticlesController;
+use App\Http\Controllers\Apim\ArticleTypesController;
+use App\Http\Controllers\Apim\AuthorController;
+use App\Http\Controllers\Apim\BlogCategoryController;
+use App\Http\Controllers\Apim\BlogPostController;
+use App\Http\Controllers\Apim\CitationController;
+use App\Http\Controllers\Apim\CommentController;
+use App\Http\Controllers\Apim\ContactController;
+use App\Http\Controllers\Apim\CountrieController;
+use App\Http\Controllers\Apim\GDriveFileController;
+use App\Http\Controllers\Apim\JournalController;
+use App\Http\Controllers\Apim\KeywordController;
+use App\Http\Controllers\Apim\KullaniciController;
+use App\Http\Controllers\Apim\LanguageController;
+use App\Http\Controllers\Apim\NewsletterController;
+use App\Http\Controllers\Apim\ProfileController;
+use App\Http\Controllers\Apim\PublisherController;
+use App\Http\Controllers\Apim\RolesController;
+use App\Http\Controllers\Apim\SubjectController;
+use App\Http\Controllers\Apim\SubmissionController;
+use App\Http\Controllers\Apim\TurlerController;
+use App\Http\Controllers\Apim\TypeLanguageController;
+use App\Http\Controllers\Apim\TypePresentationController;
+use App\Http\Controllers\Apim\TypePublishController;
+use App\Http\Controllers\Apim\TypeTopicController;
+use App\Http\Controllers\Apim\UsersController;
+use App\Http\Controllers\Apim\VolumeController;
 use Illuminate\Support\Facades\Route;
 
-header('Access-Control-Allow-Headers: *');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, PUT, POST, PATCH, DELETE, OPTIONS');
+Route::group(['prefix' => 'api'], function () {
+    Route::get('parameters/{type}', [TurlerController::class, 'nlist']);
+    Route::get('parameters/{type}/{id}', [TurlerController::class, 'nget']);
+    Route::post('parameters/{type}', [TurlerController::class, 'npost']);
+    Route::patch('parameters/{type}/{id}', [TurlerController::class, 'npatch']);
+    Route::delete('parameters/{type}/{id}', [TurlerController::class, 'ndel']);
+
+    Route::apiResource('typelanguage', TypeLanguageController::class);
+    Route::apiResource('typetopic', TypeTopicController::class);
+    Route::apiResource('typepublish', TypePublishController::class);
+    Route::apiResource('typepresentation', TypePresentationController::class);
+
+    Route::apiResource('submission', SubmissionController::class);
 
 
-Route::group(['prefix' => 'api', 'middleare' => ['auth:api'], 'namespace' => 'Apim', 'as' => 'api.'], function () {
-    Route::get('parameters/{type}', 'TurlerController@nlist');
-    Route::get('parameters/{type}/{id}', 'TurlerController@nget');
-    Route::post('parameters/{type}', 'TurlerController@npost');
-    Route::patch('parameters/{type}/{id}', 'TurlerController@npatch');
-    Route::delete('parameters/{type}/{id}', 'TurlerController@ndel');
+    Route::post('/sf_attribute_update', [AdminPostController::class, 'ndel']);
+    Route::post('/isf_attribute_update', [AdminPostController::class, 'ndel']);
+    Route::post('/sfc_attribute_update', [AdminPostController::class, 'ndel']);
 
+    Route::post('/f_delete', [AdminPostController::class, 'ndel']);
+    Route::post('/file_delete', [AdminPostController::class, 'ndel']);
+    Route::post('/dosya-sil', [AdminPostController::class, 'ndel']);
 
-    Route::apiResource('typelanguage', 'TypeLanguageController');
-    Route::apiResource('typetopic', 'TypeTopicController');
-    Route::apiResource('typepublish', 'TypePublishController');
-    Route::apiResource('typepresentation', 'TypePresentationController');
+    Route::post('/upload', [AdminPostController::class, 'post_upload']);
 
+    // Public Endpoints
+    Route::post('register', [KullaniciController::class, 'register']);
+    Route::post('forgot', [KullaniciController::class, 'forgot']);
+    Route::post('reset', [KullaniciController::class, 'reset']);
+    Route::get('reset', [KullaniciController::class, 'resetGet']);
+    Route::post('newsletter/subscribe', [NewsletterController::class, 'subscribe']);
+    Route::post('newsletter/unsubscribe', [NewsletterController::class, 'unsubscribe']);
 
-    Route::get('myself', 'KullaniciController@myself');
-    Route::get('users', 'KullaniciController@json');
-    Route::apiResource('kullanicilar', 'UsersController');
-    Route::apiResource('submission', 'SubmissionController');
-    Route::apiResource('author', 'AuthorController');
-    Route::apiResource('profile', 'ProfileController');
-    Route::post('/contact', 'ContactController@submit');
+    Route::apiResource('post', BlogPostController::class);
+    Route::get('post/slug/{slug}', [BlogPostController::class, 'showBySlug']);
+    Route::get('post/{post_id}/comments', [CommentController::class, 'blog']);
+    Route::post('post/{post_id}/comments', [CommentController::class, 'post_blog_comment']);
 
-    Route::get('/gfile/{id}/download', 'GDriveFileController@download');
-    Route::post('/gupload', 'GDriveFileController@create');
-    Route::post('/guploadbitti', 'GDriveFileController@uploadbitti');
-    Route::get('/gfile/{id}/thumblink', 'GDriveFileController@thumblink');
+    Route::apiResource('journal', JournalController::class);
+    Route::post('journal/getname', [JournalController::class, 'getname']);
+    Route::post('journal/getid', [JournalController::class, 'getid']);
+    Route::post('journal/getinfo', [JournalController::class, 'getinfo']);
+    Route::post('journal/getissues', [JournalController::class, 'getissues']);
+
+    Route::apiResource('volume', VolumeController::class);
+    Route::post('volume/getarticles', [VolumeController::class, 'getarticles']);
+
+    Route::apiResource('article', ArticlesController::class);
+    Route::apiResource('author', AuthorController::class);
+    Route::apiResource('keyword', KeywordController::class);
+    Route::apiResource('language', LanguageController::class);
+    Route::apiResource('articletype', ArticleTypesController::class);
+    Route::apiResource('citation', CitationController::class);
+    Route::apiResource('countrie', CountrieController::class);
+    Route::apiResource('publisher', PublisherController::class);
+    Route::apiResource('subject', SubjectController::class);
+
+    Route::apiResource('profile', ProfileController::class);
+    Route::apiResource('user/me', ProfileController::class);
+    Route::apiResource('user', UsersController::class);
+
+    Route::post('contact', [ContactController::class, 'submit']);
+
+    Route::get('/gfile/{id}/download', [GDriveFileController::class, 'download']);
+    Route::post('/gupload', [GDriveFileController::class, 'create']);
+    Route::post('/guploadbitti', [GDriveFileController::class, 'uploadbitti']);
+    Route::get('/gfile/{id}/thumblink', [GDriveFileController::class, 'thumblink']);
+
+    // Semi-Public Endpoints
+    Route::group(['middleware' => ['GuestGet']], function () {
+        Route::apiResource('roles', RolesController::class);
+
+        Route::post('register', [KullaniciController::class, 'register']);
+        Route::post('forgot', [KullaniciController::class, 'forgot']);
+        Route::post('reset', [KullaniciController::class, 'reset']);
+        Route::get('reset', [KullaniciController::class, 'resetGet']);
+    });
+
+    // Private Endpoints
+    Route::group(['middleware' => ['Admin']], function () {
+        Route::get('myself', [KullaniciController::class, 'myself']);
+        Route::get('users', [KullaniciController::class, 'json']);
+        Route::apiResource('kullanicilar', UsersController::class);
+    });
 });
-
-Route::group(['prefix' => 'api', 'namespace' => 'Apim', 'as' => 'api.'], function () {
-    Route::post('register', 'KullaniciController@register');
-    Route::post('forgot', 'KullaniciController@forgot');
-    Route::post('reset', 'KullaniciController@reset');
-    Route::get('reset', 'KullaniciController@resetGet');
-});
-
-Route::post('/sf_attribute_update', 'AdminPostController@post_sf_attribute_update');
-Route::post('/isf_attribute_update', 'AdminPostController@post_isf_attribute_update');
-Route::post('/sfc_attribute_update', 'AdminPostController@post_sfc_attribute_update');
-
-Route::post('/f_delete', 'AdminPostController@post_f_delete');
-Route::post('/file_delete', 'AdminPostController@post_file_delete');
-Route::post('/dosya-sil', 'AdminPostController@post_dosya_sil');
-
-Route::post('/upload', 'AdminPostController@post_upload');

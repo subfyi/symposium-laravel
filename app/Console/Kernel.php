@@ -13,7 +13,10 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        'App\Console\Commands\SitemapCall'
+        'App\Console\Commands\SitemapCall',
+        'App\Console\Commands\SitemapUcbad',
+        'App\Console\Commands\SitemapIjepem',
+        'App\Console\Commands\ImportCall'
     ];
 
     /**
@@ -25,6 +28,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('lrvl:sitemap')->daily();
+        $schedule->command('lrvl:ucbad')->daily();
+        $schedule->command('lrvl:ijepem')->daily();
     }
 
     /**
@@ -37,6 +42,5 @@ class Kernel extends ConsoleKernel
         $this->load(__DIR__.'/Commands');
 
         require base_path('routes/console.php');
-
     }
 }
