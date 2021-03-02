@@ -30,7 +30,7 @@ class ProfileController extends Controller
                                 'department',
                                 'slug',
                                 'iletisim',
-                                'yetki'
+                                'role'
                             )
                             ->first();
 

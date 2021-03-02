@@ -226,7 +226,7 @@ class AdminPostController extends Controller
 
             $file['password'] = Hash::make($file['password']);
 
-            Kullanicilar::create(['slug' => $slug, 'password' => $file['password'], 'logo' => $file['logo'], 'name' => $request->name, 'surname' => $request->surname, 'email' => $request->email, 'yetki' => $request->yetki, 'iletisim' => $request->iletisim, 'address' => $request->address, 'u_title' => $request->u_title, 'u_type' => $request->u_type, 'gender' => $request->gender, 'institution' => $request->institution, 'faculty' => $request->faculty, 'department' => $request->department,]);
+            Kullanicilar::create(['slug' => $slug, 'password' => $file['password'], 'logo' => $file['logo'], 'name' => $request->name, 'surname' => $request->surname, 'email' => $request->email, 'role' => $request->role, 'iletisim' => $request->iletisim, 'address' => $request->address, 'u_title' => $request->u_title, 'u_type' => $request->u_type, 'gender' => $request->gender, 'institution' => $request->institution, 'faculty' => $request->faculty, 'department' => $request->department,]);
             return response(['durum' => 'success', 'baslik' => 'Başarılı', 'icerik' => 'Kayıt başarı ile yapıldı']);
         } catch (\Exception $e) {
             return response(['durum' => 'error', 'baslik' => 'Hatalı', 'icerik' => 'Kayıt yapılamadı', 'hata' => $e]);

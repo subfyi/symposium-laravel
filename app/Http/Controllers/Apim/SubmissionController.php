@@ -37,7 +37,7 @@ class SubmissionController extends Controller
             $data = $data->where('video_approved', 1);
         }
 
-        if ((auth('api')->check() && auth('api')->user()->yetki != 9) && ! $presentation) {
+        if ((auth('api')->check() && auth('api')->user()->role != 9) && ! $presentation) {
             $data = $data->where('pap_creater', auth('api')->user()->id);
         }
 
@@ -96,7 +96,7 @@ class SubmissionController extends Controller
             'parampre', 'parampap', 'abstract_dosya', 'full_paper_dosya',
             'poster_presentation_dosya', 'icerikler', 'icerikler.user', 'video')->findOrFail($id);
 
-        if ((auth('api')->check() && auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) && ! $all->video_approved) {
+        if ((auth('api')->check() && auth('api')->user()->role != 9 && $all->user->id !== auth('api')->user()->id) && ! $all->video_approved) {
             throw new Exception("Yetkiniz yok");
         }
 
@@ -162,7 +162,7 @@ class SubmissionController extends Controller
     {
         $all = Articles::with('user')->findOrFail($id);
 
-        if (auth('api')->user()->yetki != 9 && $all->user->id !== auth('api')->user()->id) {
+        if (auth('api')->user()->role != 9 && $all->user->id !== auth('api')->user()->id) {
             throw new Exception("Yetkiniz yok");
         }
 

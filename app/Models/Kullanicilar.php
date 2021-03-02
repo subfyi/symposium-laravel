@@ -8,7 +8,7 @@ class Kullanicilar extends Model
 {
     protected $table='users';
     protected $guarded = array('password');
-    protected $with = ['utitle','utype','ugender'];
+    protected $with = ['utitle','utype','ugender','urole'];
 
     protected $fillable = [
         'name',
@@ -25,7 +25,7 @@ class Kullanicilar extends Model
         'department',
         'slug',
         'iletisim',
-        'yetki'
+        'role'
     ];
 
     function utitle() {
@@ -36,6 +36,9 @@ class Kullanicilar extends Model
     }
     function ugender() {
         return $this->belongsTo('App\Models\Parameters', 'gender', 'id')->where('type', 'gender');
+    }
+    function urole() {
+        return $this->belongsTo('App\Models\Roles', 'role', 'id');
     }
 
     protected $hidden = ['password'];

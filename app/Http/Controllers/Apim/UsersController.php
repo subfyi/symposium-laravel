@@ -38,38 +38,49 @@ class UsersController extends Controller
 
     public function show($id)
     {
-        $kurum = Kullanicilar::with([])->findOrFail($id);
+        $val = Kullanicilar::with([])->findOrFail($id);
 
-        return $kurum;
+        return $val;
     }
 
     public function store(Request $request)
     {
         $update = [
-            "name" => $request->name,
-            "email" => $request->email,
-            "role" => $request->role["id"],
-            "unvan" => $request->unvan,
-            "iletisim" => $request->iletisim,
-            "aciklama" => $request->aciklama
+            'name'        => $request->name,
+            'surname'     => $request->surname,
+            'email'       => $request->email,
+            'address'     => $request->address,
+            'u_title'     => isset($request->utitle) ? $request->utitle["id"] : null,
+            'u_type'     => isset($request->utype) ? $request->utype["id"] : null,
+            'gender'      => $request->gender,
+            'institution' => $request->institution,
+            'faculty'     => $request->faculty,
+            'department'  => $request->department,
+            'iletisim'    => $request->iletisim
         ];
 
         if(!empty($request->password)) {
             $update["password"] = Hash::make($request->password);
         }
 
-        Kullanicilar::create($update);
+        $id = Kullanicilar::create($update);
+        return $this->show($id->id);
     }
 
     public function update(Request $request, $id)
     {
         $update = [
-            "name" => $request->name,
-            "email" => $request->email,
-            "role" => 8,
-            "unvan" => $request->unvan,
-            "iletisim" => $request->iletisim,
-            "aciklama" => $request->aciklama
+            'name'        => $request->name,
+            'surname'     => $request->surname,
+            'email'       => $request->email,
+            'address'     => $request->address,
+            'u_title'     => isset($request->utitle) ? $request->utitle["id"] : null,
+            'u_type'     => isset($request->utype) ? $request->utype["id"] : null,
+            'gender'      => $request->gender,
+            'institution' => $request->institution,
+            'faculty'     => $request->faculty,
+            'department'  => $request->department,
+            'iletisim'    => $request->iletisim
         ];
 
         if(!empty($request->password)) {
@@ -77,6 +88,7 @@ class UsersController extends Controller
         }
 
         Kullanicilar::where('id', $id)->update($update);
+        return $this->show($id);
     }
 
     public function destroy($id)

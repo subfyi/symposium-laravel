@@ -98,8 +98,13 @@ Route::group(['prefix' => 'api'], function () {
     Route::apiResource('publisher', PublisherController::class);
     Route::apiResource('subject', SubjectController::class);
 
+
     Route::apiResource('profile', ProfileController::class);
+    Route::patch('profile', [ProfileController::class, 'store']);
+
     Route::apiResource('user/me', ProfileController::class);
+    Route::patch('user/me', [ProfileController::class, 'store']);
+
     Route::apiResource('user', UsersController::class);
 
     Route::post('contact', [ContactController::class, 'submit']);
