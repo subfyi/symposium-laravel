@@ -58,5 +58,7 @@ class ProfileController extends Controller
                 'password' => Hash::make($request->password)
             ]);
         }
+
+        return $this->index();
     }
 }
