@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dosyalar extends Model
 {
+    protected $appends = ['name', 'size', 'access_url'];
 
     protected $table = 'dosyalar';
     protected $fillable = [
@@ -17,4 +18,19 @@ class Dosyalar extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function getNameAttribute()
+    {
+        return $this->attributes['r_dosyaisimi'];
+    }
+
+    public function getSizeAttribute()
+    {
+        return $this->attributes['f_dosya_boyut'];
+    }
+
+    public function getAccessUrlAttribute()
+    {
+        return request()->getSchemeAndHttpHost() . '/uploads/' . $this->attributes['f_klasorismi'] . '/' . $this->attributes['f_dosyaisimi'];
+    }
 }
