@@ -42,7 +42,7 @@ class Articles extends Model
 
     public function authors()
     {
-        return $this->hasMany('App\Models\Pauthor', 'p_id', 'id');
+        return $this->hasMany('App\Models\Authors', 'p_id', 'id');
     }
 
     public function dosyalar()

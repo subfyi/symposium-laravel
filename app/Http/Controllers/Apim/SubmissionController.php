@@ -11,7 +11,7 @@ use App\Models\Articles;
 use App\Models\Gorevicerik;
 use App\Models\Kullanicilar;
 use App\Models\Parameters;
-use App\Models\Pauthor;
+use App\Models\Authors;
 use Illuminate\Support\Facades\Mail;
 use Exception;
 use Illuminate\Support\Str;
@@ -141,7 +141,7 @@ class SubmissionController extends Controller
 
         if (isset($request->authors)) {
             foreach ($request->authors as $author) {
-                Pauthor::create([
+                Authors::create([
                     'p_id'       => $id,
                     'p_user'     => auth('api')->user()->id,
                     'p_mail'     => $author['p_mail'],
@@ -200,14 +200,14 @@ class SubmissionController extends Controller
         ]);
 
         if (isset($request->authors)) {
-            $varolanlar = Pauthor::where('p_id', $id)->get();
+            $varolanlar = Authors::where('p_id', $id)->get();
             $ids        = array_map(function ($kull) {
                 return empty($kull['id']) ? 0 : $kull['id'];
             }, $request->authors);
 
             foreach ($varolanlar as $varolan) {
                 if ( ! in_array($varolan->id, $ids)) {
-                    Pauthor::destroy($varolan->id);
+                    Authors::destroy($varolan->id);
                 }
             }
 
@@ -224,16 +224,16 @@ class SubmissionController extends Controller
                 ];
 
                 if (empty($author['id'])) {
-                    $dest_id = Pauthor::create($data)->id;
+                    $dest_id = Authors::create($data)->id;
                 } else {
                     $dest_id = $author['id'];
-                    Pauthor::where('id', $dest_id)->update($data);
+                    Authors::where('id', $dest_id)->update($data);
                 }
             }
         }
 
         $gorev = Articles::where('id', $id)->first();
-        $user  = Pauthor::where('p_id', $gorev->id)->where('correspond', 1)->first();
+        $user  = Authors::where('p_id', $gorev->id)->where('correspond', 1)->first();
 
         if (isset($request->icerikler)) {
             $ids = [];

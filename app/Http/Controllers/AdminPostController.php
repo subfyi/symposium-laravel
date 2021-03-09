@@ -10,7 +10,7 @@ use App\Models\Gorevfiles;
 use App\Models\Gorevicerik;
 use App\Models\Articles;
 use App\Models\Parameters;
-use App\Models\Pauthor;
+use App\Models\Authors;
 use App\Models\Sss;
 use App\Models\Blog;
 use App\Models\Dosyalar;
@@ -795,7 +795,7 @@ class AdminPostController extends Controller
                 if ($allPresenter == $i) $prre = 1;
                 else $prre = 0;
 
-                Pauthor::create([
+                Authors::create([
                     'p_id' => $gorevid->id,
                     'p_user' => Auth::user()->id,
                     'p_mail' => $allEmails[$i],
