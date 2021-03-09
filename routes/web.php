@@ -41,6 +41,10 @@ use App\Http\Controllers\Apim\UsersController;
 use App\Http\Controllers\Apim\VolumeController;
 use Illuminate\Support\Facades\Route;
 
+Route::post('reset', [KullaniciController::class, 'forgot']);
+Route::post('reset2', [KullaniciController::class, 'reset']);
+Route::get('reset2', [KullaniciController::class, 'resetGet'])->name('reset');
+
 Route::group(['prefix' => 'api'], function () {
     Route::get('parameters/{type}', [TurlerController::class, 'nlist']);
     Route::get('parameters/{type}/{id}', [TurlerController::class, 'nget']);
@@ -68,9 +72,6 @@ Route::group(['prefix' => 'api'], function () {
 
     // Public Endpoints
     Route::post('register', [KullaniciController::class, 'register']);
-    Route::post('forgot', [KullaniciController::class, 'forgot']);
-    Route::post('reset', [KullaniciController::class, 'reset']);
-    Route::get('reset', [KullaniciController::class, 'resetGet']);
     Route::post('newsletter/subscribe', [NewsletterController::class, 'subscribe']);
     Route::post('newsletter/unsubscribe', [NewsletterController::class, 'unsubscribe']);
 
@@ -114,14 +115,11 @@ Route::group(['prefix' => 'api'], function () {
     Route::post('/guploadbitti', [GDriveFileController::class, 'uploadbitti']);
     Route::get('/gfile/{id}/thumblink', [GDriveFileController::class, 'thumblink']);
 
+
     // Semi-Public Endpoints
     Route::group(['middleware' => ['GuestGet']], function () {
         Route::apiResource('roles', RolesController::class);
 
-        Route::post('register', [KullaniciController::class, 'register']);
-        Route::post('forgot', [KullaniciController::class, 'forgot']);
-        Route::post('reset', [KullaniciController::class, 'reset']);
-        Route::get('reset', [KullaniciController::class, 'resetGet']);
     });
 
     // Private Endpoints

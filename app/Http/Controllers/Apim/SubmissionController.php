@@ -82,7 +82,7 @@ class SubmissionController extends Controller
         if ( ! auth('api')->check()) {
             foreach ($ret['data'] as $row) {
                 foreach ($row["authors"] as $author) {
-                    $author["p_mail"] = null;
+                    $author["email"] = null;
                 }
             }
         }
@@ -122,9 +122,9 @@ class SubmissionController extends Controller
             'en_title'               => $request->en_title,
             'en_abstract'            => $request->en_abstract,
             'pap_keyword'            => $pap_keywords,
-            'pap_topic_p'            => $request->pap_topic_p,
-            'pre_type'               => $request->pre_type,
-            'pap_type'               => $request->pap_type,
+            'pap_topic_p'            => isset($request->topic) ? $request->topic["id"] : null,
+            'pre_type'               => isset($request->parampre) ? $request->parampre["id"] : null,
+            'pap_type'               => isset($request->parampap) ? $request->parampap["id"] : null,
             'mes_congress'           => $request->mes_congress,
             'pap_creater'            => auth('api')->user()->id,
             'slug'                   => Str::slug($request->en_title),
@@ -144,9 +144,9 @@ class SubmissionController extends Controller
                 Authors::create([
                     'p_id'       => $id,
                     'p_user'     => auth('api')->user()->id,
-                    'p_mail'     => $author['p_mail'],
-                    'name'       => $author['name'],
-                    'surname'    => $author['surname'],
+                    'email'     => $author['email'],
+                    'first_name'       => $author['first_name'],
+                    'last_name'    => $author['last_name'],
                     'adress'     => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
@@ -155,7 +155,7 @@ class SubmissionController extends Controller
         }
 
 
-        return $id;
+        return $this->show($id);
     }
 
     public function update(Request $request, $id)
@@ -185,9 +185,9 @@ class SubmissionController extends Controller
             'en_title'               => $request->en_title,
             'en_abstract'            => $request->en_abstract,
             'pap_keyword'            => $pap_keywords,
-            'pap_topic_p'            => $request->pap_topic_p,
-            'pre_type'               => $request->pre_type,
-            'pap_type'               => $request->pap_type,
+            'pap_topic_p'            => isset($request->topic) ? $request->topic["id"] : null,
+            'pre_type'               => isset($request->parampre) ? $request->parampre["id"] : null,
+            'pap_type'               => isset($request->parampap) ? $request->parampap["id"] : null,
             'mes_congress'           => $request->mes_congress,
             'slug'                   => Str::slug($request->en_title),
             'abstract_dosya_id'      => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : null,
@@ -215,9 +215,9 @@ class SubmissionController extends Controller
                 $data = [
                     'p_id'       => $id,
                     'p_user'     => auth('api')->user()->id,
-                    'p_mail'     => $author['p_mail'],
-                    'name'       => $author['name'],
-                    'surname'    => $author['surname'],
+                    'email'     => $author['email'],
+                    'first_name'       => $author['first_name'],
+                    'last_name'    => $author['last_name'],
                     'adress'     => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
@@ -263,7 +263,7 @@ class SubmissionController extends Controller
             Mail::send(new PaperApprovedMail($user, $gorev));
         }
 
-        return $id;
+        return $this->show($id);
     }
 
     public function destroy($id)

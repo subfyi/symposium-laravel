@@ -12,16 +12,16 @@ class ResetMail extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
-    public $link;
+    public $code;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($user, $link)
+    public function __construct($user, $code)
     {
         $this->user = $user;
-        $this->link = $link;
+        $this->code = $code;
 
         $this->to($user->email)->cc("iseser@iseser.com");
     }

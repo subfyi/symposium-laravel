@@ -31,6 +31,11 @@ class Dosyalar extends Model
 
     public function getAccessUrlAttribute()
     {
-        return request()->getSchemeAndHttpHost() . '/uploads/' . $this->attributes['f_klasorismi'] . '/' . $this->attributes['f_dosyaisimi'];
+        if ($this->f_dosyayeri === 2) {
+            return "https://drive.google.com/file/d/" . $this->g_dosyaismi . "/preview";
+        } 
+
+
+        return request()->getSchemeAndHttpHost() . '/uploads/dosya/' . $this->attributes['f_klasorismi'] . '/' . $this->attributes['f_dosyaisimi'];
     }
 }
