@@ -29,9 +29,6 @@ class SubmissionController extends Controller
             'poster_presentation_dosya', 'video'
         ])->where('pap_status', '!=', 3);
 
-
-        $data = $data->where('title_year', '2020');
-
         $presentation = request()->query('presentation');
         if ($presentation) {
             $data = $data->where('video_approved', 1);
