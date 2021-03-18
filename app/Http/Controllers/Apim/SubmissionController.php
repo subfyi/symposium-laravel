@@ -133,7 +133,7 @@ class SubmissionController extends Controller
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : null,
             'video_id'               => isset($request->video) ? $request->video["id"] : null,
             'video_approved'         => $request->video_approved,
-            'title_year'             => isset($request->title_year) ? $request->title_year : "2020",
+            'title_year'             => isset($request->title_year) ? $request->title_year : "2021",
             'paper_approved'         => isset($request->paper_approved) ? $request->paper_approved : 0
         ]);
 
@@ -195,7 +195,7 @@ class SubmissionController extends Controller
             'poster_presentation_id' => isset($request->poster_presentation_dosya) ? $request->poster_presentation_dosya['id'] : null,
             'video_id'               => isset($request->video) ? $request->video["id"] : null,
             'video_approved'         => $request->video_approved,
-            'title_year'             => isset($request->title_year) ? $request->title_year : "2020",
+            'title_year'             => isset($request->title_year) ? $request->title_year : "2021",
             'paper_approved'         => isset($request->paper_approved) ? $request->paper_approved : 0
         ]);
 
