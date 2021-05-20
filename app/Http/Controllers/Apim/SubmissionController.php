@@ -141,9 +141,9 @@ class SubmissionController extends Controller
                 Authors::create([
                     'p_id'       => $id,
                     'p_user'     => auth('api')->user()->id,
-                    'email'     => $author['email'],
-                    'first_name'       => $author['first_name'],
-                    'last_name'    => $author['last_name'],
+                    'email'      => $author['email'],
+                    'first_name' => $author['first_name'],
+                    'last_name'  => $author['last_name'],
                     'adress'     => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
@@ -212,9 +212,9 @@ class SubmissionController extends Controller
                 $data = [
                     'p_id'       => $id,
                     'p_user'     => auth('api')->user()->id,
-                    'email'     => $author['email'],
-                    'first_name'       => $author['first_name'],
-                    'last_name'    => $author['last_name'],
+                    'email'      => $author['email'],
+                    'first_name' => $author['first_name'],
+                    'last_name'  => $author['last_name'],
                     'adress'     => $author['adress'],
                     'correspond' => isset($author['correspond']) ? $author['correspond'] : false,
                     'presenter'  => isset($author['correspond']) ? $author['presenter'] : false
@@ -251,12 +251,10 @@ class SubmissionController extends Controller
                     Mail::send(new PaperCommentMail($user, $gorev));
                 }
             }
-
             Gorevicerik::where('slug', $all->slug)->whereNotIn('id', $ids)->delete();
         }
 
         if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
-
             Mail::send(new PaperApprovedMail($user, $gorev));
         }
 

@@ -798,7 +798,7 @@ class AdminPostController extends Controller
                 Authors::create([
                     'p_id' => $gorevid->id,
                     'p_user' => Auth::user()->id,
-                    'p_mail' => $allEmails[$i],
+                    'email' => $allEmails[$i],
                     'name' => $allNames[$i],
                     'surname' => $allSurnames[$i],
                     'correspond' => $corre,
