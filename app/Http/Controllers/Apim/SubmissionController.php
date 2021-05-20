@@ -232,6 +232,10 @@ class SubmissionController extends Controller
         $gorev = Articles::where('id', $id)->first();
         $user  = Authors::where('p_id', $gorev->id)->where('correspond', 1)->first();
 
+        if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
+            Mail::send(new PaperApprovedMail($user, $gorev));
+        }
+
         if (isset($request->icerikler)) {
             $ids = [];
 
@@ -251,12 +255,10 @@ class SubmissionController extends Controller
                     Mail::send(new PaperCommentMail($user, $gorev));
                 }
             }
+
             Gorevicerik::where('slug', $all->slug)->whereNotIn('id', $ids)->delete();
         }
 
-        if ($old_gorev->paper_approved != $request->paper_approved && $request->paper_approved) {
-            Mail::send(new PaperApprovedMail($user, $gorev));
-        }
 
         return $this->show($id);
     }
