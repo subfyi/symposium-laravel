@@ -110,10 +110,10 @@ Route::group(['prefix' => 'api'], function () {
 
     Route::post('contact', [ContactController::class, 'submit']);
 
-    Route::get('/gfile/{id}/download', [GDriveFileController::class, 'download']);
-    Route::post('/gupload', [GDriveFileController::class, 'create']);
-    Route::post('/guploadbitti', [GDriveFileController::class, 'uploadbitti']);
-    Route::get('/gfile/{id}/thumblink', [GDriveFileController::class, 'thumblink']);
+    Route::get('gfile/{id}/download', [GDriveFileController::class, 'download']);
+    Route::post('gupload', [GDriveFileController::class, 'create']);
+    Route::post('guploadbitti', [GDriveFileController::class, 'uploadbitti']);
+    Route::get('gfile/{id}/thumblink', [GDriveFileController::class, 'thumblink']);
 
 
     // Semi-Public Endpoints
