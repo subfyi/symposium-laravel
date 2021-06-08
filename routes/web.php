@@ -58,6 +58,7 @@ Route::group(['prefix' => 'api'], function () {
     Route::apiResource('typepresentation', TypePresentationController::class);
 
     Route::apiResource('submission', SubmissionController::class);
+    Route::get('/submission/{id}/restore', [SubmissionController::class, 'restore']);
 
 
     Route::post('/sf_attribute_update', [AdminPostController::class, 'ndel']);

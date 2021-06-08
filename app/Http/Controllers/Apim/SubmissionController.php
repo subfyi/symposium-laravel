@@ -31,7 +31,7 @@ class SubmissionController extends Controller
 
         $pap_status = request()->query('pap_status');
         if ($pap_status) {
-            $data = $data->where('pap_status', '==', $pap_status);
+            $data = $data->where('pap_status', $pap_status);
         }else{
             $data = $data->where('pap_status', '!=', 3);
         }
@@ -269,6 +269,14 @@ class SubmissionController extends Controller
 
 
         return $this->show($id);
+    }
+
+
+    public function restore($id)
+    {
+        Articles::where('id', $id)->update(['pap_status' => '0']);
+
+        return response(null, 204);
     }
 
     public function destroy($id)
