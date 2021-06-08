@@ -27,7 +27,15 @@ class SubmissionController extends Controller
             'user', 'authors', 'dosyalar', 'dosyalar.user', 'topic', 'parampre',
             'parampap', 'abstract_dosya', 'full_paper_dosya',
             'poster_presentation_dosya', 'video'
-        ])->where('pap_status', '!=', 3);
+        ]);
+
+        $pap_status = request()->query('pap_status');
+        if ($pap_status) {
+            $data = $data->where('pap_status', '==', $pap_status);
+        }else{
+            $data = $data->where('pap_status', '!=', 3);
+        }
+
 
         $presentation = request()->query('presentation');
         if ($presentation) {
