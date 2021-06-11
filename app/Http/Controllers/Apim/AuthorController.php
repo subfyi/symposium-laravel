@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Apim;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Articles;
-use App\Models\Parameters;
 use App\Models\Authors;
 use Illuminate\Support\Facades\DB;
 
@@ -48,7 +46,7 @@ class AuthorController extends Controller
 
     public function show($id)
     {
-        $all = Authors::findOrFail($id);
+        $all = Authors::where('email', $id)->first();
 
         return $all;
     }
@@ -70,8 +68,10 @@ class AuthorController extends Controller
 
     public function update(Request $request, $id)
     {
-        Authors::where('id', $id)->update([
-            "name" => $request->name
+        Authors::where('email', $id)->update([
+            "first_name" => $request->first_name,
+            "last_name" => $request->last_name,
+            "email" => $request->email
         ]);
 
         return $this->show($id);
