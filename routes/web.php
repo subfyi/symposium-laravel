@@ -57,6 +57,7 @@ Route::group(['prefix' => 'api'], function () {
     Route::apiResource('typepublish', TypePublishController::class);
     Route::apiResource('typepresentation', TypePresentationController::class);
 
+    Route::get('/submission/years', [SubmissionController::class, 'years']);
     Route::apiResource('submission', SubmissionController::class);
     Route::get('/submission/{id}/restore', [SubmissionController::class, 'restore']);
 
@@ -89,6 +90,7 @@ Route::group(['prefix' => 'api'], function () {
 
     Route::apiResource('volume', VolumeController::class);
     Route::post('volume/getarticles', [VolumeController::class, 'getarticles']);
+
 
     Route::apiResource('article', ArticlesController::class);
     Route::apiResource('author', AuthorController::class);
