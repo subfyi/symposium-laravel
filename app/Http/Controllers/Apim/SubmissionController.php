@@ -12,12 +12,17 @@ use App\Models\Gorevicerik;
 use App\Models\Kullanicilar;
 use App\Models\Parameters;
 use App\Models\Authors;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Exception;
 use Illuminate\Support\Str;
 
 class SubmissionController extends Controller
 {
+    public function years() {
+        return Articles::select('title_year')->groupBy('title_year')->get();
+    }
+
     public function index()
     {
         $itemPerPage = request()->query('itemPerPage');
@@ -36,7 +41,6 @@ class SubmissionController extends Controller
             $data = $data->where('pap_status', '!=', 3);
         }
 
-
         $presentation = request()->query('presentation');
         if ($presentation) {
             $data = $data->where('video_approved', 1);
@@ -45,7 +49,6 @@ class SubmissionController extends Controller
         if ((auth('api')->check() && auth('api')->user()->role != 9) && ! $presentation) {
             $data = $data->where('pap_creater', auth('api')->user()->id);
         }
-
 
         $year = request()->query('year');
         if ($year) {
@@ -131,7 +134,7 @@ class SubmissionController extends Controller
             'pre_type'               => isset($request->parampre) ? $request->parampre["id"] : null,
             'pap_type'               => isset($request->parampap) ? $request->parampap["id"] : null,
             'mes_congress'           => $request->mes_congress,
-            'pap_creater'            => auth('api')->user()->id,
+            'pap_creater'            => Auth::user()->role > 7 && isset($request->user) ? $request->user['id'] : auth('api')->user()->id,
             'slug'                   => Str::slug($request->en_title),
             'abstract_dosya_id'      => isset($request->abstract_dosya) ? $request->abstract_dosya['id'] : null,
             'full_paper_dosya_id'    => isset($request->full_paper_dosya) ? $request->full_paper_dosya['id'] : null,
@@ -186,7 +189,7 @@ class SubmissionController extends Controller
 
         $old_gorev = Articles::where('id', $id)->first();
 
-        Articles::where('id', $id)->update([
+        $udata = [
             'en_title'               => $request->en_title,
             'en_abstract'            => $request->en_abstract,
             'pap_keyword'            => $pap_keywords,
@@ -202,7 +205,13 @@ class SubmissionController extends Controller
             'video_approved'         => $request->video_approved,
             'title_year'             => isset($request->title_year) ? $request->title_year : "2023",
             'paper_approved'         => isset($request->paper_approved) ? $request->paper_approved : 0
-        ]);
+        ];
+
+        if (Auth::user()->role > 7  && isset($request->user)) {
+            $udata['pap_creater'] = $request->user['id'];
+        }
+
+        Articles::where('id', $id)->update($udata);
 
         if (isset($request->authors)) {
             $varolanlar = Authors::where('p_id', $id)->get();
