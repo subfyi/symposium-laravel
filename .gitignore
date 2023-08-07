@@ -37,6 +37,7 @@ yarn-error.log*
 /.vagrant
 
 #laravel
+/public/doc
 /public/uploads
 /public/hot
 /public/storage
