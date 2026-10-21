@@ -8,7 +8,7 @@ use Error;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
-use Intervention\Image\Facades\Image;
+use Intervention\Image\Laravel\Facades\Image;
 
 class FileService
 {
@@ -45,7 +45,7 @@ class FileService
         $height = null;
 
         if (strpos($resim_type, "image/") === 0) {
-            $img = @Image::make(Storage::disk('uploads')->readStream($id."/".$name));
+            $img = Image::read(Storage::disk('uploads')->readStream($id."/".$name));
             if ($img) {
                 $width = $img->width();
                 $height = $img->height();

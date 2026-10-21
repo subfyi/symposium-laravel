@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-class GoogleDriveAdapter extends \Hypweb\Flysystem\GoogleDrive\GoogleDriveAdapter
+class GoogleDriveAdapter extends \Masbug\Flysystem\GoogleDriveAdapter
 {
     public function getService()
     {

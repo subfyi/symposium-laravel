@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Apim;
 use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Http\Request;
-use Spatie\Newsletter\NewsletterFacade as Newsletter;
+use Spatie\Newsletter\Facades\Newsletter;
 
 class NewsletterController extends Controller
 {

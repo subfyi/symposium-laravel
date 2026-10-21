@@ -34,6 +34,7 @@ return [
     'allowed_origins' => [
         'https://iseser.com',
         'https://admin.iseser.com',
+        'https://portal.iseser.com',
         'http://localhost:4000',
         'http://localhost:3000'
     ],

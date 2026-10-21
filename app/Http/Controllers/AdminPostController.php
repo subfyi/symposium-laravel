@@ -27,7 +27,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-use Intervention\Image\Facades\Image;
+use Intervention\Image\Laravel\Facades\Image;
 
 
 class AdminPostController extends Controller
@@ -51,7 +51,7 @@ class AdminPostController extends Controller
             $logo_isim = Str::slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
 
             Storage::disk('uploads')->makeDirectory('img');
-            Image::make($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
+            Image::read($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
         }
 
         try {
@@ -137,7 +137,7 @@ class AdminPostController extends Controller
             $logo_isim = Str::slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
 
             Storage::disk('uploads')->makeDirectory('img');
-            Image::make($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
+            Image::read($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
         }
 
         unset($file['_token']);
@@ -213,7 +213,7 @@ class AdminPostController extends Controller
             $logo_isim = Str::slug($request->name) . '-' . $tarih . '.' . $logo_uzanti;
 
             Storage::disk('uploads')->makeDirectory('img');
-            Image::make($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
+            Image::read($logo->getRealPath())->resize(100, 100)->save('uploads/img/' . $logo_isim);
         }
 
         try {

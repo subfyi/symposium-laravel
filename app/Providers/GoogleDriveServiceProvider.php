@@ -20,14 +20,16 @@ class GoogleDriveServiceProvider extends ServiceProvider
             $client->refreshToken($config['refreshToken']);
             $service = new \Google_Service_Drive($client);
 
-            $options = [];
+            $options = ['useDisplayPaths' => false];
             if(isset($config['teamDriveId'])) {
                 $options['teamDriveId'] = $config['teamDriveId'];
             }
 
             $adapter = new GoogleDriveAdapter($service, $config['folderId'], $options);
 
-            return new \League\Flysystem\Filesystem($adapter);
+            return new \Illuminate\Filesystem\FilesystemAdapter(
+                new \League\Flysystem\Filesystem($adapter), $adapter, $config
+            );
         });
     }
 

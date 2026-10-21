@@ -12,7 +12,7 @@ class GoogleDriveIslem
 
   public function __construct()
   {
-    $this->service = Storage::cloud()->getAdapter()->getService();
+    $this->service = Storage::disk('google')->getAdapter()->getService();
   }
 
   public function direct() {

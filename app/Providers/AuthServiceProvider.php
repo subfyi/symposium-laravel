@@ -27,18 +27,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::routes(function ($router) {
-            $router->forAuthorization();
-
-            $router->forAccessTokens();
-
-            $router->forTransientTokens();
-            $router->forClients();
-            $router->forPersonalAccessTokens();
-        });
-
-        Route::post('/oauth/token', [
-            'uses' => '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken'
-        ]);
+        Passport::enablePasswordGrant();
     }
 }
